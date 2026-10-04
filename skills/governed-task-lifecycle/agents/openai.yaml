@@ -1,0 +1,6 @@
+interface:
+  display_name: "Governed Task Lifecycle"
+  short_description: "Initialize, validate and approve exact work"
+  default_prompt: "Use $governed-task-lifecycle for the task and lifecycle stage I specify, within its current scope and approval."
+policy:
+  allow_implicit_invocation: true

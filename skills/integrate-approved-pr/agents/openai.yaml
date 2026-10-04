@@ -1,0 +1,6 @@
+interface:
+  display_name: "Integrate Approved PR"
+  short_description: "Check and perform approved PR integration"
+  default_prompt: "Use $integrate-approved-pr for the pull request I identify; inspect prerequisites and execute only effects covered by its exact current approval."
+policy:
+  allow_implicit_invocation: true
