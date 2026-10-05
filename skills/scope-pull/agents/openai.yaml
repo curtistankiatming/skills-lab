@@ -1,0 +1,6 @@
+interface:
+  display_name: "Scope Pull"
+  short_description: "Reconcile project scope, progress, and proposed work"
+  default_prompt: "Use $scope-pull to reconcile the project's agreed scope, evidenced progress, scope changes and proposed next work from the sources I identify."
+policy:
+  allow_implicit_invocation: true

@@ -1,6 +1,6 @@
 # Contributing to Skills Lab
 
-Start with the [repository instructions](AGENTS.md) and an exact assignment. A contribution proposal is not owner approval or permission to publish it. The initial collection contains three selected skills; it is not a complete inventory of every skill its maintainer has created.
+Start with the [repository instructions](AGENTS.md) and an exact assignment. A contribution proposal is not owner approval or permission to publish it. Collection 1.1.0 selects four skills; it is not a complete inventory of every skill its maintainer has created.
 
 ## Prepare a useful change
 
@@ -9,6 +9,8 @@ Identify the affected skill, its controlling source and exact revision, the user
 For a selected export, revise the controlling source through its own current authority before updating this copy. Do not patch a distributed copy and silently diverge from the source. An intended transfer of canonical ownership needs an explicit owner decision and a recorded revision boundary.
 
 Update the catalog, inventory and distribution version when their basis changes. Hash final raw bytes; state which files a manifest covers and exclude its own bytes explicitly. Keep historical issued versions and any private review evidence with their accountable owner.
+
+Prepare source, selected export and included index upkeep together before review. Complete the approved task's included upkeep without duplicate approval prompts for unchanged bookkeeping. A new semantic, rights or destination change receives affected review. Adding Scope Pull does not expand an existing three-skill bundle's membership.
 
 ## Check and review
 
