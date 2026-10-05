@@ -2,7 +2,9 @@
 
 The selected outgoing licence is [MIT](LICENSE). Copyright attribution for this self-created collection uses the publisher's public account handle: **2026 curtistankiatming**. The full licence supplies the permission, notice, warranty and liability terms.
 
-The collection contains three instruction skills, their five supporting resources, three agent metadata files and collection documentation. No third-party skill, executable dependency or upstream licence notice is bundled in this selection. This describes the included files; it does not assert universal legal clearance or guarantee rights in material supplied by a future contributor.
+The collection selects four instruction skills, five supporting references/templates, four agent metadata files and collection documentation. The three original skill sources remain version 1.0.1; Scope Pull is an unchanged two-file selected export at source version 1.0.0.
+
+Scope Pull is attributed to Curtis's maintained instruction baseline. That attribution and matching file bytes are useful provenance, but the original full authorship history has not been independently reconstructed. The prepared update proposes MIT for these exact files as part of the publisher's later exact distribution decision. No incompatible upstream component, executable dependency or additional third-party notice has been identified in the bounded included selection; this is not universal legal clearance or proof of ownership from package metadata, AI assistance or public availability.
 
 Keep the copyright and permission notice in all copies or substantial portions. Preserve any applicable upstream notices if later components are included; their actual terms govern those components. Before accepting new material, establish permission for its inclusion under the selected terms without inventing ownership from public availability or AI assistance.
 
