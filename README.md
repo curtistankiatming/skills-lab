@@ -1,6 +1,6 @@
 # Skills Lab
 
-Four portable instruction skills for preparing governed work, checking exact candidates, handling explicitly approved pull request integration and reconciling project scope. Collection version: 1.1.0. The first three skills remain at source version 1.0.1; Scope Pull is an unchanged selected export at source version 1.0.0.
+Four portable instruction skills for preparing governed work, checking exact candidates, handling explicitly approved pull request integration and reconciling project scope. Collection version: 1.2.0. Verify Exact Candidate and Scope Pull select source version 1.1.0; Governed Task Lifecycle and Integrate Approved PR remain at 1.0.1.
 
 The collection is provided under the [MIT License](LICENSE). See [rights and attribution](RIGHTS.md) for the selected components and preserved notices.
 
@@ -13,7 +13,7 @@ The collection is provided under the [MIT License](LICENSE). See [rights and att
 | Integrate Approved PR | You need integration prerequisites checked, or already-approved readiness or protected merge completed. | [integrate-approved-pr](skills/integrate-approved-pr/SKILL.md) |
 | Scope Pull | You want agreed scope, evidenced progress, changes and proposed expansion reconciled, including non-software projects. | [scope-pull](skills/scope-pull/SKILL.md) |
 
-The [catalog](CATALOG.md) explains the boundaries and examples. The [inventory](inventory.json) records version, source relationships, file sizes and raw SHA-256 values.
+The [catalog](CATALOG.md) explains the boundaries and examples. The [optional evaluation guide](EVALUATING.md) and fictional casebooks support maintainers assessing revisions; their inclusion is not evidence of executed tests. The [inventory](inventory.json) records version, source relationships, file sizes and raw SHA-256 values.
 
 ## Use the complete skill
 

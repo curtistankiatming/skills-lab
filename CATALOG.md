@@ -1,6 +1,6 @@
 # Skills Lab catalog
 
-Collection version: 1.1.0. [MIT licence](LICENSE). This catalog summarizes four unchanged selected skill declarations: three at source version 1.0.1 and Scope Pull at 1.0.0. The [inventory](inventory.json) binds their complete files to raw hashes; the skill bodies control their detailed meaning.
+Collection version: 1.2.0. [MIT licence](LICENSE). This catalog summarizes four selected skill declarations: Verify Exact Candidate and Scope Pull at source version 1.1.0, and the other two skills unchanged at 1.0.1. The [inventory](inventory.json) binds their complete files to raw hashes; the skill bodies control their detailed meaning.
 
 | Folder | Use if | Boundary | Complete entry point |
 | --- | --- | --- | --- |
@@ -23,8 +23,10 @@ These examples are invocation patterns, not task authorizations. For an agent wi
 ## Included resources
 
 - Lifecycle: [chat-summary reference](skills/governed-task-lifecycle/references/chat-summary.md), [optional task record](skills/governed-task-lifecycle/assets/task-record.md), and agent metadata.
-- Verification: [Git custody reference](skills/verify-exact-candidate/references/git-custody.md), [optional verification record](skills/verify-exact-candidate/assets/verification-record.md), and agent metadata.
+- Verification: [Git custody reference](skills/verify-exact-candidate/references/git-custody.md), [optional verification record](skills/verify-exact-candidate/assets/verification-record.md), [fictional examples and evaluation cases](skills/verify-exact-candidate/references/check-cases.md), and agent metadata.
 - Integration: [optional integration receipt](skills/integrate-approved-pr/assets/integration-receipt.md) and agent metadata.
-- Scope Pull: the self-contained [workflow](skills/scope-pull/SKILL.md) and [agent metadata](skills/scope-pull/agents/openai.yaml); no other resource or executable dependency is bundled.
+- Scope Pull: [workflow](skills/scope-pull/SKILL.md), [fictional examples and evaluation cases](skills/scope-pull/references/check-cases.md), and [agent metadata](skills/scope-pull/agents/openai.yaml).
 
 The metadata permits implicit invocation; actual discovery remains host-dependent. Resource completeness and source identity do not prove the agent will enforce a workflow.
+
+The [optional maintainer evaluation guide](EVALUATING.md) distinguishes case specifications, structural checks and observed behavior. The package contains no executable checker or claimed evaluation result.

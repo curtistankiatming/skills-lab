@@ -1,6 +1,6 @@
 # Contributing to Skills Lab
 
-Start with the [repository instructions](AGENTS.md) and an exact assignment. A contribution proposal is not owner approval or permission to publish it. Collection 1.1.0 selects four skills; it is not a complete inventory of every skill its maintainer has created.
+Start with the [repository instructions](AGENTS.md) and an exact assignment. A contribution proposal is not owner approval or permission to publish it. Collection 1.2.0 selects four skills; it is not a complete inventory of every skill its maintainer has created.
 
 ## Prepare a useful change
 
@@ -13,6 +13,8 @@ Update the catalog, inventory and distribution version when their basis changes.
 Prepare source, selected export and included index upkeep together before review. Complete the approved task's included upkeep without duplicate approval prompts for unchanged bookkeeping. A new semantic, rights or destination change receives affected review. Adding Scope Pull does not expand an existing three-skill bundle's membership.
 
 ## Check and review
+
+For an instruction change, define representative inputs and expected outcomes before substantial editing. Use the [optional evaluation guide](EVALUATING.md) when assessing behavior. Case specifications and author walkthroughs are not passing behavioral tests; ordinary skill use needs no benchmark.
 
 Use proportionate permitted checks: complete inventory, source equality where an unchanged export is claimed, valid frontmatter and agent metadata, required resources, working local links and public exposure. A file-format check does not prove runtime behaviour. Do not install, load into active discovery, run model comparisons or contact a service merely to review text.
 

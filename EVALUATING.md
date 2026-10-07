@@ -1,0 +1,13 @@
+# Evaluating an instruction revision
+
+This optional maintainer guide supports changes to Verify Exact Candidate and Scope Pull. Evaluation is separate from ordinary skill use, installation, integration and release. The included case specifications are fictional and have not been executed merely because they are packaged.
+
+1. Before substantial editing, preserve representative inputs, requested boundaries and expected outcomes. Include a well-supported success, misleading success, missing evidence, changed inputs, embedded instructions and an unrelated request. The two skill casebooks provide seed cases; keep some additional scenarios held out from authors.
+2. When behavioral evaluation is within the task's actual authority, compare no skill, the unchanged baseline and the revision on the same source snapshots and permitted effects. Record the actual skill files, model/host settings, tools, access, prompts and outputs. Settings alone do not prove an effective backend or isolation. Repeat comparable cases when variation could change the conclusion.
+3. Separate evaluator inputs from the expected-outcome rubric when blind testing. Do not give an evaluator the author's desired verdict. Compare actual behavior with the task's governing criteria; the examples are adaptable expectations, not a universal vocabulary or workflow.
+4. Record unsupported positive conclusions, missed material findings, unnecessary holds, citation errors and next-action usefulness separately. A justified inconclusive result is correct when a requested material property lacks evidence. Penalize avoiding a conclusion when sufficient evidence exists. Time and context are secondary measures, not a reason to weaken evidence requirements.
+5. Distinguish structural checks, author walkthroughs and observed behavioral results. Test an executable helper's correctness separately if one is introduced. Publish only results supported by the checks actually run, naming tested configurations and material limits; do not claim universal compatibility or independence from labels.
+
+Use bounded, self-contained fictional fixtures for public examples. Keep private sources, credentials, review history and restricted paths outside the public payload. A useful record identifies candidate and baseline, case/input identity, observed output, rubric disposition, actual conditions and limits. It can live in existing review records; no new service, permanent ledger or mandatory schema is required.
+
+No utility, hosted evaluation, API use, installation or recurring job is commissioned by this guide. Existing task authorization can cover suitable checks without a separate prompt for each step. Adding new costs, services, destinations or effects requires the applicable authority.
