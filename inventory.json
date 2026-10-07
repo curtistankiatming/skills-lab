@@ -1,7 +1,7 @@
 {
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
-  "distribution_version": "1.2.0",
+  "distribution_version": "1.3.0",
   "files": [
     {
       "path": "AGENTS.md",
@@ -10,18 +10,43 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 3606,
-      "sha256": "9518f18351479af904b913c0ba511cb84e609ddc841be4cc4c5306163a4b143c"
+      "bytes": 3819,
+      "sha256": "941435cac7d73637286022064ac513402794929c2452e9ede60fc2a939d0d7cb"
     },
     {
       "path": "CONTRIBUTING.md",
       "bytes": 3297,
-      "sha256": "3db17d8573c30db9f6630792146799b078c17de9d4bd2af6a0b61c5e7b4a3199"
+      "sha256": "0f67bc53e3d16e17e2435b79cfe1d9d6ef8fabdcfca780716efc5fecbb76a661"
     },
     {
       "path": "EVALUATING.md",
-      "bytes": 2762,
-      "sha256": "aee230ddf893914b1b3d15df1875fb2733a13db649f926270c44a2b72a634f72"
+      "bytes": 3386,
+      "sha256": "8fbc814415227a2d2a8cfe2e0938824dc5c849e5c2585e9627898c5fbe744870"
+    },
+    {
+      "path": "evaluations/2026-10-07/answers.json",
+      "bytes": 33587,
+      "sha256": "68ef268033e4a3435c9dbaf351770a08046d2228d8a428ac794b7bc96ed35548"
+    },
+    {
+      "path": "evaluations/2026-10-07/cases.json",
+      "bytes": 13409,
+      "sha256": "2428f08c818cd44512baf057f58188c2253a50d9ab895b43745afdd7be51f8e0"
+    },
+    {
+      "path": "evaluations/2026-10-07/README.md",
+      "bytes": 3588,
+      "sha256": "0184ee46ef3f37da0d491c54043434e1ab5bd78119303abbdd1546b67ec7d446"
+    },
+    {
+      "path": "evaluations/2026-10-07/results.json",
+      "bytes": 11333,
+      "sha256": "72d67ea53db1e3481bbfcfdf4d919c29d7e6132e00c7b7d94718d5602883cff0"
+    },
+    {
+      "path": "evaluations/2026-10-07/rubric.json",
+      "bytes": 3372,
+      "sha256": "f860f1ac83b05e47bf9cac9c51ba91ad9ed9198ea2fd049edfc10f3bf3bfdd5b"
     },
     {
       "path": "LICENSE",
@@ -30,28 +55,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 4256,
-      "sha256": "9267d6f5c517b342fdead75caa10fd75cf9fb5c043bd9051c5d997d822d8a034"
+      "bytes": 4752,
+      "sha256": "5259c8173f39cdd44a088ff2ae58d70f75bec15dfd1f2e41eec0390572e87181"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 2945,
-      "sha256": "d8527bc2865cc2d7a07fd81f6d2362a7e08979c2d55451da8e576fd0e0883e2a"
+      "bytes": 2951,
+      "sha256": "f142a8a741327fc1c9fee002ed03901ece535dc3e89ce3bfbc1d0312be51ff18"
     },
     {
       "path": "RIGHTS.md",
-      "bytes": 1948,
-      "sha256": "322ac8e593a2cfa84a7b83c94f24c4a573c7da18cdbf52367b66819e57bd9265"
-    },
-    {
-      "path": "VERSION",
-      "bytes": 6,
-      "sha256": "1e5b51cde515396a9fa762909cf8ca6584ccc564b325d2eebeea76175fe95c4d"
-    },
-    {
-      "path": "skills/governed-task-lifecycle/SKILL.md",
-      "bytes": 11565,
-      "sha256": "06416a5867cf633f9c5cddca4697b1a5bc4ef43dbec89b14e1532cd90ee6902a"
+      "bytes": 2192,
+      "sha256": "12f8637f64d747c0e11e2be99eb02637b033031a30ab2832fe6dca2be4bf07e4"
     },
     {
       "path": "skills/governed-task-lifecycle/agents/openai.yaml",
@@ -69,9 +84,9 @@
       "sha256": "3ac5718e4db44efb1b9929cdcc61d2b908ca80e59a300b4689b0a881a767bb81"
     },
     {
-      "path": "skills/integrate-approved-pr/SKILL.md",
-      "bytes": 7849,
-      "sha256": "b652ac45c5dd157661762f08a44917472570616bf0d58b7df7993e362dc6903f"
+      "path": "skills/governed-task-lifecycle/SKILL.md",
+      "bytes": 11565,
+      "sha256": "06416a5867cf633f9c5cddca4697b1a5bc4ef43dbec89b14e1532cd90ee6902a"
     },
     {
       "path": "skills/integrate-approved-pr/agents/openai.yaml",
@@ -84,9 +99,9 @@
       "sha256": "9da07642a72004ef90bc58a9d8ca4040abc98fa68c3bf652409739a531ae1eb4"
     },
     {
-      "path": "skills/scope-pull/SKILL.md",
-      "bytes": 7023,
-      "sha256": "5fb0b0614670f78a84b13e1d08b6acd38f2f046221214f00eab0cbea243d7fc5"
+      "path": "skills/integrate-approved-pr/SKILL.md",
+      "bytes": 7849,
+      "sha256": "b652ac45c5dd157661762f08a44917472570616bf0d58b7df7993e362dc6903f"
     },
     {
       "path": "skills/scope-pull/agents/openai.yaml",
@@ -99,9 +114,9 @@
       "sha256": "88f884da9ff3644327ed0a5e03abf9bbee6b1d8500f77bf82366b7130705370c"
     },
     {
-      "path": "skills/verify-exact-candidate/SKILL.md",
-      "bytes": 7472,
-      "sha256": "5d61e7844c3c8292f63442f9a451a1929bc5c19fb1f34adb3fec94164a1bf321"
+      "path": "skills/scope-pull/SKILL.md",
+      "bytes": 7023,
+      "sha256": "5fb0b0614670f78a84b13e1d08b6acd38f2f046221214f00eab0cbea243d7fc5"
     },
     {
       "path": "skills/verify-exact-candidate/agents/openai.yaml",
@@ -122,6 +137,31 @@
       "path": "skills/verify-exact-candidate/references/git-custody.md",
       "bytes": 2415,
       "sha256": "f508987dd2a43be16eef0e5bebc7c2dcd6de077786304013184961383038cfc5"
+    },
+    {
+      "path": "skills/verify-exact-candidate/references/local-checker.md",
+      "bytes": 6874,
+      "sha256": "0aec770f26d691924338ec35607fcf6cc6d6f64bf71f804468df4043b4e09437"
+    },
+    {
+      "path": "skills/verify-exact-candidate/scripts/test_verify_files.py",
+      "bytes": 14104,
+      "sha256": "d7f6d3a10d5475418d2adcc762a24b191fcb40f1bd3716c386898af37c017840"
+    },
+    {
+      "path": "skills/verify-exact-candidate/scripts/verify_files.py",
+      "bytes": 22362,
+      "sha256": "90a1ef2a6ce35bb6273706be37d4dcff1cfa94c10bffc1b3f9497309797987cf"
+    },
+    {
+      "path": "skills/verify-exact-candidate/SKILL.md",
+      "bytes": 7850,
+      "sha256": "54d8b9f544164d711888082dd4495296f86eaa7d9ce82ba1118d436b2279d0ee"
+    },
+    {
+      "path": "VERSION",
+      "bytes": 6,
+      "sha256": "64d23f858ef51b0f996e4966d4e27c0371b437e2d2787890b1f7ad22d4ec5663"
     }
   ],
   "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
@@ -133,11 +173,6 @@
       "entrypoint": "skills/governed-task-lifecycle/SKILL.md",
       "id": "governed-task-lifecycle",
       "source_files": [
-        {
-          "path": "skills/governed-task-lifecycle/SKILL.md",
-          "bytes": 11565,
-          "sha256": "06416a5867cf633f9c5cddca4697b1a5bc4ef43dbec89b14e1532cd90ee6902a"
-        },
         {
           "path": "skills/governed-task-lifecycle/agents/openai.yaml",
           "bytes": 294,
@@ -152,6 +187,11 @@
           "path": "skills/governed-task-lifecycle/references/chat-summary.md",
           "bytes": 3109,
           "sha256": "3ac5718e4db44efb1b9929cdcc61d2b908ca80e59a300b4689b0a881a767bb81"
+        },
+        {
+          "path": "skills/governed-task-lifecycle/SKILL.md",
+          "bytes": 11565,
+          "sha256": "06416a5867cf633f9c5cddca4697b1a5bc4ef43dbec89b14e1532cd90ee6902a"
         }
       ],
       "source_relationship": "unchanged_selected_export",
@@ -162,11 +202,6 @@
       "id": "integrate-approved-pr",
       "source_files": [
         {
-          "path": "skills/integrate-approved-pr/SKILL.md",
-          "bytes": 7849,
-          "sha256": "b652ac45c5dd157661762f08a44917472570616bf0d58b7df7993e362dc6903f"
-        },
-        {
           "path": "skills/integrate-approved-pr/agents/openai.yaml",
           "bytes": 324,
           "sha256": "a40e352e86718a071bbf004dd77d4c8fa291861b29ca4d6e42a99214b0a924c2"
@@ -175,6 +210,11 @@
           "path": "skills/integrate-approved-pr/assets/integration-receipt.md",
           "bytes": 1885,
           "sha256": "9da07642a72004ef90bc58a9d8ca4040abc98fa68c3bf652409739a531ae1eb4"
+        },
+        {
+          "path": "skills/integrate-approved-pr/SKILL.md",
+          "bytes": 7849,
+          "sha256": "b652ac45c5dd157661762f08a44917472570616bf0d58b7df7993e362dc6903f"
         }
       ],
       "source_relationship": "unchanged_selected_export",
@@ -187,11 +227,6 @@
       "source_relationship": "unchanged_selected_export",
       "source_files": [
         {
-          "path": "skills/scope-pull/SKILL.md",
-          "bytes": 7023,
-          "sha256": "5fb0b0614670f78a84b13e1d08b6acd38f2f046221214f00eab0cbea243d7fc5"
-        },
-        {
           "path": "skills/scope-pull/agents/openai.yaml",
           "bytes": 321,
           "sha256": "855ed43ea6ebaeb6404777a852067833116f732d972401cea86e29c4a4715a3c"
@@ -200,6 +235,11 @@
           "path": "skills/scope-pull/references/check-cases.md",
           "bytes": 6185,
           "sha256": "88f884da9ff3644327ed0a5e03abf9bbee6b1d8500f77bf82366b7130705370c"
+        },
+        {
+          "path": "skills/scope-pull/SKILL.md",
+          "bytes": 7023,
+          "sha256": "5fb0b0614670f78a84b13e1d08b6acd38f2f046221214f00eab0cbea243d7fc5"
         }
       ]
     },
@@ -207,11 +247,6 @@
       "entrypoint": "skills/verify-exact-candidate/SKILL.md",
       "id": "verify-exact-candidate",
       "source_files": [
-        {
-          "path": "skills/verify-exact-candidate/SKILL.md",
-          "bytes": 7472,
-          "sha256": "5d61e7844c3c8292f63442f9a451a1929bc5c19fb1f34adb3fec94164a1bf321"
-        },
         {
           "path": "skills/verify-exact-candidate/agents/openai.yaml",
           "bytes": 317,
@@ -231,10 +266,30 @@
           "path": "skills/verify-exact-candidate/references/git-custody.md",
           "bytes": 2415,
           "sha256": "f508987dd2a43be16eef0e5bebc7c2dcd6de077786304013184961383038cfc5"
+        },
+        {
+          "path": "skills/verify-exact-candidate/references/local-checker.md",
+          "bytes": 6874,
+          "sha256": "0aec770f26d691924338ec35607fcf6cc6d6f64bf71f804468df4043b4e09437"
+        },
+        {
+          "path": "skills/verify-exact-candidate/scripts/test_verify_files.py",
+          "bytes": 14104,
+          "sha256": "d7f6d3a10d5475418d2adcc762a24b191fcb40f1bd3716c386898af37c017840"
+        },
+        {
+          "path": "skills/verify-exact-candidate/scripts/verify_files.py",
+          "bytes": 22362,
+          "sha256": "90a1ef2a6ce35bb6273706be37d4dcff1cfa94c10bffc1b3f9497309797987cf"
+        },
+        {
+          "path": "skills/verify-exact-candidate/SKILL.md",
+          "bytes": 7850,
+          "sha256": "54d8b9f544164d711888082dd4495296f86eaa7d9ce82ba1118d436b2279d0ee"
         }
       ],
       "source_relationship": "unchanged_selected_export",
-      "source_version": "1.1.0"
+      "source_version": "1.2.0"
     }
   ],
   "source_policy": "Selected exact exports of their named source versions; one controlling source per skill. Restricted author/decision lineage is not included and cannot be reproduced from this inventory. Versions and file identity do not establish integration, release, installed state or behavioral performance."

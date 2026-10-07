@@ -1,6 +1,6 @@
 # Skills Lab
 
-Four portable instruction skills for preparing governed work, checking exact candidates, handling explicitly approved pull request integration and reconciling project scope. Collection version: 1.2.0. Verify Exact Candidate and Scope Pull select source version 1.1.0; Governed Task Lifecycle and Integrate Approved PR remain at 1.0.1.
+Four portable instruction skills for preparing governed work, checking exact candidates, handling explicitly approved pull request integration and reconciling project scope. Collection version: 1.3.0. Verify Exact Candidate selects source version 1.2.0 and Scope Pull 1.1.0; Governed Task Lifecycle and Integrate Approved PR remain at 1.0.1.
 
 The collection is provided under the [MIT License](LICENSE). See [rights and attribution](RIGHTS.md) for the selected components and preserved notices.
 
@@ -34,7 +34,7 @@ For the lifecycle skill, preserve its [owner-facing chat summary](skills/governe
 
 ## What to expect
 
-These are instruction files and templates, with no bundled executable scripts, credentials, server, installer, dependency environment or workflow. An agent needs separately available tools and current authority for real file or GitHub operations. No extra software is needed simply to read the Markdown.
+The instruction files and templates include an optional local stdlib checker and its fixture suite for Verify Exact Candidate. They need a trusted Python interpreter and explicit task authority to execute. The package has no credentials, server, installer, dependency environment or hosted workflow. An agent needs separately available tools and current authority for real file or GitHub operations. No extra software is needed simply to read the Markdown.
 
 The four agent metadata files enable implicit invocation as a declaration. Automatic selection, effective model configuration, runtime enforcement and compatibility with every host have not been established by this package. Templates are blank formats, not evidence of completed work. Scope Pull reports and advises; it does not approve scope or dispatch work.
 
@@ -43,3 +43,5 @@ Publication or possession does not establish destination adoption, portfolio adm
 ## Maintain or release
 
 See [contributing and maintenance](CONTRIBUTING.md), [release preparation](RELEASING.md) and [repository instructions](AGENTS.md). Keep one controlling source for each skill identity; the collection is a selected distribution, not an automatic replacement for its source.
+
+See the [optional local checker](skills/verify-exact-candidate/references/local-checker.md) and the [executed bounded comparison](evaluations/2026-10-07/README.md). Published and revised instructions tied in this trial; no behavioral improvement is established. The helper was separately tested on Windows with explicit coverage gaps.

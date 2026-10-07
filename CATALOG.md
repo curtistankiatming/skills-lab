@@ -1,6 +1,6 @@
 # Skills Lab catalog
 
-Collection version: 1.2.0. [MIT licence](LICENSE). This catalog summarizes four selected skill declarations: Verify Exact Candidate and Scope Pull at source version 1.1.0, and the other two skills unchanged at 1.0.1. The [inventory](inventory.json) binds their complete files to raw hashes; the skill bodies control their detailed meaning.
+Collection version: 1.3.0. [MIT licence](LICENSE). This catalog summarizes four selected skill declarations: Verify Exact Candidate at source version 1.2.0 and Scope Pull at 1.1.0, and the other two skills unchanged at 1.0.1. The [inventory](inventory.json) binds their complete files to raw hashes; the skill bodies control their detailed meaning.
 
 | Folder | Use if | Boundary | Complete entry point |
 | --- | --- | --- | --- |
@@ -29,4 +29,4 @@ These examples are invocation patterns, not task authorizations. For an agent wi
 
 The metadata permits implicit invocation; actual discovery remains host-dependent. Resource completeness and source identity do not prove the agent will enforce a workflow.
 
-The [optional maintainer evaluation guide](EVALUATING.md) distinguishes case specifications, structural checks and observed behavior. The package contains no executable checker or claimed evaluation result.
+The [optional maintainer evaluation guide](EVALUATING.md) distinguishes case specifications, structural checks and observed behavior. The [optional local checker](skills/verify-exact-candidate/references/local-checker.md) and [bounded executed comparison](evaluations/2026-10-07/README.md) have separate authority and coverage limits. The published and revised instructions tied; no behavioral gain is claimed.

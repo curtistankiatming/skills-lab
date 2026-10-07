@@ -45,6 +45,8 @@ Use literal, named inputs rather than recursively searching fixtures for a plaus
 - For Git or remote transfers, read [Git custody](references/git-custody.md) when commit, tree, parent, mode, PR-delta or remote-byte claims are required. These identities describe different properties; a head SHA alone is not a complete transfer check.
 - Separate the evaluated source from evidence-storage revisions, aliases and historical snapshots. A newer receipt or successful delivery does not change what was evaluated or establish receiving acceptance.
 
+For authorized ordinary local file-set checks, an optional [stdlib checker](references/local-checker.md) can compare raw bytes and membership. Read its admission and launch limits first; use a trusted interpreter with isolated imports. It is not required when another adequate authorized method is available, and it establishes neither approval nor an atomic package snapshot.
+
 ## Verify evidence and conclusions
 
 Check material citations at their exact sources and ensure each result binds to the final evaluated candidate. Record actual check commands or queries, observation time where material, exit/embedded status, failures, skips and limits. Preserve unavailable or malformed attempts. A successful process exit can still contain a failed result; an unrun test plan is not passing evidence.

@@ -1,6 +1,6 @@
 # Contributing to Skills Lab
 
-Start with the [repository instructions](AGENTS.md) and an exact assignment. A contribution proposal is not owner approval or permission to publish it. Collection 1.2.0 selects four skills; it is not a complete inventory of every skill its maintainer has created.
+Start with the [repository instructions](AGENTS.md) and an exact assignment. A contribution proposal is not owner approval or permission to publish it. Collection 1.3.0 selects four skills; it is not a complete inventory of every skill its maintainer has created.
 
 ## Prepare a useful change
 
