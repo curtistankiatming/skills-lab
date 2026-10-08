@@ -1,6 +1,6 @@
 # Skills Lab
 
-Four portable instruction skills for preparing governed work, checking exact candidates, handling explicitly approved pull request integration and reconciling project scope. Collection version: 1.1.0. The first three skills remain at source version 1.0.1; Scope Pull is an unchanged selected export at source version 1.0.0.
+Four portable instruction skills for preparing governed work, checking exact candidates, handling explicitly approved pull request integration and reconciling project scope. Prepared collection version: 1.1.1; the latest issued collection remains 1.1.0. This review candidate changes Governed Task Lifecycle to source version 1.0.2. Verify Exact Candidate and Integrate Approved PR remain at 1.0.1; Scope Pull remains at 1.0.0. It is an exact selected export of a prepared source revision, not an integrated or issued release.
 
 The collection is provided under the [MIT License](LICENSE). See [rights and attribution](RIGHTS.md) for the selected components and preserved notices.
 
@@ -30,7 +30,7 @@ Use $scope-pull to reconcile the project's agreed scope, evidenced progress and 
 
 Replace task identifiers and example destinations with your actual inputs. In another host, request the same skill in plain language and supply its files. Use the installed name or namespace the host actually exposes. Selecting a skill grants no additional permission.
 
-For the lifecycle skill, preserve its [owner-facing chat summary](skills/governed-task-lifecycle/references/chat-summary.md), including Scope, Done, Now, Next, Checks / limits, Upcoming, Evidence and Your decision.
+For the lifecycle skill, preserve its [owner-facing chat summary](skills/governed-task-lifecycle/references/chat-summary.md), including Scope, Done, Now, Next, Checks / limits, Upcoming, Evidence and Your decision. Apply the destination's active command meanings and required formats. Keep that owner summary separate from an audience-facing deliverable unless the requested artifact itself needs lifecycle fields.
 
 ## What to expect
 
@@ -43,3 +43,7 @@ Publication or possession does not establish destination adoption, portfolio adm
 ## Maintain or release
 
 See [contributing and maintenance](CONTRIBUTING.md), [release preparation](RELEASING.md) and [repository instructions](AGENTS.md). Keep one controlling source for each skill identity; the collection is a selected distribution, not an automatic replacement for its source.
+
+## Prepared lifecycle update
+
+The 1.0.2 clarification makes destination adaptation, audience/status separation and validation before changed-candidate approval explicit. It preserves authority boundaries and adds no scripts, service, mandatory schema or approval stage. The instructions and source identity do not establish runtime enforcement, independent certification or effectiveness for every host/project. This review copy changes neither the latest issued release nor installed skills. Overlapping unmerged proposals and collection versions must be reconciled before integration.

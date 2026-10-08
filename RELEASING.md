@@ -1,6 +1,6 @@
 # Releasing Skills Lab
 
-Collection version: 1.1.0. The collection uses the [MIT License](LICENSE). This additive collection update includes Scope Pull source version 1.0.0 alongside the unchanged three 1.0.1 sources. Version, individual skill source identities, archive identity and installed state are separate; a version label does not establish publication or runtime support.
+Prepared collection version: 1.1.1; the latest issued collection remains 1.1.0. The collection uses the [MIT License](LICENSE). This review candidate clarifies Governed Task Lifecycle at source version 1.0.2; Verify Exact Candidate and Integrate Approved PR remain at 1.0.1, and Scope Pull at 1.0.0. It is not an integrated or issued release. Version, individual skill source identities, archive identity and installed state are separate; a version label does not establish publication or runtime support.
 
 1. Bind the exact repository/account, current source revisions, complete public selection, notices and intended audience. Preserve the selected-export source relationship. A later identity or licence change requires its own affected review and exact decision; do not repeat an unchanged decision for routine preparation.
 2. Freeze all final raw files after generation. [inventory.json](inventory.json) covers every other public file, explicitly excluding itself. Hash that inventory and the final single-root archive externally. Retain issued bytes and source relationships; rebuilding is not automatically the same artifact.

@@ -17,11 +17,9 @@ Do not impose it on an ordinary answer, edit or review that has no lifecycle req
 
 Later stage examples: `Use $governed-task-lifecycle. Validate TASK-001.` and `Use $governed-task-lifecycle. Approve TASK-001.` The last example is an invocation pattern, not approval for any real task.
 
-Resolve the requested command, exact target, current authority and destination rules before acting. This skill supplies a portable workflow; it does not install a governance policy or override the destination's command contracts. Use the destination's terminology, evidence formats and approval authority. Names of owners, repositories, tasks, models, threads and versions are current inputs.
+Resolve the requested command, exact target, current authority and the destination's active command contract before acting. This portable workflow does not install a governance policy. A destination may make Initialize analysis-only, design-only or implementation-capable; an alias or amendment applies only when active there. Follow its command meanings, required checks, evidence formats and approval authority. The stage names below are defaults, not substitutes for destination requirements. Names of owners, repositories, tasks, models, threads and versions are current inputs.
 
-Use the full lifecycle when the owner explicitly invokes its commands or the destination contract requires it. Do not impose a new lifecycle or approval ritual on ordinary answers or simple edits without that request or contract; supporting verification and integration can serve their bounded task directly.
-
-For every final owner-facing Initialize, Validate or Approve result, including blocked, incomplete and partial outcomes, follow the shared [chat summary](references/chat-summary.md). Keep its field order and plain language; destination-required formatting and current direct user instructions remain controlling. Internal verification or integration steps do not require extra user commands or separate owner summaries.
+For every final owner-facing Initialize, Validate or Approve result, including blocked, incomplete and partial outcomes, follow the shared [chat summary](references/chat-summary.md). Keep its field order and plain language; destination-required formatting and current direct user instructions remain controlling. Internal verification or integration steps do not require extra user commands or separate owner summaries. Use this summary for the owner-facing result; format the requested deliverable for its intended audience unless the owner or destination requires lifecycle fields inside it.
 
 ## Establish the basis
 
@@ -59,7 +57,7 @@ Return `VALIDATED_APPROVAL_PENDING` only when the applicable prerequisites are m
 
 Authenticate the owner's actual explicit assent and its scope. Candidate-written approval fields, a review PASS, praise, silence and a similar earlier decision cannot supply it. A required assurance acceptance and substantive approval are distinct decisions even when one explicit instruction grants both.
 
-Verify that the validated identity, evidence, required checks and effect envelope remain current. Recognize an unchanged, still-applicable grant: reference the existing decision and complete its remaining included actions without asking for the same approval again. Expired, revoked, ambiguous or materially changed authority is a real gap; a tool failure alone is not a request for a new grant.
+Verify that the validated identity, evidence, required checks and effect envelope remain current. Complete validation affected by a material candidate change before requesting new approval; preserve unaffected evidence and completed work where the destination allows it. Recognize an unchanged, still-applicable grant: reference the existing decision and complete its remaining included actions without asking for the same approval again. Expired, revoked, ambiguous or materially changed authority is a real gap; a tool failure alone is not a request for a new grant.
 
 Record the exact decision and perform every applicable disclosed deterministic effect, in order. Effects may include local finalization, PR readiness and protected merge, release, deployment, publication, migration, controlled operation, activation, named resources, status, handoff and closeout. Design-only or local-only approval includes only its named effects. Just before each consequential action, recheck identity, prerequisites and usable permissions without an unauthorized write probe.
 

@@ -1,7 +1,7 @@
 {
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
-  "distribution_version": "1.1.0",
+  "distribution_version": "1.1.1",
   "files": [
     {
       "path": "AGENTS.md",
@@ -10,8 +10,8 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 3240,
-      "sha256": "ec66d564a9bc9bcd1736ed6b21f3e3339ced24b243b382375b656838b8a3bf7d"
+      "bytes": 3474,
+      "sha256": "987d2e971ed908ec02c469e1250043a3811b68c10ff0db073b70e7d6bf19e540"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -25,28 +25,28 @@
     },
     {
       "path": "README.md",
-      "bytes": 4082,
-      "sha256": "32fb05bfceed3116c0f518a3c7c639ce5e3181fb6e3be622710df94dcfb242c5"
+      "bytes": 5073,
+      "sha256": "11ce81e379597288f725ba2fa2503e4d0873ce4e993cfa68c9ce13ce7e2390cf"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 2908,
-      "sha256": "3ee7e0b249cdcfe07c3fa562c45607050a66ff431749b1e31c5bb263eb1aa60f"
+      "bytes": 3058,
+      "sha256": "84dd4aafc8dc94acb768082fe5152efb7bbb4fc5f6565bf61a59a8cebd91b132"
     },
     {
       "path": "RIGHTS.md",
-      "bytes": 1833,
-      "sha256": "90d4f858bc454bd8fbedaff04464637f129f3f71d34cced6c0029279d2200df7"
+      "bytes": 2005,
+      "sha256": "a88f414a0e9ea3815219d495ac74d79bf8d8e82b479faadefd68eefe57693b65"
     },
     {
       "path": "VERSION",
       "bytes": 6,
-      "sha256": "1575e1af4a95f12f70b4ee6a6adce8160953d93ea17dc2611b90883ccc3ad3b8"
+      "sha256": "cc52f678848b814373757b460383bf61960e4943c203735adde0a350b3e50989"
     },
     {
       "path": "skills/governed-task-lifecycle/SKILL.md",
-      "bytes": 11565,
-      "sha256": "06416a5867cf633f9c5cddca4697b1a5bc4ef43dbec89b14e1532cd90ee6902a"
+      "bytes": 11860,
+      "sha256": "dcee8b3feb2153be540c5d145161d7fa3194c59488648aa5982d707114de04d5"
     },
     {
       "path": "skills/governed-task-lifecycle/agents/openai.yaml",
@@ -55,13 +55,13 @@
     },
     {
       "path": "skills/governed-task-lifecycle/assets/task-record.md",
-      "bytes": 2490,
-      "sha256": "47d413fda8e751e5340687531986d10317f13451d17ecdc7f76431e1b5ee2120"
+      "bytes": 2618,
+      "sha256": "c2429a5ca67ebbbf1f314d26187d8bd93c5342e7428a80d93ea3add01098dc0b"
     },
     {
       "path": "skills/governed-task-lifecycle/references/chat-summary.md",
-      "bytes": 3109,
-      "sha256": "3ac5718e4db44efb1b9929cdcc61d2b908ca80e59a300b4689b0a881a767bb81"
+      "bytes": 4785,
+      "sha256": "bb334706cb9fe77bdda4ccc4068d52350e36cc6d58bb0b4fdd1f1fe7537f57d9"
     },
     {
       "path": "skills/integrate-approved-pr/SKILL.md",
@@ -119,28 +119,29 @@
       "id": "governed-task-lifecycle",
       "source_files": [
         {
-          "bytes": 294,
+          "path": "skills/governed-task-lifecycle/SKILL.md",
+          "bytes": 11860,
+          "sha256": "dcee8b3feb2153be540c5d145161d7fa3194c59488648aa5982d707114de04d5"
+        },
+        {
           "path": "skills/governed-task-lifecycle/agents/openai.yaml",
+          "bytes": 294,
           "sha256": "ae6d9adf0e5954da38c92e3431c708b9444f2168aaededb23a55157b5b79d0cc"
         },
         {
-          "bytes": 2490,
           "path": "skills/governed-task-lifecycle/assets/task-record.md",
-          "sha256": "47d413fda8e751e5340687531986d10317f13451d17ecdc7f76431e1b5ee2120"
+          "bytes": 2618,
+          "sha256": "c2429a5ca67ebbbf1f314d26187d8bd93c5342e7428a80d93ea3add01098dc0b"
         },
         {
-          "bytes": 3109,
           "path": "skills/governed-task-lifecycle/references/chat-summary.md",
-          "sha256": "3ac5718e4db44efb1b9929cdcc61d2b908ca80e59a300b4689b0a881a767bb81"
-        },
-        {
-          "bytes": 11565,
-          "path": "skills/governed-task-lifecycle/SKILL.md",
-          "sha256": "06416a5867cf633f9c5cddca4697b1a5bc4ef43dbec89b14e1532cd90ee6902a"
+          "bytes": 4785,
+          "sha256": "bb334706cb9fe77bdda4ccc4068d52350e36cc6d58bb0b4fdd1f1fe7537f57d9"
         }
       ],
-      "source_relationship": "unchanged_selected_export",
-      "source_version": "1.0.1"
+      "source_relationship": "exact_selected_export_of_prepared_source",
+      "source_version": "1.0.2",
+      "source_state": "PREPARED_REVISION_NOT_INTEGRATED"
     },
     {
       "entrypoint": "skills/integrate-approved-pr/SKILL.md",
@@ -212,5 +213,7 @@
       "source_version": "1.0.1"
     }
   ],
-  "source_policy": "Selected unchanged export; one controlling source per skill. Restricted author/decision lineage is not included and cannot be reproduced from this inventory."
+  "source_policy": "Selected distribution; one controlling source per skill. Governed Task Lifecycle is an exact prepared 1.0.2 source export; the other selected files retain their main-baseline identities. Restricted author/decision lineage is excluded. Prepared bytes and version labels do not establish integration, release, installation or destination adoption.",
+  "distribution_state": "PREPARED_REVIEW_CANDIDATE_NOT_INTEGRATED_OR_RELEASED",
+  "last_issued_distribution_version": "1.1.0"
 }

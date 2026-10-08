@@ -1,10 +1,10 @@
 # Skills Lab catalog
 
-Collection version: 1.1.0. [MIT licence](LICENSE). This catalog summarizes four unchanged selected skill declarations: three at source version 1.0.1 and Scope Pull at 1.0.0. The [inventory](inventory.json) binds their complete files to raw hashes; the skill bodies control their detailed meaning.
+Prepared collection version: 1.1.1; latest issued version: 1.1.0. [MIT licence](LICENSE). This catalog describes the exact prepared Governed Task Lifecycle 1.0.2 export, Verify Exact Candidate and Integrate Approved PR at 1.0.1, and Scope Pull at 1.0.0. The prepared revision is not integrated, released or installed. The [inventory](inventory.json) binds their complete files to raw hashes; the skill bodies control their detailed meaning.
 
 | Folder | Use if | Boundary | Complete entry point |
 | --- | --- | --- | --- |
-| governed-task-lifecycle | The owner invokes Initialize/Initiate, Validate or Approve, or the destination requires that contract. | Do not impose a lifecycle on ordinary work. Initialize builds; author checks do not finish Validate; approval covers only its named effects. | [SKILL.md](skills/governed-task-lifecycle/SKILL.md) |
+| governed-task-lifecycle | The owner invokes Initialize/Initiate, Validate or Approve, or the destination requires that contract. | Do not impose a lifecycle on ordinary work. Initialize produces the authorized analysis, design or implementation under the active destination contract; author checks do not finish Validate; approval covers only its named effects. | [SKILL.md](skills/governed-task-lifecycle/SKILL.md) |
 | verify-exact-candidate | Exact identity, custody or evidence must be checked against a pinned candidate or baseline. | Byte identity is not semantic acceptance, live capability, owner approval or integration authority. | [SKILL.md](skills/verify-exact-candidate/SKILL.md) |
 | integrate-approved-pr | Integration prerequisites need inspection, or exact approved readiness/merge effects need completion. | A review pass or design approval supplies no merge authority. Changes and unknown outcomes require reconciliation. | [SKILL.md](skills/integrate-approved-pr/SKILL.md) |
 | scope-pull | Project scope, delivery against commitments, scope changes or proposed expansion needs reconciliation, including non-software work. | Reconciliation does not approve, dispatch, implement or establish acceptance. Missing evidence is not evidence of noncompletion. | [SKILL.md](skills/scope-pull/SKILL.md) |
