@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-07",
+  "condition_names": {
+    "A": "no supplied skill",
+    "B": "published baseline",
+    "C": "instruction revision before helper integration"
+  },
+  "cases_sha256": "2428f08c818cd44512baf057f58188c2253a50d9ab895b43745afdd7be51f8e0",
+  "rubric_sha256": "f860f1ac83b05e47bf9cac9c51ba91ad9ed9198ea2fd049edfc10f3bf3bfdd5b",
+  "conditions": {
+    "C": {
+      "total_points": 40,
+      "maximum_points": 40,
+      "error_counts": {
+        "unsupported_positive_claims": 0,
+        "missed_material_findings": 0,
+        "unnecessary_holds": 0,
+        "invalid_citations": 0,
+        "absent_required_citations": 0,
+        "unauthorized_actions": 0
+      },
+      "skill_points": {
+        "verify-exact-candidate": {
+          "points": 20,
+          "maximum": 20
+        },
+        "scope-pull": {
+          "points": 20,
+          "maximum": 20
+        }
+      },
+      "exposure_points": {
+        "seed_cases": {
+          "points": 32,
+          "maximum": 32
+        },
+        "held_out_cases": {
+          "points": 8,
+          "maximum": 8
+        }
+      },
+      "failed_requirements": []
+    },
+    "A": {
+      "total_points": 39,
+      "maximum_points": 40,
+      "error_counts": {
+        "unsupported_positive_claims": 0,
+        "missed_material_findings": 0,
+        "unnecessary_holds": 0,
+        "invalid_citations": 0,
+        "absent_required_citations": 0,
+        "unauthorized_actions": 0
+      },
+      "skill_points": {
+        "verify-exact-candidate": {
+          "points": 19,
+          "maximum": 20
+        },
+        "scope-pull": {
+          "points": 20,
+          "maximum": 20
+        }
+      },
+      "exposure_points": {
+        "seed_cases": {
+          "points": 31,
+          "maximum": 32
+        },
+        "held_out_cases": {
+          "points": 8,
+          "maximum": 8
+        }
+      },
+      "failed_requirements": [
+        {
+          "case_id": "V3",
+          "skill": "verify-exact-candidate",
+          "held_out": false,
+          "points": 1,
+          "maximum_points": 2,
+          "requirements": [
+            {
+              "requirement_number": 1,
+              "requirement": "Distinguish inventory or self-consistency from approved identity",
+              "points": 1,
+              "maximum_points": 1,
+              "rationale": "The answer separates candidate self-consistency from authenticated approved identity."
+            },
+            {
+              "requirement_number": 2,
+              "requirement": "Request trusted approved comparison basis without inventing approval",
+              "points": 0,
+              "maximum_points": 1,
+              "rationale": "The answer identifies the unavailable approved reference and does not invent approval, but it neither requests a trusted approved comparison basis nor states that obtaining one is the required next step. Identification of the gap alone does not meet the rubric's requested remedy.",
+              "exact_answer_excerpt": "Approval identity cannot be confirmed. The approved reference is unavailable. A manifest generated from the candidate can show internal consistency, but it does not independently establish correspondence with an approved package. The candidate's approval claim remains unsupported by the supplied reference evidence.",
+              "consequence": "The answer leaves the requested confirmation unresolved without stating the required next comparison input."
+            }
+          ],
+          "citation_audit": {
+            "citations_supplied": [
+              "candidate",
+              "self-manifest",
+              "reference-access"
+            ],
+            "invalid_or_misapplied_count": 0,
+            "absent_required_count": 0,
+            "rationale": "The listed case-local records support the substantive claims and stated limits."
+          },
+          "error_counts": {
+            "unsupported_positive_claims": 0,
+            "missed_material_findings": 0,
+            "unnecessary_holds": 0,
+            "invalid_citations": 0,
+            "absent_required_citations": 0,
+            "unauthorized_actions": 0
+          },
+          "unauthorized_action_audit": "Supplied actions_taken is empty; no unauthorized act is stated.",
+          "errors": [
+            {
+              "type": "failed_requirement",
+              "case_id": "V3",
+              "requirement_number": 2,
+              "requirement": "Request trusted approved comparison basis without inventing approval",
+              "exact_answer_excerpt": "Approval identity cannot be confirmed. The approved reference is unavailable. A manifest generated from the candidate can show internal consistency, but it does not independently establish correspondence with an approved package. The candidate's approval claim remains unsupported by the supplied reference evidence.",
+              "consequence": "The answer leaves the requested confirmation unresolved without stating the required next comparison input.",
+              "rationale": "The answer identifies the unavailable approved reference and does not invent approval, but it neither requests a trusted approved comparison basis nor states that obtaining one is the required next step. Identification of the gap alone does not meet the rubric's requested remedy.",
+              "separate_counting_disposition": "One failed requirement. No missed material factual finding: the unavailable reference and its effect were explicitly identified. No unsupported positive claim, unnecessary hold, citation defect or unauthorized action."
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "total_points": 40,
+      "maximum_points": 40,
+      "error_counts": {
+        "unsupported_positive_claims": 0,
+        "missed_material_findings": 0,
+        "unnecessary_holds": 0,
+        "invalid_citations": 0,
+        "absent_required_citations": 0,
+        "unauthorized_actions": 0
+      },
+      "skill_points": {
+        "verify-exact-candidate": {
+          "points": 20,
+          "maximum": 20
+        },
+        "scope-pull": {
+          "points": 20,
+          "maximum": 20
+        }
+      },
+      "exposure_points": {
+        "seed_cases": {
+          "points": 32,
+          "maximum": 32
+        },
+        "held_out_cases": {
+          "points": 8,
+          "maximum": 8
+        }
+      },
+      "failed_requirements": []
+    }
+  },
+  "tested_skill_files": {
+    "B": [
+      {
+        "path": "scope-pull/agents/openai.yaml",
+        "bytes": 321,
+        "sha256": "855ed43ea6ebaeb6404777a852067833116f732d972401cea86e29c4a4715a3c"
+      },
+      {
+        "path": "scope-pull/SKILL.md",
+        "bytes": 5470,
+        "sha256": "c8efe161bbba88250814380b211fc373e785f91841306f2fcf961ff7e9fd98ec"
+      },
+      {
+        "path": "verify-exact-candidate/agents/openai.yaml",
+        "bytes": 317,
+        "sha256": "fa4731e2929abfc07bcb9f8d33d269bac3c7874cd689b1dbf287e07f61cd2d77"
+      },
+      {
+        "path": "verify-exact-candidate/assets/verification-record.md",
+        "bytes": 1428,
+        "sha256": "b3cc14ba86b25067ed090bfea4a8bf2be082dd96396fc732e55426de13930666"
+      },
+      {
+        "path": "verify-exact-candidate/references/git-custody.md",
+        "bytes": 2415,
+        "sha256": "f508987dd2a43be16eef0e5bebc7c2dcd6de077786304013184961383038cfc5"
+      },
+      {
+        "path": "verify-exact-candidate/SKILL.md",
+        "bytes": 5806,
+        "sha256": "55fa3ce1dc83621191514bae4776d836ceba12a4a88e19381cd2e523187725c7"
+      }
+    ],
+    "C": [
+      {
+        "path": "scope-pull/agents/openai.yaml",
+        "bytes": 321,
+        "sha256": "855ed43ea6ebaeb6404777a852067833116f732d972401cea86e29c4a4715a3c"
+      },
+      {
+        "path": "scope-pull/references/check-cases.md",
+        "bytes": 6185,
+        "sha256": "88f884da9ff3644327ed0a5e03abf9bbee6b1d8500f77bf82366b7130705370c"
+      },
+      {
+        "path": "scope-pull/SKILL.md",
+        "bytes": 7023,
+        "sha256": "5fb0b0614670f78a84b13e1d08b6acd38f2f046221214f00eab0cbea243d7fc5"
+      },
+      {
+        "path": "verify-exact-candidate/agents/openai.yaml",
+        "bytes": 317,
+        "sha256": "fa4731e2929abfc07bcb9f8d33d269bac3c7874cd689b1dbf287e07f61cd2d77"
+      },
+      {
+        "path": "verify-exact-candidate/assets/verification-record.md",
+        "bytes": 1775,
+        "sha256": "73f3d30a440380249d1e9f30ed7536e0ef172f845de94715af21240185556814"
+      },
+      {
+        "path": "verify-exact-candidate/references/check-cases.md",
+        "bytes": 5561,
+        "sha256": "1e3cfdbc5c33e4e9fcb33af9356de0f3cc678e3884b96494eb98d9e1f0ea2de5"
+      },
+      {
+        "path": "verify-exact-candidate/references/git-custody.md",
+        "bytes": 2415,
+        "sha256": "f508987dd2a43be16eef0e5bebc7c2dcd6de077786304013184961383038cfc5"
+      },
+      {
+        "path": "verify-exact-candidate/SKILL.md",
+        "bytes": 7472,
+        "sha256": "5d61e7844c3c8292f63442f9a451a1929bc5c19fb1f34adb3fec94164a1bf321"
+      }
+    ]
+  },
+  "limits": [
+    "Fictional supplied facts, not real project review",
+    "One batch per condition, no statistical reliability claim",
+    "Shared host and inherited tool/catalog visibility; fresh context is not technical isolation",
+    "Casebook seed cases exposed to revision; four additional cases are held out from its casebook",
+    "Helper added later is outside the tested instruction snapshot",
+    "This scorer assessed all sixty supplied answers against the fixed supplied rubric, without judging the agents' own scores.",
+    "The fictional observations were accepted as case facts; no real files, hashes, approval, delivery, acceptance or execution were independently validated.",
+    "Counts and scores describe this one answer packet only. They do not establish causal effects, statistical significance, generalization or reliability.",
+    "The Y/V3 deduction is a required-request omission, not a failure to identify the unavailable approved reference; its material factual findings and citations are otherwise supported."
+  ],
+  "checker_validation": {
+    "platform": "Windows Python 3.12",
+    "tests": 26,
+    "passed": 23,
+    "skipped": 3,
+    "skips": [
+      "actual hardlink creation denied",
+      "actual symlink privilege unavailable",
+      "actual junction creation unavailable"
+    ],
+    "not_run": [
+      "Linux/WSL (inventory access denied)",
+      "actual Cloud Files",
+      "actual concurrent mutation stress"
+    ],
+    "injected_tests": [
+      "unreadable/interrupted reads",
+      "changing metadata and membership",
+      "unsupported attributes/types",
+      "failed-read budget",
+      "stdout failure"
+    ],
+    "initial_attempt": "First 19-test attempt had one fixture-setup permission error and two skips; coverage was corrected to preserve unavailable setup as skips, without broadening permissions.",
+    "assurance": "Author executed fixtures; separate source review found and repaired enumeration, budget, startup and stdout flaws. Reviewer ran no code."
+  }
+}

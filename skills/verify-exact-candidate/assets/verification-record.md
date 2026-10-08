@@ -10,9 +10,12 @@ Use this optional record inside the destination's existing format. Retain only f
 **Checks actually run:** {{command/query, checked identity, exit and embedded result, limitations}}  
 **Unrun / unavailable checks:** {{exact gap and consequence}}
 
-| Criterion and source | Fact / inference / gap | Consequence | Disposition and evidence |
+| Requested property / criterion | Exact source or observation | Fact / inference / gap | Result and consequence |
 | --- | --- | --- | --- |
-| {{material requirement}} | {{bounded observation}} | {{effect on the requested claim}} | {{verified, mismatch or inconclusive; exact reference}} |
+| {{material requirement}} | {{candidate/reference and evidence}} | {{bounded observation}} | {{destination vocabulary or verified, mismatch, inconclusive; effect on claim}} |
+
+**Outside coverage:** {{unrequested properties; "not assessed" is coverage, not a successful result}}
+Keep mixed results separate. Missing evidence for a requested material property is inconclusive, not outside coverage. Irrelevant unassessed properties need not block the requested comparison.
 
 **Changes / affected rechecks:** {{final exact identity, preserved prior attempts and unaffected evidence}}  
 **Actual assurance:** {{authorship/context/access separation; no unsupported isolation or model claim}}  
