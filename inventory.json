@@ -20,8 +20,8 @@
     },
     {
       "path": "EVALUATING.md",
-      "bytes": 3386,
-      "sha256": "8fbc814415227a2d2a8cfe2e0938824dc5c849e5c2585e9627898c5fbe744870"
+      "bytes": 3700,
+      "sha256": "0eb6be281e18d27958ed13ebdbd8a24c73f34a3f5e31de672fb2eecdf1a18069"
     },
     {
       "path": "evaluations/2026-10-07/answers.json",
@@ -292,5 +292,42 @@
       "source_version": "1.2.0"
     }
   ],
-  "source_policy": "Selected exact exports of their named source versions; one controlling source per skill. Restricted author/decision lineage is not included and cannot be reproduced from this inventory. Versions and file identity do not establish integration, release, installed state or behavioral performance."
+  "source_policy": "Selected exact exports of their named source versions; one controlling source per skill. Restricted author/decision lineage is not included and cannot be reproduced from this inventory. Versions and file identity do not establish integration, release, installed state or behavioral performance.",
+  "maintenance_snapshot": {
+    "client_date": "2026-10-08",
+    "captured_utc": "2026-10-08 04:43:23 UTC",
+    "state": "DRAFT_CANDIDATE_RECORD_UPKEEP_NOT_RELEASED",
+    "observed_public_branch_basis": "7ca5cc0ad913d600990f08e63662ffc665cb8eda",
+    "observed_public_main": "9f3ac78f1a091fee177a2dcbce3038d8b8a03c73",
+    "last_observed_release": {
+      "tag": "v1.1.0",
+      "target": "9f3ac78f1a091fee177a2dcbce3038d8b8a03c73"
+    },
+    "source_alignment": "All four selected resource sets have matching source/distribution Git blobs and 100644 modes at the captured bases; restricted controller locators and records are withheld.",
+    "evaluation_record": "evaluations/2026-10-07/README.md",
+    "paired_evidence": [
+      {
+        "path": "cases.json",
+        "bytes": 13409,
+        "sha256": "2428f08c818cd44512baf057f58188c2253a50d9ab895b43745afdd7be51f8e0"
+      },
+      {
+        "path": "rubric.json",
+        "bytes": 3372,
+        "sha256": "f860f1ac83b05e47bf9cac9c51ba91ad9ed9198ea2fd049edfc10f3bf3bfdd5b"
+      },
+      {
+        "path": "answers.json",
+        "bytes": 33587,
+        "sha256": "68ef268033e4a3435c9dbaf351770a08046d2228d8a428ac794b7bc96ed35548"
+      },
+      {
+        "path": "results.json",
+        "bytes": 11333,
+        "sha256": "72d67ea53db1e3481bbfcfdf4d919c29d7e6132e00c7b7d94718d5602883cff0"
+      }
+    ],
+    "behavioral_improvement_established": false,
+    "record_limits": "This snapshot predates its containing upkeep commit. It is not current approval, integration, installed state or qualification. Final delivery identities are recorded outside this inventory."
+  }
 }
