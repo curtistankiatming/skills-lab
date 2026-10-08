@@ -1,6 +1,6 @@
 # Skills Lab catalog
 
-Prepared collection version: 1.1.1; latest issued version: 1.1.0. [MIT licence](LICENSE). This catalog describes the exact prepared Governed Task Lifecycle 1.0.2 export, Verify Exact Candidate and Integrate Approved PR at 1.0.1, and Scope Pull at 1.0.0. The prepared revision is not integrated, released or installed. The [inventory](inventory.json) binds their complete files to raw hashes; the skill bodies control their detailed meaning.
+Preparation snapshot, 2026-10-08: collection 1.3.0; last observed issued version 1.1.0. [MIT licence](LICENSE). This reconciled selection contains Governed Task Lifecycle 1.0.2, Verify Exact Candidate 1.2.0, Scope Pull 1.1.0 and unchanged Integrate Approved PR 1.0.1. At preparation it was awaiting integration; later integration and releases must be checked in actual GitHub PR/tag records. The [inventory](inventory.json) binds the complete files to raw hashes; the skill bodies control their detailed meaning.
 
 | Folder | Use if | Boundary | Complete entry point |
 | --- | --- | --- | --- |
@@ -23,8 +23,10 @@ These examples are invocation patterns, not task authorizations. For an agent wi
 ## Included resources
 
 - Lifecycle: [chat-summary reference](skills/governed-task-lifecycle/references/chat-summary.md), [optional task record](skills/governed-task-lifecycle/assets/task-record.md), and agent metadata.
-- Verification: [Git custody reference](skills/verify-exact-candidate/references/git-custody.md), [optional verification record](skills/verify-exact-candidate/assets/verification-record.md), and agent metadata.
+- Verification: [Git custody reference](skills/verify-exact-candidate/references/git-custody.md), [optional verification record](skills/verify-exact-candidate/assets/verification-record.md), [fictional examples and evaluation cases](skills/verify-exact-candidate/references/check-cases.md), and agent metadata.
 - Integration: [optional integration receipt](skills/integrate-approved-pr/assets/integration-receipt.md) and agent metadata.
-- Scope Pull: the self-contained [workflow](skills/scope-pull/SKILL.md) and [agent metadata](skills/scope-pull/agents/openai.yaml); no other resource or executable dependency is bundled.
+- Scope Pull: [workflow](skills/scope-pull/SKILL.md), [fictional examples and evaluation cases](skills/scope-pull/references/check-cases.md), and [agent metadata](skills/scope-pull/agents/openai.yaml).
 
 The metadata permits implicit invocation; actual discovery remains host-dependent. Resource completeness and source identity do not prove the agent will enforce a workflow.
+
+The [optional maintainer evaluation guide](EVALUATING.md) distinguishes case specifications, structural checks and observed behavior. The [optional local checker](skills/verify-exact-candidate/references/local-checker.md) and [bounded executed comparison](evaluations/2026-10-07/README.md) have separate authority and coverage limits. The published and revised instructions tied; no behavioral gain is claimed.

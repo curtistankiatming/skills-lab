@@ -1,7 +1,7 @@
 {
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
-  "distribution_version": "1.1.1",
+  "distribution_version": "1.3.0",
   "files": [
     {
       "path": "AGENTS.md",
@@ -10,13 +10,18 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 3474,
-      "sha256": "987d2e971ed908ec02c469e1250043a3811b68c10ff0db073b70e7d6bf19e540"
+      "bytes": 4073,
+      "sha256": "8e39981b8918a58df112c53066c05a087794c49b6f273ecf021b4a8d306c88af"
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 2997,
-      "sha256": "b7f2954d73d456ab22b6e3375b63d405fdb3d546d1c17df8304b0769606b8e9e"
+      "bytes": 3297,
+      "sha256": "0f67bc53e3d16e17e2435b79cfe1d9d6ef8fabdcfca780716efc5fecbb76a661"
+    },
+    {
+      "path": "EVALUATING.md",
+      "bytes": 3700,
+      "sha256": "0eb6be281e18d27958ed13ebdbd8a24c73f34a3f5e31de672fb2eecdf1a18069"
     },
     {
       "path": "LICENSE",
@@ -25,23 +30,48 @@
     },
     {
       "path": "README.md",
-      "bytes": 5073,
-      "sha256": "11ce81e379597288f725ba2fa2503e4d0873ce4e993cfa68c9ce13ce7e2390cf"
+      "bytes": 5799,
+      "sha256": "92e9ee13baefb2f9a8231e9cb787fab20082545c01081a48faf42ccf03dded62"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 3058,
-      "sha256": "84dd4aafc8dc94acb768082fe5152efb7bbb4fc5f6565bf61a59a8cebd91b132"
+      "bytes": 3106,
+      "sha256": "f8ab505d26043a56ff9e52cabd7eca8dffcb03931aa71dd940f47d3ac6bbc72d"
     },
     {
       "path": "RIGHTS.md",
-      "bytes": 2005,
-      "sha256": "a88f414a0e9ea3815219d495ac74d79bf8d8e82b479faadefd68eefe57693b65"
+      "bytes": 2229,
+      "sha256": "f8a203cc8dd5111183490ea98d2f3c3314c070f5ecf1e3b44cfd02f9e5f5d681"
     },
     {
       "path": "VERSION",
       "bytes": 6,
-      "sha256": "cc52f678848b814373757b460383bf61960e4943c203735adde0a350b3e50989"
+      "sha256": "64d23f858ef51b0f996e4966d4e27c0371b437e2d2787890b1f7ad22d4ec5663"
+    },
+    {
+      "path": "evaluations/2026-10-07/README.md",
+      "bytes": 3588,
+      "sha256": "0184ee46ef3f37da0d491c54043434e1ab5bd78119303abbdd1546b67ec7d446"
+    },
+    {
+      "path": "evaluations/2026-10-07/answers.json",
+      "bytes": 33587,
+      "sha256": "68ef268033e4a3435c9dbaf351770a08046d2228d8a428ac794b7bc96ed35548"
+    },
+    {
+      "path": "evaluations/2026-10-07/cases.json",
+      "bytes": 13409,
+      "sha256": "2428f08c818cd44512baf057f58188c2253a50d9ab895b43745afdd7be51f8e0"
+    },
+    {
+      "path": "evaluations/2026-10-07/results.json",
+      "bytes": 11333,
+      "sha256": "72d67ea53db1e3481bbfcfdf4d919c29d7e6132e00c7b7d94718d5602883cff0"
+    },
+    {
+      "path": "evaluations/2026-10-07/rubric.json",
+      "bytes": 3372,
+      "sha256": "f860f1ac83b05e47bf9cac9c51ba91ad9ed9198ea2fd049edfc10f3bf3bfdd5b"
     },
     {
       "path": "skills/governed-task-lifecycle/SKILL.md",
@@ -80,8 +110,8 @@
     },
     {
       "path": "skills/scope-pull/SKILL.md",
-      "bytes": 5470,
-      "sha256": "c8efe161bbba88250814380b211fc373e785f91841306f2fcf961ff7e9fd98ec"
+      "bytes": 7023,
+      "sha256": "5fb0b0614670f78a84b13e1d08b6acd38f2f046221214f00eab0cbea243d7fc5"
     },
     {
       "path": "skills/scope-pull/agents/openai.yaml",
@@ -89,9 +119,14 @@
       "sha256": "855ed43ea6ebaeb6404777a852067833116f732d972401cea86e29c4a4715a3c"
     },
     {
+      "path": "skills/scope-pull/references/check-cases.md",
+      "bytes": 6185,
+      "sha256": "88f884da9ff3644327ed0a5e03abf9bbee6b1d8500f77bf82366b7130705370c"
+    },
+    {
       "path": "skills/verify-exact-candidate/SKILL.md",
-      "bytes": 5806,
-      "sha256": "55fa3ce1dc83621191514bae4776d836ceba12a4a88e19381cd2e523187725c7"
+      "bytes": 7850,
+      "sha256": "54d8b9f544164d711888082dd4495296f86eaa7d9ce82ba1118d436b2279d0ee"
     },
     {
       "path": "skills/verify-exact-candidate/agents/openai.yaml",
@@ -100,13 +135,33 @@
     },
     {
       "path": "skills/verify-exact-candidate/assets/verification-record.md",
-      "bytes": 1428,
-      "sha256": "b3cc14ba86b25067ed090bfea4a8bf2be082dd96396fc732e55426de13930666"
+      "bytes": 1775,
+      "sha256": "73f3d30a440380249d1e9f30ed7536e0ef172f845de94715af21240185556814"
+    },
+    {
+      "path": "skills/verify-exact-candidate/references/check-cases.md",
+      "bytes": 5561,
+      "sha256": "1e3cfdbc5c33e4e9fcb33af9356de0f3cc678e3884b96494eb98d9e1f0ea2de5"
     },
     {
       "path": "skills/verify-exact-candidate/references/git-custody.md",
       "bytes": 2415,
       "sha256": "f508987dd2a43be16eef0e5bebc7c2dcd6de077786304013184961383038cfc5"
+    },
+    {
+      "path": "skills/verify-exact-candidate/references/local-checker.md",
+      "bytes": 6874,
+      "sha256": "0aec770f26d691924338ec35607fcf6cc6d6f64bf71f804468df4043b4e09437"
+    },
+    {
+      "path": "skills/verify-exact-candidate/scripts/test_verify_files.py",
+      "bytes": 14104,
+      "sha256": "d7f6d3a10d5475418d2adcc762a24b191fcb40f1bd3716c386898af37c017840"
+    },
+    {
+      "path": "skills/verify-exact-candidate/scripts/verify_files.py",
+      "bytes": 22362,
+      "sha256": "90a1ef2a6ce35bb6273706be37d4dcff1cfa94c10bffc1b3f9497309797987cf"
     }
   ],
   "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
@@ -141,26 +196,26 @@
       ],
       "source_relationship": "exact_selected_export_of_prepared_source",
       "source_version": "1.0.2",
-      "source_state": "PREPARED_REVISION_NOT_INTEGRATED"
+      "source_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
     },
     {
       "entrypoint": "skills/integrate-approved-pr/SKILL.md",
       "id": "integrate-approved-pr",
       "source_files": [
         {
-          "bytes": 324,
+          "path": "skills/integrate-approved-pr/SKILL.md",
+          "bytes": 7849,
+          "sha256": "b652ac45c5dd157661762f08a44917472570616bf0d58b7df7993e362dc6903f"
+        },
+        {
           "path": "skills/integrate-approved-pr/agents/openai.yaml",
+          "bytes": 324,
           "sha256": "a40e352e86718a071bbf004dd77d4c8fa291861b29ca4d6e42a99214b0a924c2"
         },
         {
-          "bytes": 1885,
           "path": "skills/integrate-approved-pr/assets/integration-receipt.md",
+          "bytes": 1885,
           "sha256": "9da07642a72004ef90bc58a9d8ca4040abc98fa68c3bf652409739a531ae1eb4"
-        },
-        {
-          "bytes": 7849,
-          "path": "skills/integrate-approved-pr/SKILL.md",
-          "sha256": "b652ac45c5dd157661762f08a44917472570616bf0d58b7df7993e362dc6903f"
         }
       ],
       "source_relationship": "unchanged_selected_export",
@@ -169,51 +224,131 @@
     {
       "id": "scope-pull",
       "entrypoint": "skills/scope-pull/SKILL.md",
-      "source_version": "1.0.0",
-      "source_relationship": "unchanged_selected_export",
+      "source_version": "1.1.0",
+      "source_relationship": "exact_selected_export_of_prepared_source",
       "source_files": [
         {
           "path": "skills/scope-pull/SKILL.md",
-          "bytes": 5470,
-          "sha256": "c8efe161bbba88250814380b211fc373e785f91841306f2fcf961ff7e9fd98ec"
+          "bytes": 7023,
+          "sha256": "5fb0b0614670f78a84b13e1d08b6acd38f2f046221214f00eab0cbea243d7fc5"
         },
         {
           "path": "skills/scope-pull/agents/openai.yaml",
           "bytes": 321,
           "sha256": "855ed43ea6ebaeb6404777a852067833116f732d972401cea86e29c4a4715a3c"
+        },
+        {
+          "path": "skills/scope-pull/references/check-cases.md",
+          "bytes": 6185,
+          "sha256": "88f884da9ff3644327ed0a5e03abf9bbee6b1d8500f77bf82366b7130705370c"
         }
-      ]
+      ],
+      "source_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
     },
     {
       "entrypoint": "skills/verify-exact-candidate/SKILL.md",
       "id": "verify-exact-candidate",
       "source_files": [
         {
-          "bytes": 317,
+          "path": "skills/verify-exact-candidate/SKILL.md",
+          "bytes": 7850,
+          "sha256": "54d8b9f544164d711888082dd4495296f86eaa7d9ce82ba1118d436b2279d0ee"
+        },
+        {
           "path": "skills/verify-exact-candidate/agents/openai.yaml",
+          "bytes": 317,
           "sha256": "fa4731e2929abfc07bcb9f8d33d269bac3c7874cd689b1dbf287e07f61cd2d77"
         },
         {
-          "bytes": 1428,
           "path": "skills/verify-exact-candidate/assets/verification-record.md",
-          "sha256": "b3cc14ba86b25067ed090bfea4a8bf2be082dd96396fc732e55426de13930666"
+          "bytes": 1775,
+          "sha256": "73f3d30a440380249d1e9f30ed7536e0ef172f845de94715af21240185556814"
         },
         {
-          "bytes": 2415,
+          "path": "skills/verify-exact-candidate/references/check-cases.md",
+          "bytes": 5561,
+          "sha256": "1e3cfdbc5c33e4e9fcb33af9356de0f3cc678e3884b96494eb98d9e1f0ea2de5"
+        },
+        {
           "path": "skills/verify-exact-candidate/references/git-custody.md",
+          "bytes": 2415,
           "sha256": "f508987dd2a43be16eef0e5bebc7c2dcd6de077786304013184961383038cfc5"
         },
         {
-          "bytes": 5806,
-          "path": "skills/verify-exact-candidate/SKILL.md",
-          "sha256": "55fa3ce1dc83621191514bae4776d836ceba12a4a88e19381cd2e523187725c7"
+          "path": "skills/verify-exact-candidate/references/local-checker.md",
+          "bytes": 6874,
+          "sha256": "0aec770f26d691924338ec35607fcf6cc6d6f64bf71f804468df4043b4e09437"
+        },
+        {
+          "path": "skills/verify-exact-candidate/scripts/test_verify_files.py",
+          "bytes": 14104,
+          "sha256": "d7f6d3a10d5475418d2adcc762a24b191fcb40f1bd3716c386898af37c017840"
+        },
+        {
+          "path": "skills/verify-exact-candidate/scripts/verify_files.py",
+          "bytes": 22362,
+          "sha256": "90a1ef2a6ce35bb6273706be37d4dcff1cfa94c10bffc1b3f9497309797987cf"
         }
       ],
-      "source_relationship": "unchanged_selected_export",
-      "source_version": "1.0.1"
+      "source_relationship": "exact_selected_export_of_prepared_source",
+      "source_version": "1.2.0",
+      "source_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
     }
   ],
-  "source_policy": "Selected distribution; one controlling source per skill. Governed Task Lifecycle is an exact prepared 1.0.2 source export; the other selected files retain their main-baseline identities. Restricted author/decision lineage is excluded. Prepared bytes and version labels do not establish integration, release, installation or destination adoption.",
-  "distribution_state": "PREPARED_REVIEW_CANDIDATE_NOT_INTEGRATED_OR_RELEASED",
-  "last_issued_distribution_version": "1.1.0"
+  "source_policy": "Selected exact exports of their named prepared source versions; one controlling source per skill. Restricted decision lineage is not included. Prepared files and version labels do not establish integration, release, installation, destination adoption or behavioral effectiveness.",
+  "distribution_state": "RECONCILED_PREPARED_REVIEW_CANDIDATE_NOT_INTEGRATED_OR_RELEASED",
+  "last_issued_distribution_version": "1.1.0",
+  "record_semantics": "Evaluated candidate-preparation snapshot dated 2026-10-08. Prepared/not-integrated and last-issued fields describe that observation; they do not override later verified integration, release or installed state. Resolve later actions from actual GitHub PR/tag receipts.",
+  "maintenance_snapshot_history": [
+    {
+      "client_date": "2026-10-08",
+      "captured_utc": "2026-10-08 04:43:23 UTC",
+      "state": "DRAFT_CANDIDATE_RECORD_UPKEEP_NOT_RELEASED",
+      "observed_public_branch_basis": "7ca5cc0ad913d600990f08e63662ffc665cb8eda",
+      "observed_public_main": "9f3ac78f1a091fee177a2dcbce3038d8b8a03c73",
+      "last_observed_release": {
+        "tag": "v1.1.0",
+        "target": "9f3ac78f1a091fee177a2dcbce3038d8b8a03c73"
+      },
+      "source_alignment": "All four selected resource sets have matching source/distribution Git blobs and 100644 modes at the captured bases; restricted controller locators and records are withheld.",
+      "evaluation_record": "evaluations/2026-10-07/README.md",
+      "paired_evidence": [
+        {
+          "path": "cases.json",
+          "bytes": 13409,
+          "sha256": "2428f08c818cd44512baf057f58188c2253a50d9ab895b43745afdd7be51f8e0"
+        },
+        {
+          "path": "rubric.json",
+          "bytes": 3372,
+          "sha256": "f860f1ac83b05e47bf9cac9c51ba91ad9ed9198ea2fd049edfc10f3bf3bfdd5b"
+        },
+        {
+          "path": "answers.json",
+          "bytes": 33587,
+          "sha256": "68ef268033e4a3435c9dbaf351770a08046d2228d8a428ac794b7bc96ed35548"
+        },
+        {
+          "path": "results.json",
+          "bytes": 11333,
+          "sha256": "72d67ea53db1e3481bbfcfdf4d919c29d7e6132e00c7b7d94718d5602883cff0"
+        }
+      ],
+      "behavioral_improvement_established": false,
+      "record_limits": "This snapshot predates its containing upkeep commit. It is not current approval, integration, installed state or qualification. Final delivery identities are recorded outside this inventory."
+    }
+  ],
+  "reconciliation": {
+    "date": "2026-10-08",
+    "state": "PREPARED_DRAFT_REVIEW_CANDIDATE",
+    "public_input_heads": [
+      "0e183ba54421c1046f8d7a40eaa5b2bde8aea77c",
+      "535336f10b4c4aab55eca4322d5f09f9272f4ebe"
+    ],
+    "public_base": "9f3ac78f1a091fee177a2dcbce3038d8b8a03c73",
+    "branch": "codex/improve-governed-task-lifecycle",
+    "source_alignment": "All four complete selected resource sets match their controlling prepared source bytes and modes. Restricted source locators are withheld.",
+    "evaluation_scope": "evaluations/2026-10-07 covers the historical fictional Verify/Scope comparison. No Lifecycle behavioral comparison is included here; no gain is established.",
+    "history": "Earlier metadata snapshots retain their evaluated revision meaning. Current files/skills inventories bind the reconciled selection; final remote delivery identities are recorded externally."
+  }
 }
