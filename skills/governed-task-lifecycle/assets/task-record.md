@@ -4,7 +4,7 @@ Adapt this optional template to the destination's existing record. Remove fields
 
 **Command / profile:** {{command and target profile}}  
 **Target / destination:** {{task ID, repository or system, literal scope}}  
-**Exact basis:** {{evaluated revision/digest; base/head/PR/object version where relevant}}  
+**Exact basis:** {{label the evaluated source revision/version and any required raw file digest by kind; base/head/PR/object version where relevant; evidence-storage revision separately}}  
 **Governing sources / current grant:** {{references and authenticated instruction}}  
 **Writer / consumers:** {{ownership and required handoff}}  
 **Prepared or changed:** {{bounded candidate and evidence links}}  

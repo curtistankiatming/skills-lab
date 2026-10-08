@@ -11,7 +11,7 @@ Done:
 Now:
 - [ ] <actual stage and included unfinished work; reason for any hold>.
 Next:
-- [ ] <action under existing authority or smallest actual prerequisite>.
+- [ ] <plain-language next action or prerequisite; put an exact user-command prompt only in Your decision>.
 Checks / limits: <meaningful checks actually run; material gaps, reduced assurance, exclusions and non-claims>.
 Upcoming: <separate proposed scope, not started; or None>.
 Evidence: <exact candidate/PR and supporting record links when available>.
@@ -31,3 +31,18 @@ For Approve, label Done / Now as its In Scope Checklist and list each included o
 Explain actual stage and holds; separate approval, integration and operational results where material. Keep logs/hashes behind evidence links, but supply the full digest or command needed for exact acceptance or approval. Never abbreviate that subject or hide a blocker.
 
 Next states the permitted action or blocker; place any needed exact user-command prompt once in the final Your decision line. If blocked, request only the smallest real prerequisite. Do not re-ask unchanged approval or require user commands for authorized internal work. Upcoming is proposed/not started, not permission or an automatic priority change; never invent its ID or treat an illustrative command as an assignment.
+
+## Adaptation examples
+
+These fictional examples illustrate the existing rules; they grant no actions and do not replace a destination contract.
+
+| Situation | Appropriate result |
+| --- | --- |
+| Initialize permits only analysis | Produce the authorized analysis, not implementation. If the current instruction also grants implementation, complete it without seeking the same grant again. |
+| A public invitation is the deliverable | Save the invitation in its audience's format. Put the lifecycle status in the separate owner reply when that workflow applies. |
+| Candidate content materially changes | Complete the affected destination-required validation before its new approval request. Preserve independent authorized work and applicable evidence. |
+| One approved effect times out | Read resulting state before any permitted retry. Preserve completed effects; ask no duplicate approval merely to solve a tool problem. |
+
+For an Initialize result, Next can say “Review the completed candidate”; Your decision contains `Validate <actual target>` once, when that command is needed. For an unvalidated changed candidate, Next states the affected validation; Your decision does not imply it is already ready to approve. Use the destination's required vocabulary and fields where they differ.
+
+Label identities by kind: a source revision locates the evaluated material; a raw file hash binds file bytes; an evidence-storage revision locates a report. None authenticates owner assent or proves an external effect completed. Use only the identities the task needs, in its existing format.
