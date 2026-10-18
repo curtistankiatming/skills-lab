@@ -120,7 +120,7 @@ function main(argv) {
   if(inPath===outPath) throw Error('output must differ from raw receipt');
   const raw=fs.readFileSync(inPath), result=formatReceipt(JSON.parse(raw),inPath,sha(raw));
   fs.mkdirSync(path.dirname(outPath),{recursive:true});
-  fs.writeFileSync(outPath,result.report,'utf8');
+  fs.writeFileSync(outPath,result.report,{encoding:'utf8',flag:'wx'});
   process.stdout.write(`${result.status} ${outPath} SHA256 ${sha(Buffer.from(result.report))}\n`);
 }
 if(require.main===module) try {main(process.argv.slice(2));} catch(e) {console.error(e.message);process.exitCode=1;}

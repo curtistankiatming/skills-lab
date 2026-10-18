@@ -1,7 +1,7 @@
 {
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
-  "distribution_version": "1.4.0",
+  "distribution_version": "1.5.0",
   "files": [
     {
       "path": "AGENTS.md",
@@ -10,13 +10,13 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 5419,
-      "sha256": "3d95137e89804d0691e1a03b6fcd8033697796d540aa9b5d958ea2b70ea1b90f"
+      "bytes": 6630,
+      "sha256": "8c0d32d82dce4a5ff8c1b6f7ea6178c2599694f06c84a964a07cdc6912c62726"
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 3477,
-      "sha256": "a883dfb4134c9e27b13f40c59a25b61b24f416f30fe936f59e7bc225f4325d71"
+      "bytes": 3478,
+      "sha256": "3f5b754d9c4fcf141bb0433f1fc702bbf4008337dfaf93309b59e41d4cf2b4a8"
     },
     {
       "path": "EVALUATING.md",
@@ -30,23 +30,23 @@
     },
     {
       "path": "README.md",
-      "bytes": 6124,
-      "sha256": "c9105f341345a0de958276a117f7f1a34534ba01a3e683899105d6355fecc227"
+      "bytes": 8298,
+      "sha256": "e69683b83335dc689a8e09566d429e8a1093b0a98d6f7cae1eed462b25e2474a"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 3708,
-      "sha256": "7be3b0be558f62a62edff4adfac15fe4440241272b9df19bda0713e10529dd29"
+      "bytes": 4229,
+      "sha256": "f194165cfb9abdaa15c3875f24857e650cf07bde4f859c46306de8fd75454acf"
     },
     {
       "path": "RIGHTS.md",
-      "bytes": 3462,
-      "sha256": "4416e887de5b0b89c336f8dddfa699fbc30d57d68460ab55253731c6e4c0122a"
+      "bytes": 5107,
+      "sha256": "4351f19cd821459345b4112dca144d0dbf5a84c56e8ffd0ffa5c3e38e12e1333"
     },
     {
       "path": "VERSION",
       "bytes": 6,
-      "sha256": "78b591400c56b7b67b8cb3b2b8a8e65e9093897f02ce0878e6b5405c68620fa7"
+      "sha256": "acb57a7135b2d7d6e665f67f056e21353023b93835f54def1ae523bf76f1bfb3"
     },
     {
       "path": "evaluations/2026-10-07/README.md",
@@ -109,6 +109,11 @@
       "sha256": "9da07642a72004ef90bc58a9d8ca4040abc98fa68c3bf652409739a531ae1eb4"
     },
     {
+      "path": "skills/lean-history-reporting/SKILL.md",
+      "bytes": 892,
+      "sha256": "e933e41a3c22eecda7a7381081aac7ba0bd2f8fbdec32764a2663355bc9a2b08"
+    },
+    {
       "path": "skills/node-workflow-batcher/SKILL.md",
       "bytes": 2289,
       "sha256": "791ec622a5a4862c1a2942f52d123c1f51403b316acacecbe9e0ea219932d4dd"
@@ -120,8 +125,8 @@
     },
     {
       "path": "skills/offline-usage-reporter/references/receipt-contract.md",
-      "bytes": 1948,
-      "sha256": "d7ff9db3b91762f835a0d72aa7173439e423535c9c59860fb5d804abc32795e7"
+      "bytes": 2266,
+      "sha256": "c5134e3e7305965ed709f51e1e41fcfb0d2ff91fb3f3bddc0ce020419a214ae2"
     },
     {
       "path": "skills/offline-usage-reporter/scripts/gate.cjs",
@@ -130,8 +135,8 @@
     },
     {
       "path": "skills/offline-usage-reporter/scripts/report.cjs",
-      "bytes": 10651,
-      "sha256": "93d07ca1307fdb23d839f9d1069ce0304c4ce1d0f381a7752f6e841ac74d1640"
+      "bytes": 10672,
+      "sha256": "3e0a1865cba6bc8fa6bd4e8048bf17c271314f524a42c7a87ad33d582bcc6c72"
     },
     {
       "path": "skills/scope-pull/SKILL.md",
@@ -325,13 +330,13 @@
     {
       "id": "offline-usage-reporter",
       "entrypoint": "skills/offline-usage-reporter/SKILL.md",
-      "source_version": "1.0.1",
-      "source_relationship": "EXACT_SELECTED_COPY_OF_ACCEPTED_LOCAL_SOURCE",
-      "source_state": "LOCAL_ACCEPTANCE_ESTABLISHED_DISTRIBUTION_PROPOSED",
-      "resource_payload_sha256": "7c1f2bbd20c249c325367127fe412f4577b5a1014cb6a2897d793d151a7e6261",
-      "outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION",
+      "source_version": "1.0.2",
+      "source_relationship": "EXACT_SELECTED_COPY_OF_PROPOSED_LOCAL_SOURCE_SUCCESSOR",
+      "source_state": "OUTPUT_PRESERVATION_SUCCESSOR_PENDING_CURRENT_REVIEW_AND_ACCEPTANCE",
+      "resource_payload_sha256": "066c8b90b9f277ab5776482ffc26009f4ae917c6e44790fa51282fe0362afd1b",
+      "outgoing_MIT_inclusion": "Retained MIT terms within current eligible-publication review; no changed-source publication is claimed yet",
       "runtime_requirement": "Available Node.js runtime; supported fictional O2 receipt schema",
-      "discovery_and_new_name_runtime": "UNVERIFIED",
+      "discovery_and_new_name_runtime": "No new installation or activation in this task; previous1.0.1 installed state is distinct",
       "source_files": [
         {
           "path": "skills/offline-usage-reporter/SKILL.md",
@@ -340,8 +345,8 @@
         },
         {
           "path": "skills/offline-usage-reporter/references/receipt-contract.md",
-          "bytes": 1948,
-          "sha256": "d7ff9db3b91762f835a0d72aa7173439e423535c9c59860fb5d804abc32795e7"
+          "bytes": 2266,
+          "sha256": "c5134e3e7305965ed709f51e1e41fcfb0d2ff91fb3f3bddc0ce020419a214ae2"
         },
         {
           "path": "skills/offline-usage-reporter/scripts/gate.cjs",
@@ -350,19 +355,47 @@
         },
         {
           "path": "skills/offline-usage-reporter/scripts/report.cjs",
-          "bytes": 10651,
-          "sha256": "93d07ca1307fdb23d839f9d1069ce0304c4ce1d0f381a7752f6e841ac74d1640"
+          "bytes": 10672,
+          "sha256": "3e0a1865cba6bc8fa6bd4e8048bf17c271314f524a42c7a87ad33d582bcc6c72"
         }
-      ]
+      ],
+      "historical_outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION",
+      "historical_published_source": {
+        "version": "1.0.1",
+        "payload_sha256": "7c1f2bbd20c249c325367127fe412f4577b5a1014cb6a2897d793d151a7e6261",
+        "public_base": "bd6230d3cea0c9efe8db870079ab4ac9c4170985",
+        "source_files": [
+          {
+            "path": "skills/offline-usage-reporter/SKILL.md",
+            "bytes": 1036,
+            "sha256": "72db910f43dab0548fec341881cc5162403498795cda952fddf3e556c5fc097b"
+          },
+          {
+            "path": "skills/offline-usage-reporter/references/receipt-contract.md",
+            "bytes": 1948,
+            "sha256": "d7ff9db3b91762f835a0d72aa7173439e423535c9c59860fb5d804abc32795e7"
+          },
+          {
+            "path": "skills/offline-usage-reporter/scripts/gate.cjs",
+            "bytes": 1214,
+            "sha256": "37a954e2f78a3869a9155e6c36cec41eaaa8eda09c06af225e2bac69a995f160"
+          },
+          {
+            "path": "skills/offline-usage-reporter/scripts/report.cjs",
+            "bytes": 10651,
+            "sha256": "93d07ca1307fdb23d839f9d1069ce0304c4ce1d0f381a7752f6e841ac74d1640"
+          }
+        ]
+      }
     },
     {
       "id": "node-workflow-batcher",
       "entrypoint": "skills/node-workflow-batcher/SKILL.md",
       "source_version": "1.0.0",
       "source_relationship": "EXACT_SELECTED_COPY_OF_ACCEPTED_LOCAL_SOURCE",
-      "source_state": "LOCAL_ACCEPTANCE_ESTABLISHED_DISTRIBUTION_PROPOSED",
+      "source_state": "ACCEPTED_LOCAL_SOURCE_SELECTED_IN_VERIFIED_PUBLIC_BASE_1_4_0",
       "resource_payload_sha256": "c0a9d22d5814985b97aff66718e41e0c130ab16ce014ff1a323acbdcf65d44a0",
-      "outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION",
+      "outgoing_MIT_inclusion": "ALREADY_PUBLISHED_IN_BASE_1_4_0",
       "runtime_requirement": "Host-supported persistent Node REPL with documented state/output facilities",
       "discovery_and_new_name_runtime": "UNVERIFIED",
       "source_files": [
@@ -371,13 +404,33 @@
           "bytes": 2289,
           "sha256": "791ec622a5a4862c1a2942f52d123c1f51403b316acacecbe9e0ea219932d4dd"
         }
-      ]
+      ],
+      "historical_outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION"
+    },
+    {
+      "id": "lean-history-reporting",
+      "entrypoint": "skills/lean-history-reporting/SKILL.md",
+      "source_version": "1.0.0",
+      "source_relationship": "EXACT_SELECTED_COPY_OF_LOCAL_R5_PACKAGE",
+      "source_state": "RE_REVIEW_PUBLICATION_CANDIDATE",
+      "source_files": [
+        {
+          "path": "skills/lean-history-reporting/SKILL.md",
+          "bytes": 892,
+          "sha256": "e933e41a3c22eecda7a7381081aac7ba0bd2f8fbdec32764a2663355bc9a2b08"
+        }
+      ],
+      "resource_payload_sha256": "5ba6962048d11063708f1a26a6c8c57f7577deabe4a3fddf234bc51b303f60a2",
+      "dependency": "Authorized history reader exposing includeOutputs or an equivalent compact view; required detailed evidence remains necessary",
+      "performance": "No general savings or effectiveness guarantee; prior packaging comparison is not recertified by publication",
+      "outgoing_MIT_inclusion": "Selected retained MIT terms within current owner-directed eligible-publication task; actual review/delivery prerequisites remain",
+      "discovery": "UNVERIFIED"
     }
   ],
-  "source_policy": "Four existing skill resource sets are exact unchanged selections from integrated source 1.3.0; two additions are exact selections of accepted local packages. Controllers remain with their existing maintainers. Public MIT inclusion of the new resources is proposed, not granted. Restricted controller and decision records are excluded.",
-  "distribution_state": "COMBINED_LOCAL_DELIVERY_CANDIDATE_NOT_PUBLISHED_OR_INSTALLED",
+  "source_policy": "The selection retains five existing skill resource sets unchanged from integrated1.4.0, adds the exact O1 R5 one-file package, and selects the proposed local Reporter1.0.2 output-preservation successor. No GPF custody transfer, native savings qualification, installation or activation follows from source preparation/publication. Existing notices and retained MIT terms apply under current task authority.",
+  "distribution_state": "O1_O3_REVIEW_PUBLICATION_CANDIDATE_NOT_YET_PUBLISHED",
   "last_issued_distribution_version": "1.1.0",
-  "record_semantics": "Prepared distribution snapshot dated 2026-10-18. Historical metadata fields retain their original observation meaning; current selection binds these bytes, not future integration, release, discovery or runtime.",
+  "record_semantics": "Prepared snapshot dated 2026-10-18. Existing 1.4.0 source inclusion of Reporter/Batcher was verified at the observed base; older preparation fields retain history. This new candidate is not integration, installation or runtime proof.",
   "maintenance_snapshot_history": [
     {
       "client_date": "2026-10-08",
@@ -442,5 +495,25 @@
     "rights": "Two new MIT inclusions proposed; existing terms/notices retained",
     "runtime": "No new tests, model trials, discovery, installation or plugin execution",
     "tag_absence_established": false
+  },
+  "o1_o3_review": {
+    "date": "2026-10-18",
+    "source_version": "1.5.0",
+    "base": "bd6230d3cea0c9efe8db870079ab4ac9c4170985",
+    "additions": [
+      "lean-history-reporting"
+    ],
+    "unchanged_existing_skills": 5,
+    "existing_O2_O3_publication": "VERIFIED_AT_BASE",
+    "current_effect_scope": "Source publication through protected PRs only; no new installation, runtime activation, benchmark, release or plugin",
+    "new_behavioral_tests": 0,
+    "source_correction": {
+      "skill": "offline-usage-reporter",
+      "version": "1.0.2",
+      "scope": "Exclusive output creation and contract clarification; original gate and entrypoint unchanged",
+      "native_performance": "UNVERIFIED_FOR_SUCCESSOR"
+    },
+    "corrected_existing_skills": 1,
+    "candidate": "C4"
   }
 }
