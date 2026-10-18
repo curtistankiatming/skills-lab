@@ -1,7 +1,7 @@
 {
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
-  "distribution_version": "1.3.0",
+  "distribution_version": "1.4.0",
   "files": [
     {
       "path": "AGENTS.md",
@@ -10,13 +10,13 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 4073,
-      "sha256": "8e39981b8918a58df112c53066c05a087794c49b6f273ecf021b4a8d306c88af"
+      "bytes": 5419,
+      "sha256": "3d95137e89804d0691e1a03b6fcd8033697796d540aa9b5d958ea2b70ea1b90f"
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 3297,
-      "sha256": "0f67bc53e3d16e17e2435b79cfe1d9d6ef8fabdcfca780716efc5fecbb76a661"
+      "bytes": 3477,
+      "sha256": "a883dfb4134c9e27b13f40c59a25b61b24f416f30fe936f59e7bc225f4325d71"
     },
     {
       "path": "EVALUATING.md",
@@ -30,23 +30,23 @@
     },
     {
       "path": "README.md",
-      "bytes": 5799,
-      "sha256": "92e9ee13baefb2f9a8231e9cb787fab20082545c01081a48faf42ccf03dded62"
+      "bytes": 6124,
+      "sha256": "c9105f341345a0de958276a117f7f1a34534ba01a3e683899105d6355fecc227"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 3106,
-      "sha256": "f8ab505d26043a56ff9e52cabd7eca8dffcb03931aa71dd940f47d3ac6bbc72d"
+      "bytes": 3708,
+      "sha256": "7be3b0be558f62a62edff4adfac15fe4440241272b9df19bda0713e10529dd29"
     },
     {
       "path": "RIGHTS.md",
-      "bytes": 2229,
-      "sha256": "f8a203cc8dd5111183490ea98d2f3c3314c070f5ecf1e3b44cfd02f9e5f5d681"
+      "bytes": 3462,
+      "sha256": "4416e887de5b0b89c336f8dddfa699fbc30d57d68460ab55253731c6e4c0122a"
     },
     {
       "path": "VERSION",
       "bytes": 6,
-      "sha256": "64d23f858ef51b0f996e4966d4e27c0371b437e2d2787890b1f7ad22d4ec5663"
+      "sha256": "78b591400c56b7b67b8cb3b2b8a8e65e9093897f02ce0878e6b5405c68620fa7"
     },
     {
       "path": "evaluations/2026-10-07/README.md",
@@ -107,6 +107,31 @@
       "path": "skills/integrate-approved-pr/assets/integration-receipt.md",
       "bytes": 1885,
       "sha256": "9da07642a72004ef90bc58a9d8ca4040abc98fa68c3bf652409739a531ae1eb4"
+    },
+    {
+      "path": "skills/node-workflow-batcher/SKILL.md",
+      "bytes": 2289,
+      "sha256": "791ec622a5a4862c1a2942f52d123c1f51403b316acacecbe9e0ea219932d4dd"
+    },
+    {
+      "path": "skills/offline-usage-reporter/SKILL.md",
+      "bytes": 1036,
+      "sha256": "72db910f43dab0548fec341881cc5162403498795cda952fddf3e556c5fc097b"
+    },
+    {
+      "path": "skills/offline-usage-reporter/references/receipt-contract.md",
+      "bytes": 1948,
+      "sha256": "d7ff9db3b91762f835a0d72aa7173439e423535c9c59860fb5d804abc32795e7"
+    },
+    {
+      "path": "skills/offline-usage-reporter/scripts/gate.cjs",
+      "bytes": 1214,
+      "sha256": "37a954e2f78a3869a9155e6c36cec41eaaa8eda09c06af225e2bac69a995f160"
+    },
+    {
+      "path": "skills/offline-usage-reporter/scripts/report.cjs",
+      "bytes": 10651,
+      "sha256": "93d07ca1307fdb23d839f9d1069ce0304c4ce1d0f381a7752f6e841ac74d1640"
     },
     {
       "path": "skills/scope-pull/SKILL.md",
@@ -196,7 +221,8 @@
       ],
       "source_relationship": "exact_selected_export_of_prepared_source",
       "source_version": "1.0.2",
-      "source_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
+      "source_state": "UNCHANGED_FROM_INTEGRATED_1_3_0",
+      "historical_preparation_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
     },
     {
       "entrypoint": "skills/integrate-approved-pr/SKILL.md",
@@ -243,7 +269,8 @@
           "sha256": "88f884da9ff3644327ed0a5e03abf9bbee6b1d8500f77bf82366b7130705370c"
         }
       ],
-      "source_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
+      "source_state": "UNCHANGED_FROM_INTEGRATED_1_3_0",
+      "historical_preparation_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
     },
     {
       "entrypoint": "skills/verify-exact-candidate/SKILL.md",
@@ -292,13 +319,65 @@
       ],
       "source_relationship": "exact_selected_export_of_prepared_source",
       "source_version": "1.2.0",
-      "source_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
+      "source_state": "UNCHANGED_FROM_INTEGRATED_1_3_0",
+      "historical_preparation_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
+    },
+    {
+      "id": "offline-usage-reporter",
+      "entrypoint": "skills/offline-usage-reporter/SKILL.md",
+      "source_version": "1.0.1",
+      "source_relationship": "EXACT_SELECTED_COPY_OF_ACCEPTED_LOCAL_SOURCE",
+      "source_state": "LOCAL_ACCEPTANCE_ESTABLISHED_DISTRIBUTION_PROPOSED",
+      "resource_payload_sha256": "7c1f2bbd20c249c325367127fe412f4577b5a1014cb6a2897d793d151a7e6261",
+      "outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION",
+      "runtime_requirement": "Available Node.js runtime; supported fictional O2 receipt schema",
+      "discovery_and_new_name_runtime": "UNVERIFIED",
+      "source_files": [
+        {
+          "path": "skills/offline-usage-reporter/SKILL.md",
+          "bytes": 1036,
+          "sha256": "72db910f43dab0548fec341881cc5162403498795cda952fddf3e556c5fc097b"
+        },
+        {
+          "path": "skills/offline-usage-reporter/references/receipt-contract.md",
+          "bytes": 1948,
+          "sha256": "d7ff9db3b91762f835a0d72aa7173439e423535c9c59860fb5d804abc32795e7"
+        },
+        {
+          "path": "skills/offline-usage-reporter/scripts/gate.cjs",
+          "bytes": 1214,
+          "sha256": "37a954e2f78a3869a9155e6c36cec41eaaa8eda09c06af225e2bac69a995f160"
+        },
+        {
+          "path": "skills/offline-usage-reporter/scripts/report.cjs",
+          "bytes": 10651,
+          "sha256": "93d07ca1307fdb23d839f9d1069ce0304c4ce1d0f381a7752f6e841ac74d1640"
+        }
+      ]
+    },
+    {
+      "id": "node-workflow-batcher",
+      "entrypoint": "skills/node-workflow-batcher/SKILL.md",
+      "source_version": "1.0.0",
+      "source_relationship": "EXACT_SELECTED_COPY_OF_ACCEPTED_LOCAL_SOURCE",
+      "source_state": "LOCAL_ACCEPTANCE_ESTABLISHED_DISTRIBUTION_PROPOSED",
+      "resource_payload_sha256": "c0a9d22d5814985b97aff66718e41e0c130ab16ce014ff1a323acbdcf65d44a0",
+      "outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION",
+      "runtime_requirement": "Host-supported persistent Node REPL with documented state/output facilities",
+      "discovery_and_new_name_runtime": "UNVERIFIED",
+      "source_files": [
+        {
+          "path": "skills/node-workflow-batcher/SKILL.md",
+          "bytes": 2289,
+          "sha256": "791ec622a5a4862c1a2942f52d123c1f51403b316acacecbe9e0ea219932d4dd"
+        }
+      ]
     }
   ],
-  "source_policy": "Selected exact exports of their named prepared source versions; one controlling source per skill. Restricted decision lineage is not included. Prepared files and version labels do not establish integration, release, installation, destination adoption or behavioral effectiveness.",
-  "distribution_state": "RECONCILED_PREPARED_REVIEW_CANDIDATE_NOT_INTEGRATED_OR_RELEASED",
+  "source_policy": "Four existing skill resource sets are exact unchanged selections from integrated source 1.3.0; two additions are exact selections of accepted local packages. Controllers remain with their existing maintainers. Public MIT inclusion of the new resources is proposed, not granted. Restricted controller and decision records are excluded.",
+  "distribution_state": "COMBINED_LOCAL_DELIVERY_CANDIDATE_NOT_PUBLISHED_OR_INSTALLED",
   "last_issued_distribution_version": "1.1.0",
-  "record_semantics": "Evaluated candidate-preparation snapshot dated 2026-10-08. Prepared/not-integrated and last-issued fields describe that observation; they do not override later verified integration, release or installed state. Resolve later actions from actual GitHub PR/tag receipts.",
+  "record_semantics": "Prepared distribution snapshot dated 2026-10-18. Historical metadata fields retain their original observation meaning; current selection binds these bytes, not future integration, release, discovery or runtime.",
   "maintenance_snapshot_history": [
     {
       "client_date": "2026-10-08",
@@ -350,5 +429,18 @@
     "source_alignment": "All four complete selected resource sets match their controlling prepared source bytes and modes. Restricted source locators are withheld.",
     "evaluation_scope": "evaluations/2026-10-07 covers the historical fictional Verify/Scope comparison. No Lifecycle behavioral comparison is included here; no gain is established.",
     "history": "Earlier metadata snapshots retain their evaluated revision meaning. Current files/skills inventories bind the reconciled selection; final remote delivery identities are recorded externally."
+  },
+  "combined_preparation": {
+    "date": "2026-10-18",
+    "collection_version": "1.4.0",
+    "state": "LOCAL_CANDIDATE_ONLY",
+    "integrated_base": "75226ac38f2b4875db7a65cb84881d39020227e4",
+    "integrated_source_version": "1.3.0",
+    "last_observed_issued_release": "1.1.0",
+    "new_resource_count": 5,
+    "existing_resource_sets_unchanged": 4,
+    "rights": "Two new MIT inclusions proposed; existing terms/notices retained",
+    "runtime": "No new tests, model trials, discovery, installation or plugin execution",
+    "tag_absence_established": false
   }
 }

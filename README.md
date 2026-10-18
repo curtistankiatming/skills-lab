@@ -1,51 +1,51 @@
 # Skills Lab
 
-Four portable instruction skills for preparing governed work, checking exact candidates, handling explicitly approved pull request integration and reconciling project scope. Preparation snapshot, 2026-10-08: collection 1.3.0; last observed issued collection 1.1.0. This reconciled selection contains Governed Task Lifecycle 1.0.2, Verify Exact Candidate 1.2.0, Scope Pull 1.1.0 and unchanged Integrate Approved PR 1.0.1. The exact source exports were awaiting integration when prepared. Check actual GitHub PR/tag records for later integration or issued releases; this snapshot does not establish installed state.
+Six portable instruction skills for governed work, exact candidate checks, approved PR integration, scope reconciliation, offline receipt reporting and local Node workflow batching. Prepared distribution snapshot, 18 October 2026: collection 1.4.0 adds Offline Usage Reporter 1.0.1 and Node Workflow Batcher 1.0.0. The four existing skill resource sets are unchanged from integrated source 1.3.0. The latest observed issued release is 1.1.0. This candidate is not published or installed; inclusion of the two new packages under MIT is proposed in [RIGHTS.md](RIGHTS.md).
 
-The collection is provided under the [MIT License](LICENSE). See [rights and attribution](RIGHTS.md) for the selected components and preserved notices.
+The existing collection retains the [MIT License](LICENSE), copyright and notices. Source acceptance, selected distribution, host discovery, invocation and actual execution are separate states.
 
 ## Choose a skill
 
-| Skill | Use this skill if... | Start here |
+| Skill | Use this skill if... | Complete entry point |
 | --- | --- | --- |
 | Governed Task Lifecycle | Initialize, Initiate, Validate or Approve is requested, or the destination requires that lifecycle. | [governed-task-lifecycle](skills/governed-task-lifecycle/SKILL.md) |
-| Verify Exact Candidate | A handoff or check must establish exact files, hashes, revisions or evidence against a pinned basis. | [verify-exact-candidate](skills/verify-exact-candidate/SKILL.md) |
-| Integrate Approved PR | You need integration prerequisites checked, or already-approved readiness or protected merge completed. | [integrate-approved-pr](skills/integrate-approved-pr/SKILL.md) |
-| Scope Pull | You want agreed scope, evidenced progress, changes and proposed expansion reconciled, including non-software projects. | [scope-pull](skills/scope-pull/SKILL.md) |
+| Verify Exact Candidate | Exact files, hashes, revisions or evidence need comparison with a pinned basis. | [verify-exact-candidate](skills/verify-exact-candidate/SKILL.md) |
+| Integrate Approved PR | Integration prerequisites need inspection, or explicitly approved readiness/merge needs completion. | [integrate-approved-pr](skills/integrate-approved-pr/SKILL.md) |
+| Scope Pull | Agreed scope, evidenced progress, changes or proposed expansion needs reconciliation. | [scope-pull](skills/scope-pull/SKILL.md) |
+| Offline Usage Reporter | Supplied fictional O2 replay receipts need one offline report. | [offline-usage-reporter](skills/offline-usage-reporter/SKILL.md) |
+| Node Workflow Batcher | Authorized local read, derive and validate phases can be grouped in a persistent Node REPL. | [node-workflow-batcher](skills/node-workflow-batcher/SKILL.md) |
 
-The [catalog](CATALOG.md) explains the boundaries and examples. The [optional evaluation guide](EVALUATING.md) and fictional casebooks support maintainers assessing revisions; their inclusion is not evidence of executed tests. The [inventory](inventory.json) records version, source relationships, file sizes and raw SHA-256 values.
+The [catalog](CATALOG.md) explains examples, resources and boundaries. The [inventory](inventory.json) binds the complete selection. This collection is a selected distribution; it does not replace the maintained controller of any skill or expand an existing plugin bundle.
 
 ## Use the complete skill
 
-Give your agent access to the selected SKILL.md and the resources it calls for. Keep each skill folder complete, including its references, assets and agent metadata. Follow your host's documented skill-loading procedure; this repository does not install or activate anything.
-
-If the host exposes these installed names, explicit examples are:
+Give the agent the complete selected folder and follow the host's supported loading procedure. If the host exposes an installed selector, examples are:
 
 ```text
-Use $governed-task-lifecycle. Initialize TASK-001: build the deliverable within the supplied scope and stop ready for Validate.
-Use $verify-exact-candidate to compare the named candidate files with the pinned manifest and report mismatches or missing evidence.
-Use $integrate-approved-pr to inspect integration prerequisites for OWNER/REPO PR #123. Make no changes.
-Use $scope-pull to reconcile the project's agreed scope, evidenced progress and proposed next work from the sources I identify.
+Use $governed-task-lifecycle. Initialize TASK-001: build the authorized deliverable and stop ready for Validate.
+Use $verify-exact-candidate to compare the supplied files with the pinned manifest. Read and hash only.
+Use $integrate-approved-pr to inspect OWNER/REPO PR #123. Make no changes.
+Use $scope-pull to reconcile agreed scope and evidenced progress from the sources I provide.
+Use $offline-usage-reporter for the supplied fictional O2 receipt and named new output file. Preserve HOLD, unknowns and STOP latches.
+Use $node-workflow-batcher for the authorized local job in a supported persistent Node REPL. Stop at unresolved decisions or approvals.
 ```
 
-Replace task identifiers and example destinations with your actual inputs. In another host, request the same skill in plain language and supply its files. Use the installed name or namespace the host actually exposes. Selecting a skill grants no additional permission.
+Replace example identifiers with actual authorized inputs. For manual use, say “Use Offline Usage Reporter at <skill-folder>/SKILL.md” or “Use Node Workflow Batcher at <skill-folder>/SKILL.md” and supply every resource. An example or selector grants no extra authority. New-name discovery, automatic selection, phone/plugin availability and runtime are unverified for this distribution.
 
-For the lifecycle skill, preserve its [owner-facing chat summary](skills/governed-task-lifecycle/references/chat-summary.md), including Scope, Done, Now, Next, Checks / limits, Upcoming, Evidence and Your decision. Apply the destination's active command meanings and required formats. Keep that owner summary separate from an audience-facing deliverable unless the requested artifact itself needs lifecycle fields.
+Lifecycle consumers retain the [owner-facing summary](skills/governed-task-lifecycle/references/chat-summary.md) and the destination's command meanings. Keep owner status separate from an audience-facing deliverable unless requested.
 
-## What to expect
+## Dependencies and limits
 
-The instruction files and templates include an optional local stdlib checker and its fixture suite for Verify Exact Candidate. They need a trusted Python interpreter and explicit task authority to execute. The package has no credentials, server, installer, dependency environment or hosted workflow. An agent needs separately available tools and current authority for real file or GitHub operations. No extra software is needed simply to read the Markdown.
+- Offline Usage Reporter includes SKILL.md, the [receipt contract](skills/offline-usage-reporter/references/receipt-contract.md), and both Node.js helpers. It requires an available Node.js runtime and authorized fictional O2 receipts. Preserve the exact stdout and process status: HOLD may accompany exit zero, and reset grants no restart authority. It has no live schema adapter, polling, worker messaging or enforcement. It is not a hostile-input validator.
+- Node Workflow Batcher is a one-file instruction skill. It needs a host-provided persistent Node REPL with the documented job/state and output facilities. A standalone Node executable is insufficient evidence of that host capability. Group only understood authorized phases, inspect every result and stop on provider denial. This package adds no REPL implementation, connector or permission.
+- Verify Exact Candidate retains its optional Python standard-library checker and fixture suite. Execution needs a trusted interpreter and task authority. No additional software is needed to read Markdown. PyYAML is not a runtime dependency of either new skill.
 
-The four agent metadata files enable implicit invocation as a declaration. Automatic selection, effective model configuration, runtime enforcement and compatibility with every host have not been established by this package. Templates are blank formats, not evidence of completed work. Scope Pull reports and advises; it does not approve scope or dispatch work.
+The four existing agent metadata files retain their declarations. The two new packages add no agent metadata, installer, hooks, server, credentials or hosted workflow. Instructions and exact files do not establish backend identity, runtime enforcement, independent assurance or destination adoption.
 
-Publication or possession does not establish destination adoption, portfolio admission, independent assurance or permission to merge, spend, deploy or publish. Follow the current task and destination instructions.
+## Evidence and maintenance
 
-## Maintain or release
+Earlier trials remain evidence for their exact tested workloads and source bytes. Predecessor Reporter token results do not certify successor savings; Batcher's earlier tested-name results do not establish new-name loading or universal gains. No new performance or effectiveness claim is made for the combined package.
 
-See [contributing and maintenance](CONTRIBUTING.md), [release preparation](RELEASING.md) and [repository instructions](AGENTS.md). Keep one controlling source for each skill identity; the collection is a selected distribution, not an automatic replacement for its source.
+The unchanged [evaluation guide](EVALUATING.md), [executed fictional comparison](evaluations/2026-10-07/README.md) and [local checker reference](skills/verify-exact-candidate/references/local-checker.md) retain their original scopes and coverage gaps. Published and revised Verify/Scope instructions tied in that comparison. They do not evaluate these two additions or prove Lifecycle behavior.
 
-See the [optional local checker](skills/verify-exact-candidate/references/local-checker.md) and the [executed bounded comparison](evaluations/2026-10-07/README.md). Published and revised instructions tied in this trial; no behavioral improvement is established. The helper was separately tested on Windows with explicit coverage gaps.
-
-## Prepared lifecycle clarification
-
-The 1.0.2 clarification makes destination adaptation, audience/status separation and validation before changed-candidate approval explicit. It preserves authority boundaries and adds no mandatory schema or approval stage. The optional checker and fictional comparison apply to Verify Exact Candidate and Scope Pull; they do not validate Lifecycle behavior. Instructions and byte identity do not establish runtime enforcement or effectiveness for every project. This preparation did not replace issued release assets or installed skills.
+See [maintenance](CONTRIBUTING.md), [release preparation](RELEASING.md), [rights](RIGHTS.md) and [repository instructions](AGENTS.md). Possession or publication supplies no merge, deployment, spending, live-operation or other-project authority.
