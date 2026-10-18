@@ -10,8 +10,16 @@ Keep the copyright and permission notice in all copies or substantial portions. 
 
 The skill bodies and resources keep their source meaning. A licence grant does not provide authority to operate on another repository, adopt a skill into a destination, access credentials, merge, spend or deploy. Host support and operational permissions remain separate from rights to the files.
 
-## Proposed additions for collection 1.4.0
+## Historical preparation: additions for collection 1.4.0
 
 This local candidate proposes including Offline Usage Reporter 1.0.1 (SKILL.md, a receipt-contract reference and two Node.js helpers) and Node Workflow Batcher 1.0.0 (SKILL.md) under the existing MIT terms and copyright notice. Permission for these exact additions and their selected outgoing terms still needs the owner's explicit decision before public distribution. Local source/intake acceptance does not supply that public licence or publication decision.
 
 The selected resources are exact copies of their maintained local source packages. Bounded inspection identified no copied third-party implementation or additional incompatible notice in these five files; this is not an independent reconstruction of full authorship, ownership or universal legal clearance. Reporter uses Node.js built-ins; Batcher instructs use of an independently available host REPL. No Node runtime, provider implementation, dependency environment or private decision evidence is distributed. Preserve any applicable notices and hold newly identified incompatible terms for affected review. No GPF source-custody transfer, installation or operational authority follows from this proposal.
+
+## Lean History Reporting selection for 1.5.0
+
+The new owner-directed review/publication task selects the exact one-file Lean History Reporting package for eligible distribution under the collection's retained MIT terms and Copyright 2026 curtistankiatming. Existing skill resources and notices remain unchanged. The received instruction text contains no third-party implementation, private history, receipts or environment configuration. Bounded source inspection identified no incompatible notice; it does not reconstruct the entire authorship chain or establish universal legal clearance. Preserve any applicable notice or hold a newly identified incompatible term for affected review. Source maintenance stays with the existing local lineage; public selection or a private locator is not a custody transfer, host installation, new effect authority or performance certification.
+
+The two 1.4.0 additions above were subsequently published under their exact delivery authorization. Their earlier proposed-state wording is a historical preparation observation, not a current ban. This 1.5.0 candidate still requires the task's actual review and protected delivery prerequisites before it is published.
+
+Reporter 1.0.2 adds an exclusive-create flag through the existing Node.js standard library call and a receipt-contract clarification. No third-party implementation or dependency was added. The exact changed helper/reference and preserved resources are selected under the same retained MIT terms within the current review/publication task; source acceptance and protected delivery remain distinct actual decisions and effects.

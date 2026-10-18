@@ -9,3 +9,5 @@ The formatter checks source gates but is not a general hostile-input validator. 
 Required reading identity: callId is an integer (the form used by the supplied replay fixtures) or a nonblank string; actor is a nonblank string. Missing or invalid values require HOLD. No type coercion is used to validate these identifiers.
 
 Next-action guidance uses the computed gate and receipt/case/event checks as well as the preserved recorded decisions. A rejected event cannot recommend Continue. Computed or recorded STOP is retained conservatively across later decisions and resets within its case; it cannot be cleared by a reset. Raw recorded actions, reasons and deadlines remain visible, and mismatches identify the computed gate. This is reporting of fictional receipts, not operational restart authority.
+
+The output must be a new file. The formatter creates it exclusively and refuses any existing destination, including an existing path alias, so an old report or raw receipt cannot be overwritten. Preserve the failed attempt and choose a newly authorized output only after resolving the failure; never retry unchanged.
