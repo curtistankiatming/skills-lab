@@ -2,6 +2,8 @@
 
 The selected outgoing licence is [MIT](LICENSE). Copyright attribution for this self-created collection uses the publisher's public account handle: **2026 curtistankiatming**. The full licence supplies the permission, notice, warranty and liability terms.
 
+Current collection 2.1.0: six installable skills and one example skill, all under the MIT terms above. The paragraphs below record how earlier selections were prepared.
+
 The integrated collection 1.3.0 selects four instruction skills, eight supporting references/templates, four agent metadata files, two original stdlib helper/test scripts, fictional evaluation records and collection documentation. Verify Exact Candidate selects maintained source version 1.2.0 and Scope Pull 1.1.0; Governed Task Lifecycle selects 1.0.2 and Integrate Approved PR remains unchanged at 1.0.1. The added casebooks are fictional, and the evaluation guide is collection documentation.
 
 Scope Pull is attributed to Curtis's maintained instruction baseline. That attribution and matching file bytes are useful provenance, but the original full authorship history has not been independently reconstructed. This maintained selection retains the existing outgoing MIT terms. Any new distribution effects still require the applicable task authority. The new helper and tests were authored for this selection using the standard library and documented OS interfaces; no third-party implementation was copied. No incompatible upstream component, external executable dependency or additional third-party notice has been identified in the bounded included selection; this is not universal legal clearance or proof of ownership from package metadata, AI assistance or public availability.
@@ -13,6 +15,8 @@ The skill bodies and resources keep their source meaning. A licence grant does n
 ## Portability revisions for 2.0.0
 
 The 2.0.0 revisions to all six skills and the Offline Usage Reporter example were written for this collection at the owner's request and are distributed under the same MIT terms and copyright notice. They rewrite the skills' own instructions, add fictional test fixtures and tests, and change the collection's own helper scripts using only the Python and Node.js standard libraries. No third-party implementation, dependency or additional notice was added. As with the earlier selections, this is bounded inspection, not universal legal clearance.
+
+The 2.1.0 revisions move each skill's detailed rules into `references/detailed-rules.md`, shorten the descriptions and correct one checklist step. They were written for this collection under the same terms and add no third-party material.
 
 The sections below record earlier selections as they were prepared.
 

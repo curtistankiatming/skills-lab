@@ -2,13 +2,13 @@
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
   "distribution_version": "2.1.0",
-  "distribution_state": "PREPARED_ON_MAIN_NOT_RELEASED",
-  "last_issued_distribution_version": "2.0.0",
+  "distribution_state": "RELEASE_SOURCE_V2_1_0",
+  "last_issued_distribution_version": "2.1.0",
   "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
   "outgoing_licence": "MIT",
   "repository_identity": "curtistankiatming/skills-lab",
   "schema_version": 1,
-  "source_policy": "Six installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. The latest published release is v2.0.0; integration on main does not establish a release, installation, host discovery or runtime behavior.",
+  "source_policy": "Six installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. This revision is the source of the v2.1.0 release; a release does not establish installation, host discovery or runtime behavior.",
   "history": "Earlier snapshot records removed from this file in 2.0.0 are reproduced in HISTORY.md.",
   "files": [
     {
@@ -33,8 +33,8 @@
     },
     {
       "path": "HISTORY.md",
-      "bytes": 14133,
-      "sha256": "f736cff4fa35c8b0399db3faa358ad146f196c7ddce0e194a4067192ab4de891"
+      "bytes": 14148,
+      "sha256": "c582e4a9d20cf0160002d401951f36374d75205dd4a3294d74ad69bf43922355"
     },
     {
       "path": "LICENSE",
@@ -48,13 +48,13 @@
     },
     {
       "path": "RELEASING.md",
-      "bytes": 3369,
-      "sha256": "5f5aeee0f31ba416ba7b081a3f9458d5b6a393196448a0cc15dd5638ad29f7d5"
+      "bytes": 3328,
+      "sha256": "c274d0e3be0097171639cf171aad9ef2695746a96af17e20a7be984a6f0a65dc"
     },
     {
       "path": "RIGHTS.md",
-      "bytes": 5761,
-      "sha256": "0553db857be99280fc1073e0c3f34db92d1aa6d16c6786cb7f7a2a076f5bbbff"
+      "bytes": 6171,
+      "sha256": "73c06888c91539a4a1bdca1486c6682e2f5030c96f257696d5166c54268a4199"
     },
     {
       "path": "VERSION",
@@ -198,8 +198,8 @@
     },
     {
       "path": "skills/lean-history-reporting/SKILL.md",
-      "bytes": 2834,
-      "sha256": "1b8bb243af9f22e76e0fcc6b9f430ad8f757c76ec60d84861cc0fdf746936265"
+      "bytes": 2845,
+      "sha256": "f9e386adf96c56ab9870da5f750bbea1df09539978059dd818116f1d47bc8647"
     },
     {
       "path": "skills/node-workflow-batcher/SKILL.md",
@@ -310,8 +310,7 @@
       ],
       "source_relationship": "portability_revision_of_selected_export",
       "source_version": "1.1.1",
-      "source_state": "REVISION_2_1_0",
-      "historical_preparation_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
+      "source_state": "REVISION_2_1_0"
     },
     {
       "entrypoint": "skills/integrate-approved-pr/SKILL.md",
@@ -369,8 +368,7 @@
           "sha256": "94f0b666b725798fd5fd2a2051114ed9a966c00c55fa9570d7f5c19be695335c"
         }
       ],
-      "source_state": "REVISION_2_1_0",
-      "historical_preparation_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
+      "source_state": "REVISION_2_1_0"
     },
     {
       "entrypoint": "skills/verify-exact-candidate/SKILL.md",
@@ -420,7 +418,6 @@
       "source_relationship": "portability_revision_of_selected_export",
       "source_version": "1.4.0",
       "source_state": "REVISION_2_1_0",
-      "historical_preparation_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED",
       "test_suite": "tests/verify-exact-candidate/test_verify_files.py (repository-level; not part of the installed skill)"
     },
     {
@@ -429,9 +426,8 @@
       "source_version": "1.1.0",
       "source_relationship": "portability_revision_of_selected_export",
       "source_state": "INTEGRATED_2_0_0",
-      "outgoing_MIT_inclusion": "Retained MIT terms within current eligible-publication review; no changed-source publication is claimed yet",
+      "outgoing_MIT_inclusion": "Published under MIT from v2.0.0",
       "runtime_requirement": "Available Node.js runtime; supported fictional O2 receipt schema; tests use node:test",
-      "discovery_and_new_name_runtime": "No new installation or activation in this task; previous1.0.1 installed state is distinct",
       "source_files": [
         {
           "path": "examples/offline-usage-reporter/SKILL.md",
@@ -469,7 +465,6 @@
           "sha256": "df5b17c2df901d7acda858a92dd56cb97c5fdc4c5e4241458393f1d4983b6e13"
         }
       ],
-      "historical_outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION",
       "historical_published_source": {
         "version": "1.0.1",
         "payload_sha256": "7c1f2bbd20c249c325367127fe412f4577b5a1014cb6a2897d793d151a7e6261",
@@ -505,17 +500,15 @@
       "source_version": "1.1.1",
       "source_relationship": "portability_revision_of_selected_export",
       "source_state": "REVISION_2_1_0",
-      "outgoing_MIT_inclusion": "ALREADY_PUBLISHED_IN_BASE_1_4_0",
+      "outgoing_MIT_inclusion": "Published under MIT from v2.0.0",
       "runtime_requirement": "Any host code-execution tool (persistent Node or Python REPL, notebook kernel, or one-shot script runner); no implementation, connector or permission is supplied",
-      "discovery_and_new_name_runtime": "UNVERIFIED",
       "source_files": [
         {
           "path": "skills/node-workflow-batcher/SKILL.md",
           "bytes": 3604,
           "sha256": "9cd2c8f441aad3b00b9b36756978f0c0048c46d2cfa860c3ff05bb386855387e"
         }
-      ],
-      "historical_outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION"
+      ]
     },
     {
       "id": "lean-history-reporting",
@@ -526,14 +519,13 @@
       "source_files": [
         {
           "path": "skills/lean-history-reporting/SKILL.md",
-          "bytes": 2834,
-          "sha256": "1b8bb243af9f22e76e0fcc6b9f430ad8f757c76ec60d84861cc0fdf746936265"
+          "bytes": 2845,
+          "sha256": "f9e386adf96c56ab9870da5f750bbea1df09539978059dd818116f1d47bc8647"
         }
       ],
       "dependency": "Authorized history access; uses an outputs-omitted or summary view when the host offers one, otherwise messages first; required detailed evidence remains necessary",
       "performance": "No general savings or effectiveness guarantee; prior packaging comparison is not recertified by publication",
-      "outgoing_MIT_inclusion": "Selected retained MIT terms within current owner-directed eligible-publication task; actual review/delivery prerequisites remain",
-      "discovery": "UNVERIFIED"
+      "outgoing_MIT_inclusion": "Published under MIT from v2.0.0"
     }
   ]
 }
