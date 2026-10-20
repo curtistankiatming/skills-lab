@@ -1,6 +1,6 @@
 ---
 name: scope-pull
-description: Use when asked if a project is on track, what is left against the plan, whether scope has crept, or whether new work belongs in scope, for any kind of project. Report source-backed scope, progress, gaps and next steps. For what one recorded run did, use lean-history-reporting. Not for approving or starting work.
+description: Use when asked how a project stands against its agreed scope: whether it's on track, what is left against the plan, whether scope has crept, or whether to add new work to that scope. Works for any kind of project. Report source-backed scope, progress, gaps and next steps. For what one recorded run did, use lean-history-reporting. Not for approving or starting work.
 ---
 
 # Scope Pull
@@ -9,7 +9,7 @@ description: Use when asked if a project is on track, what is left against the p
 
 **Use this skill when** the user asks "are we on track?", "what's left against the plan?", "has scope crept?" or "should this be added to the project's scope?". That covers pulling a project's agreed scope together, comparing delivery with commitments, reconciling scope changes, or assessing proposed additions.
 
-**Skip it** when the question is what a single recorded run or task did ("where did that task get to?"); use lean-history-reporting for that. Skip it too for an unrelated request with no scope, commitment or progress question. Selecting the skill adds no authority.
+**Skip it** when the question is what a single recorded run or task did ("where did that task get to?"); use lean-history-reporting for that. Skip it too for an unrelated request with no scope, commitment or progress question, such as a design question like "should we add a cache?" that no agreed scope is behind. Selecting the skill adds no authority.
 
 ## Steps
 

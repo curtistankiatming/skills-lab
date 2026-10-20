@@ -240,21 +240,57 @@ def parse_choice(text, names):
     return "none" if re.search(r"\bnone\b", lowered) else "unparsed"
 
 
+def parse_choices(text, names):
+    """Map a multi-select reply to the skill names it lists, in order; [] for none, None if unparsed."""
+    lowered = re.sub(r"[`*_\"'.]", " ", text.lower()).strip()
+    if re.match(r"(none|no\b|n/a|nothing\b)", lowered):
+        return []
+    hits = sorted((lowered.find(n), n) for n in names if n in lowered)
+    if hits:
+        return [n for _, n in hits]
+    return [] if re.search(r"\bnone\b", lowered) else None
+
+
+SINGLE_PICK = ("For the user's request, reply with exactly one skill name from the list, "
+               "or none if no skill fits. Reply with the name only.")
+MULTI_PICK = ("For the user's request, list every skill from the list that you would load, "
+              "separated by commas, or none if no skill fits. Reply with the names only.")
+
+
+def trigger_record(case, choice_text, names, multi):
+    """Score one picker reply. In multi mode, any skill loaded besides the expected one is an extra."""
+    if not multi:
+        choice = None if choice_text is None else parse_choice(choice_text, names)
+        return {"choice": choice, "correct": choice == case["expected"]}
+    loaded = None if choice_text is None else parse_choices(choice_text, names)
+    if loaded is None:
+        return {"mode": "multi", "loaded": None, "extras": None, "found": False, "correct": False}
+    wanted = [] if case["expected"] == "none" else [case["expected"]]
+    extras = [n for n in loaded if n not in wanted]
+    found = all(n in loaded for n in wanted)
+    return {"mode": "multi", "loaded": loaded, "extras": extras, "found": found, "correct": found and not extras}
+
+
 def cmd_triggers(args):
     skills = skill_names(args.skills_dir)
     names = [n for n, _ in skills]
     listing = "\n".join(f"- {n}: {d}" for n, d in skills)
     system = (f"{NONE_SYSTEM} These skills are available:\n{listing}\n\n"
-              "For the user's request, reply with exactly one skill name from the list, "
-              "or none if no skill fits. Reply with the name only.")
+              + (MULTI_PICK if args.multi else SINGLE_PICK))
     with open_out(args) as out:
         for case in selected(load("triggers.json")["cases"], args.only):
             for rep in range(args.repeat):
                 result = call(args, args.base_url, args.model, system, case["request"])
-                choice = None if result["error"] else parse_choice(result["answer"], names)
+                scored = trigger_record(case, None if result["error"] else result["answer"], names, args.multi)
                 emit(out, {"case": case["id"], "model": args.model, "repeat": rep, "expected": case["expected"],
-                           "choice": choice, "correct": choice == case["expected"], **result})
-                print(f"{case['id']}: {choice or 'ERROR ' + result['error']}{warn(result)}", file=sys.stderr)
+                           **scored, **result})
+                if result["error"]:
+                    shown = "ERROR " + result["error"]
+                elif args.multi:
+                    shown = "unparsed" if scored["loaded"] is None else ", ".join(scored["loaded"]) or "none"
+                else:
+                    shown = scored["choice"]
+                print(f"{case['id']}: {shown}{warn(result)}", file=sys.stderr)
 
 
 def cmd_prompts(args):
@@ -271,7 +307,19 @@ def cmd_summary(args):
     for path in args.files:
         records = read_jsonl(path)
         flagged = [r for r in records if r.get("context_check") not in (None, "ok")]
-        if records and "expected" in records[0]:
+        if records and records[0].get("mode") == "multi":
+            done = [r for r in records if not r["error"]]
+            found = sum(r["found"] for r in done)
+            extras = sum(len(r["extras"] or []) for r in done)
+            exact = sum(r["correct"] for r in done)
+            print(f"{path}: multi-select triggers {found}/{len(done)} included the expected answer, "
+                  f"{exact}/{len(done)} loaded nothing else, {extras} extra loads, "
+                  f"{len(records) - len(done)} errors")
+            for r in done:
+                if not r["correct"]:
+                    got = "unparsed" if r["loaded"] is None else ", ".join(r["loaded"]) or "none"
+                    print(f"  {r['case']}: expected {r['expected']}, loaded {got}")
+        elif records and "expected" in records[0]:
             done = [r for r in records if not r["error"]]
             right = sum(r["correct"] for r in done)
             print(f"{path}: triggers {right}/{len(done)} correct, {len(records) - len(done)} errors")
@@ -315,6 +363,8 @@ def main(argv=None):
     a.add_argument("--condition", choices=["none", "skill"], required=True)
     t = sub.add_parser("triggers", help="check which skill each request selects")
     common(t)
+    t.add_argument("--multi", action="store_true",
+                   help="ask which skills the model would load, and count any extra ones")
     s = sub.add_parser("score", help="score an answers file with a judge model")
     common(s, endpoint=False)
     s.add_argument("--answers", required=True)

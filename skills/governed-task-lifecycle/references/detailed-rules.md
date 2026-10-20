@@ -2,6 +2,8 @@
 
 These are the full rules behind the checklist in [SKILL.md](../SKILL.md), unchanged from version 1.0.2. Read them when a step's edge case is not covered by the checklist, or when the destination's contract needs exact wording.
 
+If this file and SKILL.md disagree, SKILL.md wins. Report the conflict so the two can be brought back in line.
+
 ## General
 
 Resolve the requested command, exact target, current authority and the destination's active command contract before acting. This portable workflow does not install a governance policy. A destination may make Initialize analysis-only, design-only or implementation-capable; an alias or amendment applies only when active there. Follow its command meanings, required checks, evidence formats and approval authority. The stage names below are defaults, not substitutes for destination requirements. Names of owners, repositories, tasks, models, threads and versions are current inputs.

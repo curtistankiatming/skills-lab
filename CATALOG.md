@@ -1,15 +1,15 @@
 # Skills Lab catalog
 
-Collection 2.1.0: six installable skills, plus one example skill in [examples/](examples/README.md). The [inventory](inventory.json) records every tracked file's size and SHA-256. See [rights](RIGHTS.md).
+Collection 2.1.1: six installable skills, plus one example skill in [examples/](examples/README.md). The [inventory](inventory.json) records every tracked file's size and SHA-256. See [rights](RIGHTS.md).
 
 | Folder | Use when | Boundary | Entry point |
 | --- | --- | --- | --- |
 | governed-task-lifecycle | The owner says Initialize (or Initiate), Validate or Approve for a named task, or the project requires that lifecycle. | Not for ordinary requests. Initialize builds the authorized work; author checks don't finish Validate; Approve carries out only the effects the owner approved. | [SKILL.md](skills/governed-task-lifecycle/SKILL.md) |
 | verify-exact-candidate | Exact files, hashes or revisions must match a pinned candidate or approved baseline, in a review, transfer or handoff. | Not for general code review, testing, approval or merging. Byte identity is not semantic acceptance or permission to integrate. | [SKILL.md](skills/verify-exact-candidate/SKILL.md) |
 | integrate-approved-pr | Checking whether a PR can merge, or marking ready or merging a PR the owner explicitly approved. | Not for general code review. A review pass or design approval is not permission to merge. Changed heads and unknown outcomes are reconciled before any retry. | [SKILL.md](skills/integrate-approved-pr/SKILL.md) |
-| scope-pull | Whether a project is on track, what is left against the plan, whether scope has crept, or whether new work should be added to scope, including non-software projects. | Reports only; it doesn't approve or start work. Missing evidence is not evidence of non-completion. For what a single recorded run did, use lean-history-reporting. | [SKILL.md](skills/scope-pull/SKILL.md) |
+| scope-pull | Whether a project is on track, what is left against the plan, whether scope has crept, or whether new work should be added to the project's agreed scope, including non-software projects. | Reports only; it doesn't approve or start work. Missing evidence is not evidence of non-completion. For what a single recorded run did, use lean-history-reporting. | [SKILL.md](skills/scope-pull/SKILL.md) |
 | lean-history-reporting | A status report on, or a diagnosis of, earlier work recorded in a chat, session, thread or task history. | Summaries first; fetch full outputs when a fact, contradiction or check needs them. Omitted output never proves success. For progress against a plan, use scope-pull. Doesn't repair, rerun or approve. | [SKILL.md](skills/lean-history-reporting/SKILL.md) |
-| node-workflow-batcher | Many local file reads, computations and checks can be done in one code-tool call (Node, Python or similar) instead of many separate tool calls. | Needs a host code-execution tool. Check every result; stop at decisions, approvals or a denied provider. Not for steps that need approval or change anything outside the task. | [SKILL.md](skills/node-workflow-batcher/SKILL.md) |
+| node-workflow-batcher | A task needs many separate file reads and calculations that one script could do in a code tool (Node, Python or similar). | Not for ordinary coding, editing or running a test suite. Needs a host code-execution tool. Check every result; stop at decisions, approvals or a denied provider. Not for steps that need approval or change anything outside the task. | [SKILL.md](skills/node-workflow-batcher/SKILL.md) |
 
 ## Included resources
 

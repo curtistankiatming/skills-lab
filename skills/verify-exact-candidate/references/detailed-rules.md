@@ -2,6 +2,8 @@
 
 These are the full rules behind the checklist in [SKILL.md](../SKILL.md), moved here in version 1.4.0 with only their link paths changed. Read them when a step's edge case is not covered by the checklist, or when the destination's contract needs exact wording.
 
+If this file and SKILL.md disagree, SKILL.md wins. Report the conflict so the two can be brought back in line.
+
 ## Define the claim and input boundary
 
 Identify the target, authoritative manifest or revision, evaluated scope, expected output and evidence source. Distinguish byte identity, semantic correctness, execution results and live external state; decide which claim the task actually needs. A manifest authored by the candidate can describe it but cannot authenticate owner approval.
