@@ -1,6 +1,6 @@
 ---
 name: lean-history-reporting
-description: Use this skill when asked for a status report on, or a diagnosis of, earlier work recorded in a chat, session, thread or task history. Read summaries first and fetch full outputs only when needed. Do not use it to repair, rerun or approve anything.
+description: Use this skill when asked for a status report on, or a diagnosis of, earlier work recorded in a chat, session, thread or task history. Read summaries first and fetch full outputs only when needed. For progress against an agreed plan or scope, use scope-pull. Do not use it to repair, rerun or approve anything.
 ---
 
 # Lean history reporting
@@ -9,6 +9,7 @@ description: Use this skill when asked for a status report on, or a diagnosis of
 
 - The user asks "where did this task get to?", "what happened in that run?" or "why did it fail?", and the answer is in a recorded history: a chat or session transcript, a thread, a task log or a CI run list.
 - Skip it when the answer is in a file or the live system rather than in history, or when no history access has been granted.
+- This skill reports what a recorded run or task did. If the question is how a project stands against its agreed commitments ("are we on track?", "what's left against the plan?"), use scope-pull instead.
 
 ## Steps
 

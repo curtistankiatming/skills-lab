@@ -115,8 +115,8 @@
     },
     {
       "path": "skills/lean-history-reporting/SKILL.md",
-      "bytes": 2609,
-      "sha256": "febb541f526f14c75be6c1a738e1f6e17d80325a384e24b0ed90e8111b603215"
+      "bytes": 2875,
+      "sha256": "fdcd16b25b1a14440fa988ad41a570d6b338ff0fd23211cf0211591d3a9c23ae"
     },
     {
       "path": "skills/node-workflow-batcher/SKILL.md",
@@ -423,8 +423,8 @@
       "source_files": [
         {
           "path": "skills/lean-history-reporting/SKILL.md",
-          "bytes": 2609,
-          "sha256": "febb541f526f14c75be6c1a738e1f6e17d80325a384e24b0ed90e8111b603215"
+          "bytes": 2875,
+          "sha256": "fdcd16b25b1a14440fa988ad41a570d6b338ff0fd23211cf0211591d3a9c23ae"
         }
       ],
       "resource_payload_sha256": "5ba6962048d11063708f1a26a6c8c57f7577deabe4a3fddf234bc51b303f60a2",
