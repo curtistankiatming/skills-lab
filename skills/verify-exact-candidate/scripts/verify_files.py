@@ -12,6 +12,7 @@ sys.dont_write_bytecode = True
 import argparse
 import contextlib
 import ctypes
+import errno
 import hashlib
 import json
 import ntpath
@@ -88,6 +89,10 @@ def absolute(path):
 
 
 class PosixFS:
+    # Files are closed after observation and reopened for reading, so a large
+    # package does not exhaust the per-process open-file limit.
+    holds_files = False
+
     def __init__(self, stack):
         self.stack = stack
         if (os.open not in os.supports_dir_fd or os.listdir not in os.supports_fd
@@ -102,8 +107,14 @@ class PosixFS:
         return self.hold(os.open(base, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW))
 
     def child(self, parent, name):
+        return self.hold(self.open_unheld(parent, name))
+
+    def open_unheld(self, parent, name):
         component(name)
-        return self.hold(os.open(name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=parent))
+        return os.open(name, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=parent)
+
+    def close(self, handle):
+        os.close(handle)
 
     def info(self, handle):
         s = os.fstat(handle)
@@ -129,6 +140,8 @@ class PosixFS:
 
 class WindowsFS:
     """Open existing objects relative to retained handles, without following reparses."""
+    holds_files = True
+
     def __init__(self, stack):
         from ctypes import wintypes as w
         self.stack = stack
@@ -331,9 +344,19 @@ def manifest_entries(raw):
     return {e["path"]: e for e in found.values()}
 
 
+ERRNO_HINTS = {
+    errno.ELOOP: "symbolic link not followed; pass the real path or exclude the link",
+    errno.EMFILE: "too many open files; raise the open-file limit",
+    errno.EACCES: "permission denied",
+    errno.ENOENT: "not found",
+}
+
+
 def failure_text(exc):
     if isinstance(exc, OSError):
-        return "I/O unavailable (code %s)" % (getattr(exc, "winerror", None) or exc.errno)
+        code = getattr(exc, "winerror", None) or exc.errno
+        hint = None if getattr(exc, "winerror", None) else ERRNO_HINTS.get(exc.errno)
+        return "I/O unavailable (code %s)%s" % (code, ": " + hint if hint else "")
     return str(exc)[:240] or type(exc).__name__
 
 
@@ -384,16 +407,43 @@ def check(root, manifest, require_atomic=False):
                         if folded in aliases:
                             raise Unavailable("case-ambiguous observed path")
                         aliases[folded] = path
-                        child = fs.child(handle, name)
-                        info = fs.info(child)
+                        if fs.holds_files:
+                            child = fs.child(handle, name)
+                            info = fs.info(child)
+                        else:
+                            child = fs.open_unheld(handle, name)
+                            try:
+                                info = fs.info(child)
+                            except BaseException:
+                                fs.close(child)
+                                raise
+                            if fs.directory(info):
+                                fs.hold(child)
+                            else:
+                                fs.close(child)
+                                child = None
                         if fs.directory(info):
                             scan(child, path + "/", info, depth + 1)
                         else:
                             if info[6] != 1:
                                 raise Unavailable("hard-linked file identity unsupported")
-                            observed[path] = (child, info)
+                            observed[path] = (child, info, handle, name)
                     except (OSError, Unavailable, UnicodeError) as exc:
                         issues.append({"path": path, "reason": failure_text(exc)})
+
+            def file_handle(path):
+                # Returns (handle, opened); a reopened file must be the same object as observed.
+                handle, before, parent, name = observed[path]
+                if handle is not None:
+                    return handle, False
+                handle = fs.open_unheld(parent, name)
+                try:
+                    if fs.info(handle) != before:
+                        raise Unavailable("file changed between observations")
+                except BaseException:
+                    fs.close(handle)
+                    raise
+                return handle, True
 
             scan(rh, "", ri, 0)
             missing, extra = sorted(set(expected) - set(observed)), sorted(set(observed) - set(expected))
@@ -407,9 +457,14 @@ def check(root, manifest, require_atomic=False):
                     row["status"] = "INCONCLUSIVE" if issues else "MISMATCH"
                     row["reason"] = "not observed; see membership coverage"
                 else:
-                    handle, info = observed[path]
+                    info = observed[path][1]
                     try:
-                        size, digest, _ = read_bounded(fs, handle, info, MAX_FILE, budget=read_budget)
+                        handle, opened = file_handle(path)
+                        try:
+                            size, digest, _ = read_bounded(fs, handle, info, MAX_FILE, budget=read_budget)
+                        finally:
+                            if opened:
+                                fs.close(handle)
                         row["actual"] = {"bytes": size, "sha256": digest}
                         row["status"] = "VERIFIED" if size == entry["bytes"] and digest == entry["sha256"] else "MISMATCH"
                     except (OSError, Unavailable) as exc:
@@ -421,10 +476,15 @@ def check(root, manifest, require_atomic=False):
                         raise Unavailable("directory changed between observations")
                 except (OSError, Unavailable, UnicodeError) as exc:
                     issues.append({"path": prefix or ".", "reason": failure_text(exc)})
-            for path, (handle, before) in observed.items():
+            for path, (_, before, _, _) in observed.items():
                 try:
-                    if fs.info(handle) != before:
-                        raise Unavailable("file changed between observations")
+                    handle, opened = file_handle(path)
+                    try:
+                        if fs.info(handle) != before:
+                            raise Unavailable("file changed between observations")
+                    finally:
+                        if opened:
+                            fs.close(handle)
                 except (OSError, Unavailable) as exc:
                     issues.append({"path": path, "reason": failure_text(exc)})
                     for row in report["files"]:
