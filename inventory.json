@@ -100,8 +100,8 @@
     },
     {
       "path": "skills/integrate-approved-pr/SKILL.md",
-      "bytes": 7849,
-      "sha256": "b652ac45c5dd157661762f08a44917472570616bf0d58b7df7993e362dc6903f"
+      "bytes": 9383,
+      "sha256": "922a369627c785e3883cf9ff4600483e36e1a85ec66356b94bf41bba9ea1321b"
     },
     {
       "path": "skills/integrate-approved-pr/agents/openai.yaml",
@@ -245,8 +245,8 @@
       "source_files": [
         {
           "path": "skills/integrate-approved-pr/SKILL.md",
-          "bytes": 7849,
-          "sha256": "b652ac45c5dd157661762f08a44917472570616bf0d58b7df7993e362dc6903f"
+          "bytes": 9383,
+          "sha256": "922a369627c785e3883cf9ff4600483e36e1a85ec66356b94bf41bba9ea1321b"
         },
         {
           "path": "skills/integrate-approved-pr/agents/openai.yaml",
@@ -259,8 +259,9 @@
           "sha256": "9da07642a72004ef90bc58a9d8ca4040abc98fa68c3bf652409739a531ae1eb4"
         }
       ],
-      "source_relationship": "unchanged_selected_export",
-      "source_version": "1.0.1"
+      "source_relationship": "portability_revision_of_selected_export",
+      "source_version": "1.1.0",
+      "source_state": "PORTABILITY_REVISION_PENDING_REVIEW"
     },
     {
       "id": "scope-pull",
