@@ -10,6 +10,12 @@ Keep the copyright and permission notice in all copies or substantial portions. 
 
 The skill bodies and resources keep their source meaning. A licence grant does not provide authority to operate on another repository, adopt a skill into a destination, access credentials, merge, spend or deploy. Host support and operational permissions remain separate from rights to the files.
 
+## Portability revisions for 2.0.0
+
+The 2.0.0 revisions to all six skills and the Offline Usage Reporter example were written for this collection at the owner's request and are distributed under the same MIT terms and copyright notice. They rewrite the skills' own instructions, add fictional test fixtures and tests, and change the collection's own helper scripts using only the Python and Node.js standard libraries. No third-party implementation, dependency or additional notice was added. As with the earlier selections, this is bounded inspection, not universal legal clearance.
+
+The sections below record earlier selections as they were prepared.
+
 ## Historical preparation: additions for collection 1.4.0
 
 This local candidate proposes including Offline Usage Reporter 1.0.1 (SKILL.md, a receipt-contract reference and two Node.js helpers) and Node Workflow Batcher 1.0.0 (SKILL.md) under the existing MIT terms and copyright notice. Permission for these exact additions and their selected outgoing terms still needs the owner's explicit decision before public distribution. Local source/intake acceptance does not supply that public licence or publication decision.

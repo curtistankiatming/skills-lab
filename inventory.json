@@ -1,7 +1,15 @@
 {
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
-  "distribution_version": "1.5.0",
+  "distribution_version": "2.0.0",
+  "distribution_state": "INTEGRATED_ON_MAIN_NOT_RELEASED",
+  "last_issued_distribution_version": "1.1.0",
+  "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
+  "outgoing_licence": "MIT",
+  "repository_identity": "curtistankiatming/skills-lab",
+  "schema_version": 1,
+  "source_policy": "Six installable skills under skills/ and one example under examples/. Every skill and the example were revised for host portability in PRs #6-#12 and integrated on main; these repository copies are the current revisions. Existing notices and MIT terms apply. Source integration does not establish a release, installation, host discovery or runtime behavior.",
+  "history": "Earlier snapshot records removed from this file in 2.0.0 are reproduced in HISTORY.md.",
   "files": [
     {
       "path": "AGENTS.md",
@@ -10,18 +18,23 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 6772,
-      "sha256": "f2c1f1566bbcb008b2ac33a079d8fea1787291eb660d386042273263eb71c5a2"
+      "bytes": 5002,
+      "sha256": "04bdda103e483594a98ec714ba7718b84036705b603bc2aed92d7e20055173f6"
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 3478,
-      "sha256": "3f5b754d9c4fcf141bb0433f1fc702bbf4008337dfaf93309b59e41d4cf2b4a8"
+      "bytes": 3610,
+      "sha256": "3811efbed8de3c050af88a72da8eb10f57fb876b5ae1f5202715f123a6bf3577"
     },
     {
       "path": "EVALUATING.md",
       "bytes": 3700,
       "sha256": "0eb6be281e18d27958ed13ebdbd8a24c73f34a3f5e31de672fb2eecdf1a18069"
+    },
+    {
+      "path": "HISTORY.md",
+      "bytes": 12912,
+      "sha256": "203f0cf0bf182805c0d62bc0a73cd6c04d2e1ffe3752a5bc73ffd9ec84749f32"
     },
     {
       "path": "LICENSE",
@@ -30,23 +43,23 @@
     },
     {
       "path": "README.md",
-      "bytes": 8382,
-      "sha256": "45854e7052c4e4b1052d8938962389ce749d09a7f56a09410d558cc08f62f05b"
+      "bytes": 6681,
+      "sha256": "5764c97f30f06d94875592c371643e023cd90d6246d072e45e6ee89781798367"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 4229,
-      "sha256": "f194165cfb9abdaa15c3875f24857e650cf07bde4f859c46306de8fd75454acf"
+      "bytes": 3156,
+      "sha256": "ee34cb79a014cb2ec00c6315deffcf3284831579c76fdbd92796d33bdcd53bf5"
     },
     {
       "path": "RIGHTS.md",
-      "bytes": 5107,
-      "sha256": "4351f19cd821459345b4112dca144d0dbf5a84c56e8ffd0ffa5c3e38e12e1333"
+      "bytes": 5761,
+      "sha256": "0553db857be99280fc1073e0c3f34db92d1aa6d16c6786cb7f7a2a076f5bbbff"
     },
     {
       "path": "VERSION",
       "bytes": 6,
-      "sha256": "acb57a7135b2d7d6e665f67f056e21353023b93835f54def1ae523bf76f1bfb3"
+      "sha256": "c28fcca53637bc88e124af1725df13cb98c69dedefd62fb3cdbe1cdb6b760624"
     },
     {
       "path": "evaluations/2026-10-07/README.md",
@@ -219,10 +232,6 @@
       "sha256": "38ec3b3e855425c4db8e51331b25d3f2fd69a3ce56535f15260ecf69fc8f3b32"
     }
   ],
-  "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
-  "outgoing_licence": "MIT",
-  "repository_identity": "curtistankiatming/skills-lab",
-  "schema_version": 1,
   "skills": [
     {
       "entrypoint": "skills/governed-task-lifecycle/SKILL.md",
@@ -256,7 +265,7 @@
       ],
       "source_relationship": "portability_revision_of_selected_export",
       "source_version": "1.1.0",
-      "source_state": "PORTABILITY_REVISION_PENDING_REVIEW",
+      "source_state": "INTEGRATED_2_0_0",
       "historical_preparation_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
     },
     {
@@ -281,7 +290,7 @@
       ],
       "source_relationship": "portability_revision_of_selected_export",
       "source_version": "1.1.0",
-      "source_state": "PORTABILITY_REVISION_PENDING_REVIEW"
+      "source_state": "INTEGRATED_2_0_0"
     },
     {
       "id": "scope-pull",
@@ -305,7 +314,7 @@
           "sha256": "88f884da9ff3644327ed0a5e03abf9bbee6b1d8500f77bf82366b7130705370c"
         }
       ],
-      "source_state": "PORTABILITY_REVISION_PENDING_REVIEW",
+      "source_state": "INTEGRATED_2_0_0",
       "historical_preparation_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
     },
     {
@@ -348,9 +357,9 @@
           "sha256": "b61f35021f0b67cb3886359cdcabfc60faabe90748ad5d5732d9545df5a607f7"
         }
       ],
-      "source_relationship": "exact_selected_export_of_prepared_source",
+      "source_relationship": "portability_revision_of_selected_export",
       "source_version": "1.3.0",
-      "source_state": "PORTABILITY_REVISION_PENDING_REVIEW",
+      "source_state": "INTEGRATED_2_0_0",
       "historical_preparation_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED",
       "test_suite": "tests/verify-exact-candidate/test_verify_files.py (repository-level; not part of the installed skill)"
     },
@@ -358,8 +367,8 @@
       "id": "offline-usage-reporter",
       "entrypoint": "examples/offline-usage-reporter/SKILL.md",
       "source_version": "1.1.0",
-      "source_relationship": "EXACT_SELECTED_COPY_OF_PROPOSED_LOCAL_SOURCE_SUCCESSOR",
-      "source_state": "MOVED_TO_EXAMPLES_PENDING_REVIEW",
+      "source_relationship": "portability_revision_of_selected_export",
+      "source_state": "INTEGRATED_2_0_0",
       "outgoing_MIT_inclusion": "Retained MIT terms within current eligible-publication review; no changed-source publication is claimed yet",
       "runtime_requirement": "Available Node.js runtime; supported fictional O2 receipt schema; tests use node:test",
       "discovery_and_new_name_runtime": "No new installation or activation in this task; previous1.0.1 installed state is distinct",
@@ -434,8 +443,8 @@
       "id": "node-workflow-batcher",
       "entrypoint": "skills/node-workflow-batcher/SKILL.md",
       "source_version": "1.1.0",
-      "source_relationship": "EXACT_SELECTED_COPY_OF_ACCEPTED_LOCAL_SOURCE",
-      "source_state": "PORTABILITY_REVISION_PENDING_REVIEW",
+      "source_relationship": "portability_revision_of_selected_export",
+      "source_state": "INTEGRATED_2_0_0",
       "outgoing_MIT_inclusion": "ALREADY_PUBLISHED_IN_BASE_1_4_0",
       "runtime_requirement": "Any host code-execution tool (persistent Node or Python REPL, notebook kernel, or one-shot script runner); no implementation, connector or permission is supplied",
       "discovery_and_new_name_runtime": "UNVERIFIED",
@@ -452,8 +461,8 @@
       "id": "lean-history-reporting",
       "entrypoint": "skills/lean-history-reporting/SKILL.md",
       "source_version": "1.1.0",
-      "source_relationship": "EXACT_SELECTED_COPY_OF_LOCAL_R5_PACKAGE",
-      "source_state": "PORTABILITY_REVISION_PENDING_REVIEW",
+      "source_relationship": "portability_revision_of_selected_export",
+      "source_state": "INTEGRATED_2_0_0",
       "source_files": [
         {
           "path": "skills/lean-history-reporting/SKILL.md",
@@ -466,94 +475,5 @@
       "outgoing_MIT_inclusion": "Selected retained MIT terms within current owner-directed eligible-publication task; actual review/delivery prerequisites remain",
       "discovery": "UNVERIFIED"
     }
-  ],
-  "source_policy": "The selection retains five existing skill resource sets unchanged from integrated1.4.0, adds the exact O1 R5 one-file package, and selects the proposed local Reporter1.0.2 output-preservation successor. No GPF custody transfer, native savings qualification, installation or activation follows from source preparation/publication. Existing notices and retained MIT terms apply under current task authority.",
-  "distribution_state": "O1_O3_REVIEW_PUBLICATION_CANDIDATE_NOT_YET_PUBLISHED",
-  "last_issued_distribution_version": "1.1.0",
-  "record_semantics": "Prepared snapshot dated 2026-10-18. Existing 1.4.0 source inclusion of Reporter/Batcher was verified at the observed base; older preparation fields retain history. This new candidate is not integration, installation or runtime proof.",
-  "maintenance_snapshot_history": [
-    {
-      "client_date": "2026-10-08",
-      "captured_utc": "2026-10-08 04:43:23 UTC",
-      "state": "DRAFT_CANDIDATE_RECORD_UPKEEP_NOT_RELEASED",
-      "observed_public_branch_basis": "7ca5cc0ad913d600990f08e63662ffc665cb8eda",
-      "observed_public_main": "9f3ac78f1a091fee177a2dcbce3038d8b8a03c73",
-      "last_observed_release": {
-        "tag": "v1.1.0",
-        "target": "9f3ac78f1a091fee177a2dcbce3038d8b8a03c73"
-      },
-      "source_alignment": "All four selected resource sets have matching source/distribution Git blobs and 100644 modes at the captured bases; restricted controller locators and records are withheld.",
-      "evaluation_record": "evaluations/2026-10-07/README.md",
-      "paired_evidence": [
-        {
-          "path": "cases.json",
-          "bytes": 13409,
-          "sha256": "2428f08c818cd44512baf057f58188c2253a50d9ab895b43745afdd7be51f8e0"
-        },
-        {
-          "path": "rubric.json",
-          "bytes": 3372,
-          "sha256": "f860f1ac83b05e47bf9cac9c51ba91ad9ed9198ea2fd049edfc10f3bf3bfdd5b"
-        },
-        {
-          "path": "answers.json",
-          "bytes": 33587,
-          "sha256": "68ef268033e4a3435c9dbaf351770a08046d2228d8a428ac794b7bc96ed35548"
-        },
-        {
-          "path": "results.json",
-          "bytes": 11333,
-          "sha256": "72d67ea53db1e3481bbfcfdf4d919c29d7e6132e00c7b7d94718d5602883cff0"
-        }
-      ],
-      "behavioral_improvement_established": false,
-      "record_limits": "This snapshot predates its containing upkeep commit. It is not current approval, integration, installed state or qualification. Final delivery identities are recorded outside this inventory."
-    }
-  ],
-  "reconciliation": {
-    "date": "2026-10-08",
-    "state": "PREPARED_DRAFT_REVIEW_CANDIDATE",
-    "public_input_heads": [
-      "0e183ba54421c1046f8d7a40eaa5b2bde8aea77c",
-      "535336f10b4c4aab55eca4322d5f09f9272f4ebe"
-    ],
-    "public_base": "9f3ac78f1a091fee177a2dcbce3038d8b8a03c73",
-    "branch": "codex/improve-governed-task-lifecycle",
-    "source_alignment": "All four complete selected resource sets match their controlling prepared source bytes and modes. Restricted source locators are withheld.",
-    "evaluation_scope": "evaluations/2026-10-07 covers the historical fictional Verify/Scope comparison. No Lifecycle behavioral comparison is included here; no gain is established.",
-    "history": "Earlier metadata snapshots retain their evaluated revision meaning. Current files/skills inventories bind the reconciled selection; final remote delivery identities are recorded externally."
-  },
-  "combined_preparation": {
-    "date": "2026-10-18",
-    "collection_version": "1.4.0",
-    "state": "LOCAL_CANDIDATE_ONLY",
-    "integrated_base": "75226ac38f2b4875db7a65cb84881d39020227e4",
-    "integrated_source_version": "1.3.0",
-    "last_observed_issued_release": "1.1.0",
-    "new_resource_count": 5,
-    "existing_resource_sets_unchanged": 4,
-    "rights": "Two new MIT inclusions proposed; existing terms/notices retained",
-    "runtime": "No new tests, model trials, discovery, installation or plugin execution",
-    "tag_absence_established": false
-  },
-  "o1_o3_review": {
-    "date": "2026-10-18",
-    "source_version": "1.5.0",
-    "base": "bd6230d3cea0c9efe8db870079ab4ac9c4170985",
-    "additions": [
-      "lean-history-reporting"
-    ],
-    "unchanged_existing_skills": 5,
-    "existing_O2_O3_publication": "VERIFIED_AT_BASE",
-    "current_effect_scope": "Source publication through protected PRs only; no new installation, runtime activation, benchmark, release or plugin",
-    "new_behavioral_tests": 0,
-    "source_correction": {
-      "skill": "offline-usage-reporter",
-      "version": "1.0.2",
-      "scope": "Exclusive output creation and contract clarification; original gate and entrypoint unchanged",
-      "native_performance": "UNVERIFIED_FOR_SUCCESSOR"
-    },
-    "corrected_existing_skills": 1,
-    "candidate": "C4"
-  }
+  ]
 }
