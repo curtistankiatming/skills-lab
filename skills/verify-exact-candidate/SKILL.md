@@ -14,7 +14,7 @@ description: Use this skill when a review, transfer or handoff must verify exact
 ## Steps
 
 1. **Name the claim.** Write down which property is requested (same bytes, same Git candidate, applicable test evidence or unchanged delivery) and which independent reference it is compared with. If no independent reference exists, report an inventory and mark the match inconclusive.
-2. **Admit the inputs.** Use the literal named paths. Check that each exists and is an allowed type. If an input is missing, disallowed or of unknown type, hold that check and report it.
+2. **Admit the inputs.** Use the literal named paths. Check that each exists and is an allowed type. Pass fully resolved real paths: symbolic links, including a linked parent folder such as `/tmp`, are not followed and make the check inconclusive. If an input is missing, disallowed or of unknown type, hold that check and report it.
 3. **Compare exactly.** Hash raw bytes without normalizing anything. Match the complete declared set, including missing, extra and duplicate paths.
 4. **Bind the evidence.** Confirm that each test report, citation or receipt names the exact evaluated candidate. If it names another revision, mark it inconclusive.
 5. **Report each property** as verified, mismatch or inconclusive, with its evidence and what was not covered. Never merge mixed results into one "verified".

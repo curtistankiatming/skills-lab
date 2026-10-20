@@ -155,8 +155,8 @@
     },
     {
       "path": "skills/verify-exact-candidate/SKILL.md",
-      "bytes": 8850,
-      "sha256": "b40a2c461de615a77d6ef58d885b810b84db52ed5154298fe5f5153371e9e3da"
+      "bytes": 8997,
+      "sha256": "7d3666ea56ea4fd520c8480ee6d0f925f455d617653404c12038997ff8921281"
     },
     {
       "path": "skills/verify-exact-candidate/agents/openai.yaml",
@@ -185,8 +185,8 @@
     },
     {
       "path": "skills/verify-exact-candidate/scripts/verify_files.py",
-      "bytes": 24721,
-      "sha256": "7fd02e06cddfbd39c19081bf183136da7e18f5c70a3af320042db59ca5fa8b18"
+      "bytes": 24880,
+      "sha256": "b61f35021f0b67cb3886359cdcabfc60faabe90748ad5d5732d9545df5a607f7"
     },
     {
       "path": "tests/verify-exact-candidate/test_verify_files.py",
@@ -283,8 +283,8 @@
       "source_files": [
         {
           "path": "skills/verify-exact-candidate/SKILL.md",
-          "bytes": 8850,
-          "sha256": "b40a2c461de615a77d6ef58d885b810b84db52ed5154298fe5f5153371e9e3da"
+          "bytes": 8997,
+          "sha256": "7d3666ea56ea4fd520c8480ee6d0f925f455d617653404c12038997ff8921281"
         },
         {
           "path": "skills/verify-exact-candidate/agents/openai.yaml",
@@ -313,8 +313,8 @@
         },
         {
           "path": "skills/verify-exact-candidate/scripts/verify_files.py",
-          "bytes": 24721,
-          "sha256": "7fd02e06cddfbd39c19081bf183136da7e18f5c70a3af320042db59ca5fa8b18"
+          "bytes": 24880,
+          "sha256": "b61f35021f0b67cb3886359cdcabfc60faabe90748ad5d5732d9545df5a607f7"
         }
       ],
       "source_relationship": "exact_selected_export_of_prepared_source",

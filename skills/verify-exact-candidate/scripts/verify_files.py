@@ -11,7 +11,6 @@ sys.dont_write_bytecode = True
 
 import argparse
 import contextlib
-import ctypes
 import errno
 import hashlib
 import json
@@ -143,6 +142,10 @@ class WindowsFS:
     holds_files = True
 
     def __init__(self, stack):
+        # ctypes is imported only when the Windows adapter is used, so other
+        # platforms never load native-call support.
+        global ctypes
+        import ctypes
         from ctypes import wintypes as w
         self.stack = stack
         self.k = ctypes.WinDLL("kernel32", use_last_error=True)
