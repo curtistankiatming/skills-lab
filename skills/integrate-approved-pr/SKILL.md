@@ -1,23 +1,31 @@
 ---
 name: integrate-approved-pr
-description: Use this skill if asked to inspect PR integration prerequisites or carry out explicitly approved PR readiness or protected merge. Bind current checks to the exact approved candidate and verify the result; a review pass or design approval is not merge authority.
+description: Use this skill when asked to check whether a pull request can merge, or to mark ready or merge a PR the owner explicitly approved. Bind checks to the exact approved head and verify the result. Do not treat a review pass or design approval as permission to merge.
 ---
 
 # Integrate approved PR
 
-## When to use and invoke
+## When to use
 
-**Use this skill if** the request is to inspect a pull request's integration prerequisites, mark it ready under exact approval, or perform and verify an explicitly approved protected merge.
+**Use this skill when** the request is to inspect a pull request's integration prerequisites, mark it ready under exact approval, or perform and verify an explicitly approved protected merge.
 
-Do not use it to infer merge permission from a review pass, source approval or a generic request to review a PR. Without integration approval, stay within authorized read-only preparation.
+**Skip it** for a general code review. Never infer merge permission from a review pass, a source or design approval, or a generic request to review a PR. Without integration approval, stay read-only.
 
-**Agent invocation:** select this skill from the available skill catalog, read this `SKILL.md` and the references needed for the current task, then follow the workflow below within the existing authority. Selecting a skill does not authorize new actions.
+## Steps
 
-**Explicit invocation:** `Use $integrate-approved-pr to inspect integration prerequisites for OWNER/REPO PR #123. Make no changes.`
+1. **Bind the approval.** Find the owner's actual instruction. Record the PR, the exact approved head SHA and which effects it covers: inspect only, mark ready, merge, or more. If approval is missing or ambiguous, inspect read-only, prepare the decision, and ask only for what is missing. If it already covers readiness and merge, do not ask again.
+2. **Check your access read-only.** Confirm which tools and permissions you actually have, without a test write.
+3. **Preflight just before each action.** Re-read the PR's base, head SHA, draft state, changed files, required reviews and checks, and bind the check results to that head. Check automatic effects, such as CI runs, deployments and branch deletion on merge, against what was approved.
+4. **Mark ready** if that is included, then confirm the PR actually left draft.
+5. **Merge** if that is included: refresh the head, base and required conditions, then merge with the permitted method and an expected-head guard (for example the `sha` parameter of GitHub's merge API).
+6. **Verify the result:** merged state, the integration commit, the resulting files, and history of the right shape for the method (merge commit, squash or rebase).
+7. **Close out:** report the approved and integrated identities and, for each effect, whether it is verified complete, failed, outcome unknown, held or not attempted.
 
-With a real, current approval: `Use $integrate-approved-pr to complete the already-approved readiness and protected merge for OWNER/REPO PR #123 at its exact approved head.` Resolve the actual approval before acting; example placeholders supply no authority.
+**Stop and report** if the head changed since approval (hold), the base changed (re-evaluate first), required checks or protection rules can't be seen (a gap, not proof they're off), an automatic effect would exceed the grant, a call times out (the outcome is unknown, so read the state before any retry), or access is denied (do not bypass it).
 
-Complete the PR effects actually granted by the authorized owner, using the destination's integration rules. This skill is self-contained. It does not require another skill, a new approval ritual or a particular provider. Owner, repository, PR, base, head, method, writer and limits are current inputs.
+**Example:** the owner says "squash-merge PR #12 at `abc123`". Preflight shows head `abc123`, not draft, required checks passing on `abc123`, and branch deletion on merge off. Merge with method squash and `sha=abc123`. Then confirm the PR is merged and the squash commit on main changes exactly the PR's files. If preflight had shown head `def456`, hold and ask instead.
+
+The sections below give the detailed rules for each step. Complete only the PR effects the authorized owner actually granted, following the destination's integration rules. This skill is self-contained: it needs no other skill, approval ritual or particular provider. Owner, repository, PR, base, head, method, writer and limits are current inputs.
 
 ## Bind the approved operation
 
