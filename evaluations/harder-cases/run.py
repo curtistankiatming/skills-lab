@@ -70,7 +70,7 @@ def chat(args, base_url, model, system, user):
 def context_check(estimate, prompt_tokens, finish_reason):
     if finish_reason == "length":
         return "answer_cut_off"
-    if prompt_tokens is None:
+    if not prompt_tokens:  # missing, or 0 from servers that don't count cached prompt tokens
         return "unknown"
     return "prompt_short" if prompt_tokens < estimate * SHORT_PROMPT_RATIO else "ok"
 

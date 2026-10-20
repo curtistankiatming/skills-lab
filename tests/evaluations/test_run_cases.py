@@ -51,6 +51,8 @@ class Stub(BaseHTTPRequestHandler):
             reply["usage"]["prompt_tokens"] = 300
         if body["model"] == "cut-off":
             reply["choices"][0].update(finish_reason="length", message={"content": "<think>still going"})
+        if body["model"] == "cached-prompt":
+            reply["usage"]["prompt_tokens"] = 0
         if body["model"] == "no-usage":
             del reply["usage"]
         data = json.dumps(reply).encode()
@@ -177,7 +179,8 @@ class RunCasesTest(unittest.TestCase):
         self.assertEqual(run.strip_thinking("plain"), "plain")
 
     def test_context_check_flags(self):
-        expected = {"m": "ok", "tiny-context": "prompt_short", "cut-off": "answer_cut_off", "no-usage": "unknown"}
+        expected = {"m": "ok", "tiny-context": "prompt_short", "cut-off": "answer_cut_off", "no-usage": "unknown",
+                    "cached-prompt": "unknown"}
         for model, check in expected.items():
             out = self.tmp / f"{model}.jsonl"
             run.main(["answers", "--base-url", self.url, "--model", model, "--condition", "skill",

@@ -32,7 +32,7 @@ Set the context to at least 8,192 tokens, or 16,384 for a reasoning model:
 
 - `prompt_short`: the server counted far fewer prompt tokens than the prompt's size suggests, so it was probably truncated.
 - `answer_cut_off`: the answer hit the output limit.
-- `unknown`: the server didn't report usage.
+- `unknown`: the server didn't report a prompt token count, or reported 0 (some servers do that for cached prompts), so truncation can't be checked.
 
 `summary` prints a warning for any flagged record. Rerun flagged cases after raising the context.
 
