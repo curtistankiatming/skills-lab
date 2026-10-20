@@ -11,7 +11,7 @@ import unittest
 from unittest import mock
 
 sys.dont_write_bytecode = True
-HERE = Path(__file__).absolute().parent
+HERE = Path(__file__).absolute().parents[2] / "skills" / "verify-exact-candidate" / "scripts"
 spec = importlib.util.spec_from_file_location("checker", HERE / "verify_files.py")
 c = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(c)
@@ -187,16 +187,32 @@ class CheckerTests(unittest.TestCase):
     def test_unknown_type_in_partial_scan(self):
         self.write("unsupported", b"x")
         cls = c.WindowsFS if os.name == "nt" else c.PosixFS
-        original = cls.child
+        method = "child" if cls.holds_files else "open_unheld"
+        original = getattr(cls, method)
         def unavailable(fs, parent, name):
             if name == "unsupported":
                 raise c.Unavailable("excluded reparse observation")
             return original(fs, parent, name)
-        with mock.patch.object(cls, "child", unavailable):
+        with mock.patch.object(cls, method, unavailable):
             r = self.check()
             self.assertEqual(r["status"], "INCONCLUSIVE")
             self.assertEqual(r["membership"]["status"], "INCONCLUSIVE")
             self.assertEqual(r["files"][0]["status"], "VERIFIED")
+
+    @unittest.skipUnless(sys.platform == "linux", "POSIX open-file limit fixture")
+    def test_open_file_limit_does_not_cap_package_size(self):
+        names = ["f%04d.txt" % i for i in range(600)]
+        for name in names:
+            self.write(name, name.encode())
+        self.reference(["a.txt"] + names)
+        script = ("import resource,subprocess,sys;"
+                  "resource.setrlimit(resource.RLIMIT_NOFILE,(128,128));"
+                  "sys.exit(subprocess.run(sys.argv[1:]).returncode)")
+        p = subprocess.run([sys.executable, "-I", "-c", script, sys.executable, "-I", "-B",
+                            str(HERE / "verify_files.py"), "--root", str(self.root),
+                            "--manifest", str(self.manifest)], capture_output=True, text=True)
+        self.assertEqual(p.returncode, 0, p.stdout[-400:] + p.stderr)
+        self.assertEqual(json.loads(p.stdout)["status"], "VERIFIED")
 
     def test_changed_membership_observation(self):
         cls = c.WindowsFS if os.name == "nt" else c.PosixFS
