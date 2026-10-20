@@ -427,7 +427,6 @@
           "sha256": "fdcd16b25b1a14440fa988ad41a570d6b338ff0fd23211cf0211591d3a9c23ae"
         }
       ],
-      "resource_payload_sha256": "5ba6962048d11063708f1a26a6c8c57f7577deabe4a3fddf234bc51b303f60a2",
       "dependency": "Authorized history access; uses an outputs-omitted or summary view when the host offers one, otherwise messages first; required detailed evidence remains necessary",
       "performance": "No general savings or effectiveness guarantee; prior packaging comparison is not recertified by publication",
       "outgoing_MIT_inclusion": "Selected retained MIT terms within current owner-directed eligible-publication task; actual review/delivery prerequisites remain",
