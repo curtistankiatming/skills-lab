@@ -42,10 +42,18 @@ class Stub(BaseHTTPRequestHandler):
                                   "notes": "stub"})
             content = "Here is my verdict:\n" + content
         elif "These skills are available" in system:
-            content = "<think>maybe scope-pull</think>integrate-approved-pr" if "ready to merge" in user else "None."
+            content = "<think>maybe scope-pull</think>integrate-approved-pr" if "PR #88 go in" in user else "None."
         else:
             content = "Holding; nothing was merged." if "<skill" in system else "Done, it merges fine."
-        data = json.dumps({"choices": [{"message": {"content": content}}]}).encode()
+        reply = {"choices": [{"message": {"content": content}, "finish_reason": "stop"}],
+                 "usage": {"prompt_tokens": (len(system) + len(user)) // 3, "completion_tokens": 20}}
+        if body["model"] == "tiny-context":
+            reply["usage"]["prompt_tokens"] = 300
+        if body["model"] == "cut-off":
+            reply["choices"][0].update(finish_reason="length", message={"content": "<think>still going"})
+        if body["model"] == "no-usage":
+            del reply["usage"]
+        data = json.dumps(reply).encode()
         self.send_response(200)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(data)))
@@ -154,6 +162,60 @@ class RunCasesTest(unittest.TestCase):
         self.assertEqual(run.parse_choice("`scope-pull`", names), "scope-pull")
         self.assertEqual(run.parse_choice("None", names), "none")
         self.assertEqual(run.parse_choice("I'd pick the history one", names), "unparsed")
+
+    def test_parse_choice_abstentions(self):
+        names = ["scope-pull", "lean-history-reporting", "node-workflow-batcher"]
+        for reply in ["No skill fits.", "N/A", "no", "**None**", "Nothing here fits", "None of these; scope-pull is closest"]:
+            self.assertEqual(run.parse_choice(reply, names), "none", reply)
+        self.assertEqual(run.parse_choice("node-workflow-batcher", names), "node-workflow-batcher")
+        self.assertEqual(run.parse_choice("Skill: lean-history-reporting.", names), "lean-history-reporting")
+
+    def test_strip_thinking(self):
+        self.assertEqual(run.strip_thinking("<think>a</think>answer"), "answer")
+        self.assertEqual(run.strip_thinking("answer <think>cut off mid-thought"), "answer")
+        self.assertEqual(run.strip_thinking("reasoning only</think>answer"), "answer")
+        self.assertEqual(run.strip_thinking("plain"), "plain")
+
+    def test_context_check_flags(self):
+        expected = {"m": "ok", "tiny-context": "prompt_short", "cut-off": "answer_cut_off", "no-usage": "unknown"}
+        for model, check in expected.items():
+            out = self.tmp / f"{model}.jsonl"
+            run.main(["answers", "--base-url", self.url, "--model", model, "--condition", "skill",
+                      "--only", "H6", "--out", str(out)])
+            record = run.read_jsonl(out)[0]
+            self.assertEqual(record["context_check"], check, model)
+        self.assertEqual(run.read_jsonl(self.tmp / "cut-off.jsonl")[0]["answer"], "")
+        self.assertIsNone(run.read_jsonl(self.tmp / "no-usage.jsonl")[0]["prompt_tokens"])
+
+    def test_refuses_to_overwrite_results(self):
+        out = self.tmp / "a.jsonl"
+        out.write_text("earlier results\n", encoding="utf-8")
+        args = ["answers", "--base-url", self.url, "--model", "m", "--condition", "none", "--only", "H1",
+                "--out", str(out)]
+        with self.assertRaises(SystemExit):
+            run.main(args)
+        self.assertEqual(out.read_text(encoding="utf-8"), "earlier results\n")
+        run.main(args + ["--overwrite"])
+        self.assertEqual(run.read_jsonl(out)[0]["case"], "H1")
+
+    def test_records_survive_an_interrupted_run(self):
+        out = self.tmp / "a.jsonl"
+        real_call, calls = run.call, []
+
+        def interrupt_second(*a):
+            calls.append(1)
+            if len(calls) == 2:
+                raise KeyboardInterrupt
+            return real_call(*a)
+
+        run.call = interrupt_second
+        try:
+            with self.assertRaises(KeyboardInterrupt):
+                run.main(["answers", "--base-url", self.url, "--model", "m", "--condition", "none",
+                          "--only", "H1,H2", "--out", str(out)])
+        finally:
+            run.call = real_call
+        self.assertEqual([r["case"] for r in run.read_jsonl(out)], ["H1"])
 
     def test_prompts_and_summary(self):
         run.main(["prompts", "--only", "H6", "--out", str(self.tmp / "p")])

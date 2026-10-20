@@ -88,28 +88,33 @@
     },
     {
       "path": "evaluations/harder-cases/README.md",
-      "bytes": 4776,
-      "sha256": "96ecdce860a1f765fce0f31ecebce372ad5b09c5e429ec728fcc86a6f4edbe97"
+      "bytes": 6827,
+      "sha256": "cfccc1d85aa5b21d6860b338036add6689f966208ab0214f36a20fd2b5f73723"
+    },
+    {
+      "path": "evaluations/harder-cases/__pycache__/run.cpython-313.pyc",
+      "bytes": 21324,
+      "sha256": "b60e57cd018dcb28683aebd110c22cc6b56473ebe12a79ae2148ecbd6733f283"
     },
     {
       "path": "evaluations/harder-cases/cases.json",
-      "bytes": 9444,
-      "sha256": "faff5e996841d19d0d93d08e415ba74b6dfe189fd2e893541195661d4e12320b"
+      "bytes": 13273,
+      "sha256": "792b776aa99df67a1eee9238efbf221fcdccc74ad83cd8c9828efd0f6ee750ba"
     },
     {
       "path": "evaluations/harder-cases/rubric.json",
-      "bytes": 4766,
-      "sha256": "a32dd68075d5960611e5709b5f4b0029ae1953bbd51308dd18a5bc3296c832f5"
+      "bytes": 5664,
+      "sha256": "fee40a36f54cff8e87f5a553c706a3f011832935c30920eb3e7383d050f1b26b"
     },
     {
       "path": "evaluations/harder-cases/run.py",
-      "bytes": 11547,
-      "sha256": "9bfed7d5ad4d72a76431c01e43b9e6c2c58b59c23ba7de2e569b69ace2482c85"
+      "bytes": 14156,
+      "sha256": "7e84b4100d22fa119e2ae3b17fd2fa4250710cc48ddf566f54bc2f42b3df8bae"
     },
     {
       "path": "evaluations/harder-cases/triggers.json",
-      "bytes": 2323,
-      "sha256": "701e692dc23e6f5997a14f9512b0db96068cb9898d9bb29c3918af3be9d5a397"
+      "bytes": 3738,
+      "sha256": "b414c1972540b33d29047165afc3d0cf01cb65371f24366eab3735ef17f73e06"
     },
     {
       "path": "examples/README.md",
@@ -253,8 +258,8 @@
     },
     {
       "path": "tests/evaluations/test_run_cases.py",
-      "bytes": 8096,
-      "sha256": "e58148e6a4b611301099413f35040ced9a8d8582c86b1d4ae916feb354612acf"
+      "bytes": 11383,
+      "sha256": "19c184ae127d95e2b5c2a9d00cae4fafc2e8c47b1495005c4e1aef55d7ade397"
     },
     {
       "path": "tests/verify-exact-candidate/test_verify_files.py",
