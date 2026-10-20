@@ -10,8 +10,8 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 6778,
-      "sha256": "5cc1cf02f8c1d5f47be5fbe77eda955b99f5754f2e6b1a9f36a686fbf86059b6"
+      "bytes": 6720,
+      "sha256": "0bce29b1bce84286c01be496a8c1c78af3c96d564c40bbf09234d38a10abc008"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -30,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8419,
-      "sha256": "4bea1a7cfe2a0b61b239def2cca3c4ef33640744da4cf81b882723372714ac26"
+      "bytes": 8273,
+      "sha256": "f7c2f4f09e8c4125e80a71d8f0af545fac0c600a73554caec2f575500ae87707"
     },
     {
       "path": "RELEASING.md",
@@ -72,6 +72,46 @@
       "path": "evaluations/2026-10-07/rubric.json",
       "bytes": 3372,
       "sha256": "f860f1ac83b05e47bf9cac9c51ba91ad9ed9198ea2fd049edfc10f3bf3bfdd5b"
+    },
+    {
+      "path": "examples/README.md",
+      "bytes": 465,
+      "sha256": "32d7afb05ab7a6afc85e6645417cd225f9e19abc95baa55c3f0574dec07fe618"
+    },
+    {
+      "path": "examples/offline-usage-reporter/SKILL.md",
+      "bytes": 1770,
+      "sha256": "96b9e33115f35995c3e665d4a1f8987afab1ee96e3f1ce318dc82486a0906aa5"
+    },
+    {
+      "path": "examples/offline-usage-reporter/references/receipt-contract.md",
+      "bytes": 2431,
+      "sha256": "b9cd62edf305ab4be1b8204ce1b4cc50ad73a155195c2de44e9c6654b6f469b4"
+    },
+    {
+      "path": "examples/offline-usage-reporter/scripts/gate.cjs",
+      "bytes": 1214,
+      "sha256": "37a954e2f78a3869a9155e6c36cec41eaaa8eda09c06af225e2bac69a995f160"
+    },
+    {
+      "path": "examples/offline-usage-reporter/scripts/report.cjs",
+      "bytes": 11145,
+      "sha256": "1c88d5c6a001d0e2d001f4ba0d2f57393d7e92bfa9fc753b35e57accc6362264"
+    },
+    {
+      "path": "examples/offline-usage-reporter/tests/fixtures/stop-after-reset.json",
+      "bytes": 3762,
+      "sha256": "0731046dfbd6d4f5134a5cef8ce0927a6600a655f219843bcc4e69d61688c6cb"
+    },
+    {
+      "path": "examples/offline-usage-reporter/tests/fixtures/work-only.json",
+      "bytes": 1532,
+      "sha256": "867e215474026fdb26fa8ebe76975e53627d4b76b33b8048e09f70e0e2dfb412"
+    },
+    {
+      "path": "examples/offline-usage-reporter/tests/report.test.cjs",
+      "bytes": 2973,
+      "sha256": "67792c9fc96785deb2fc8b6c9542345bd811750e2986d0148cea2952c90fd3af"
     },
     {
       "path": "skills/governed-task-lifecycle/SKILL.md",
@@ -122,26 +162,6 @@
       "path": "skills/node-workflow-batcher/SKILL.md",
       "bytes": 2289,
       "sha256": "791ec622a5a4862c1a2942f52d123c1f51403b316acacecbe9e0ea219932d4dd"
-    },
-    {
-      "path": "skills/offline-usage-reporter/SKILL.md",
-      "bytes": 1036,
-      "sha256": "72db910f43dab0548fec341881cc5162403498795cda952fddf3e556c5fc097b"
-    },
-    {
-      "path": "skills/offline-usage-reporter/references/receipt-contract.md",
-      "bytes": 2266,
-      "sha256": "c5134e3e7305965ed709f51e1e41fcfb0d2ff91fb3f3bddc0ce020419a214ae2"
-    },
-    {
-      "path": "skills/offline-usage-reporter/scripts/gate.cjs",
-      "bytes": 1214,
-      "sha256": "37a954e2f78a3869a9155e6c36cec41eaaa8eda09c06af225e2bac69a995f160"
-    },
-    {
-      "path": "skills/offline-usage-reporter/scripts/report.cjs",
-      "bytes": 10672,
-      "sha256": "3e0a1865cba6bc8fa6bd4e8048bf17c271314f524a42c7a87ad33d582bcc6c72"
     },
     {
       "path": "skills/scope-pull/SKILL.md",
@@ -336,34 +356,48 @@
     },
     {
       "id": "offline-usage-reporter",
-      "entrypoint": "skills/offline-usage-reporter/SKILL.md",
-      "source_version": "1.0.2",
+      "entrypoint": "examples/offline-usage-reporter/SKILL.md",
+      "source_version": "1.1.0",
       "source_relationship": "EXACT_SELECTED_COPY_OF_PROPOSED_LOCAL_SOURCE_SUCCESSOR",
-      "source_state": "OUTPUT_PRESERVATION_SUCCESSOR_PENDING_CURRENT_REVIEW_AND_ACCEPTANCE",
-      "resource_payload_sha256": "066c8b90b9f277ab5776482ffc26009f4ae917c6e44790fa51282fe0362afd1b",
+      "source_state": "MOVED_TO_EXAMPLES_PENDING_REVIEW",
       "outgoing_MIT_inclusion": "Retained MIT terms within current eligible-publication review; no changed-source publication is claimed yet",
-      "runtime_requirement": "Available Node.js runtime; supported fictional O2 receipt schema",
+      "runtime_requirement": "Available Node.js runtime; supported fictional O2 receipt schema; tests use node:test",
       "discovery_and_new_name_runtime": "No new installation or activation in this task; previous1.0.1 installed state is distinct",
       "source_files": [
         {
-          "path": "skills/offline-usage-reporter/SKILL.md",
-          "bytes": 1036,
-          "sha256": "72db910f43dab0548fec341881cc5162403498795cda952fddf3e556c5fc097b"
+          "path": "examples/offline-usage-reporter/SKILL.md",
+          "bytes": 1770,
+          "sha256": "96b9e33115f35995c3e665d4a1f8987afab1ee96e3f1ce318dc82486a0906aa5"
         },
         {
-          "path": "skills/offline-usage-reporter/references/receipt-contract.md",
-          "bytes": 2266,
-          "sha256": "c5134e3e7305965ed709f51e1e41fcfb0d2ff91fb3f3bddc0ce020419a214ae2"
+          "path": "examples/offline-usage-reporter/references/receipt-contract.md",
+          "bytes": 2431,
+          "sha256": "b9cd62edf305ab4be1b8204ce1b4cc50ad73a155195c2de44e9c6654b6f469b4"
         },
         {
-          "path": "skills/offline-usage-reporter/scripts/gate.cjs",
+          "path": "examples/offline-usage-reporter/scripts/gate.cjs",
           "bytes": 1214,
           "sha256": "37a954e2f78a3869a9155e6c36cec41eaaa8eda09c06af225e2bac69a995f160"
         },
         {
-          "path": "skills/offline-usage-reporter/scripts/report.cjs",
-          "bytes": 10672,
-          "sha256": "3e0a1865cba6bc8fa6bd4e8048bf17c271314f524a42c7a87ad33d582bcc6c72"
+          "path": "examples/offline-usage-reporter/scripts/report.cjs",
+          "bytes": 11145,
+          "sha256": "1c88d5c6a001d0e2d001f4ba0d2f57393d7e92bfa9fc753b35e57accc6362264"
+        },
+        {
+          "path": "examples/offline-usage-reporter/tests/fixtures/stop-after-reset.json",
+          "bytes": 3762,
+          "sha256": "0731046dfbd6d4f5134a5cef8ce0927a6600a655f219843bcc4e69d61688c6cb"
+        },
+        {
+          "path": "examples/offline-usage-reporter/tests/fixtures/work-only.json",
+          "bytes": 1532,
+          "sha256": "867e215474026fdb26fa8ebe76975e53627d4b76b33b8048e09f70e0e2dfb412"
+        },
+        {
+          "path": "examples/offline-usage-reporter/tests/report.test.cjs",
+          "bytes": 2973,
+          "sha256": "67792c9fc96785deb2fc8b6c9542345bd811750e2986d0148cea2952c90fd3af"
         }
       ],
       "historical_outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION",
@@ -393,7 +427,8 @@
             "sha256": "93d07ca1307fdb23d839f9d1069ce0304c4ce1d0f381a7752f6e841ac74d1640"
           }
         ]
-      }
+      },
+      "distribution_role": "example; not part of the installed skill selection"
     },
     {
       "id": "node-workflow-batcher",
