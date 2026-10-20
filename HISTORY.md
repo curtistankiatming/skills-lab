@@ -2,7 +2,7 @@
 
 This file keeps the distribution notes that earlier README, CATALOG, RELEASING and inventory.json versions carried, so the current files can describe the current collection. The text below is copied from those files as they stood at commit 4e12d40, before version 2.0.0. It describes each snapshot as it was then; statements such as "not yet published" are historical, not current. Links are relative to the repository root.
 
-## 2.1.1 (prepared 2026-10-20, not yet released)
+## 2.1.1 (2026-10-20)
 
 - Governed Task Lifecycle 1.1.2: the description names "Initiate" again ("Initialize (or Initiate), Validate or Approve"), so a host that picks skills from the description alone still selects it for "Initiate TASK-…". The 2.1.0 shortening had dropped it; the skill body already accepted both words.
 - A new trigger test, T26, checks that "Initiate" selects the skill.
@@ -11,6 +11,7 @@ This file keeps the distribution notes that earlier README, CATALOG, RELEASING a
 - Each `references/detailed-rules.md` (Governed Task Lifecycle, Integrate Approved PR 1.2.1, Scope Pull, Verify Exact Candidate 1.4.1) now says that `SKILL.md` wins if the two disagree, and CONTRIBUTING says to change both together.
 - The evaluation runner gains `triggers --multi`, which asks which skills the model would load and counts extra loads, because some hosts load every partly relevant skill.
 - These changes follow the Hermes review of v2.1.0.
+- Published as the GitHub release v2.1.1.
 
 ## 2.1.0 (2026-10-20)
 
