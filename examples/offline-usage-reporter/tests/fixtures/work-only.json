@@ -1,0 +1,58 @@
+{
+  "phase": "screening",
+  "mode": "candidate",
+  "account": "acct-1",
+  "authority": "fictional-test-fixture",
+  "fixtureSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "totals": {
+    "accountPolls": 1,
+    "failedAttempts": 0,
+    "fallbackPolls": 0,
+    "workerGates": 1,
+    "duplicateTriggers": 0
+  },
+  "cases": [
+    {
+      "id": "c1",
+      "events": [
+        {
+          "at": "2026-01-01T00:00:00.000Z",
+          "expectedDue": "2026-01-01T00:00:00.000Z",
+          "bucket": "b",
+          "reset": "2026-01-01T05:00:00.000Z",
+          "fault": null,
+          "readings": [
+            {
+              "callId": 1,
+              "actor": "monitor",
+              "result": {
+                "accountId": "acct-1",
+                "bucketId": "b",
+                "observedAt": "2026-01-01T00:00:00.000Z",
+                "ordinaryUsageAllowed": true,
+                "rateLimitsByLimitId": {
+                  "ordinary": {
+                    "primaryWindow": {
+                      "usedPercent": 50,
+                      "windowDurationMins": 300,
+                      "resetsAt": 1767243600
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "decisions": [
+            {
+              "worker": "w1",
+              "trigger": 1,
+              "action": "WORK",
+              "reason": "fresh-authorized",
+              "deadline": "2026-01-01T01:00:00.000Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

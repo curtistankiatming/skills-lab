@@ -9,6 +9,7 @@ const value=x=>x===undefined||x===null?'UNKNOWN':String(x);
 const iso=s=>typeof s==='string'&&Number.isFinite(Date.parse(s));
 const q=s=>String(s).replace(/[|\r\n]/g,' ');
 const identity=s=>typeof s==='string'&&s.length>0;
+const pct=x=>String(Math.round(x*100)/100);
 const readingId=x=>Number.isInteger(x)||(typeof x==='string'&&x.trim().length>0);
 const actorId=x=>typeof x==='string'&&x.trim().length>0;
 const faultText=e=>!Object.hasOwn(e,'fault')?'UNKNOWN':e.fault===null?'NONE':typeof e.fault==='string'&&e.fault.length?q(e.fault):'UNKNOWN';
@@ -16,12 +17,12 @@ const meterText=m=>{
   if(typeof m==='string') return `failure=${q(m)}`;
   if(!m||typeof m!=='object') return 'UNKNOWN reading';
   const w=m.rateLimitsByLimitId?.ordinary, p=w?.primaryWindow;
-  const used=p&&Number.isFinite(p.usedPercent)?`${p.usedPercent}% used / ${100-p.usedPercent}% remaining`:'UNKNOWN';
+  const used=p&&Number.isFinite(p.usedPercent)?`${pct(p.usedPercent)}% used / ${pct(100-p.usedPercent)}% remaining`:'UNKNOWN';
   const secondary=w?.secondaryWindow===null?'UNKNOWN':w?.secondaryWindow===undefined?'UNKNOWN':JSON.stringify(w.secondaryWindow);
   return `account=${q(value(m.accountId))}; bucket=${q(value(m.bucketId))}; sampled=${q(value(m.observedAt))}; ordinaryAllowed=${q(value(m.ordinaryUsageAllowed))}; primary=${used}; duration=${q(value(p?.windowDurationMins))} min; resetsAt=${q(value(p?.resetsAt))}; secondary=${q(secondary)}`;
 };
 function formatReceipt(r, sourcePath, sourceHash) {
-  const issues=[]; const lines=[];
+  const issues=[]; const lines=[]; const latched=[];
   const issue=(where,why)=>issues.push(`${where}: ${why}`);
   if(!r||typeof r!=='object') throw Error('receipt must be a JSON object');
   if(!['screening','confirmation'].includes(r.phase)) issue('receipt','unsupported phase');
@@ -102,18 +103,20 @@ function formatReceipt(r, sourcePath, sourceHash) {
       const actions=new Set([...decisions.map(x=>x?.action),...computedActions]);
       const hasStopLatch=[...states.values()].some(s=>s.latched);
       const next=hasStopLatch||actions.has('STOP')?'Safe checkpoint and stop; owner authority required before any restart, including after reset.':receiptRejected||caseRejected||issues.length>eventIssueStart||actions.has('HOLD')?'Hold work; resolve source/identity/authority and obtain a fresh at/after-boundary reading before further work.':actions.size===1&&actions.has('WORK')?'Continue only until each listed expiry. At the next due boundary, obtain a fresh at/after-boundary source sample and pass the local gate before further work; the prior sample cannot extend expiry.':'HOLD / review needed: missing or unsupported action.';
+      for(const [w,s] of states) if(s.latched&&!latched.includes(`${caseName}/${w}`)) latched.push(`${caseName}/${w}`);
       lines.push(`STOP latch: ${[...states].filter(([,s])=>s.latched).map(([w])=>w).join(', ')||'none'}`,
         `Next action: ${next}`,'');
     }
   }
   lines.push('## Totals','',`Account polls: ${value(t.accountPolls)} | Failed attempts: ${value(t.failedAttempts)} | Local fallbacks: ${value(t.fallbackPolls)} | Worker gates: ${value(t.workerGates)} | Duplicate triggers: ${value(t.duplicateTriggers)}`,
-    'These counters are diagnostics, not token savings.','',`Receipt check: ${issues.length?'HOLD / REVIEW NEEDED':'MATCHED'}`);
+    'These counters are diagnostics, not token savings.','',`Receipt check: ${issues.length?'HOLD / REVIEW NEEDED':'MATCHED'}`,
+    `STOP latched: ${latched.length?latched.map(q).join(', '):'none'}`);
   if(issues.length) lines.push(...issues.map(x=>`- ${q(x)}`));
   lines.push('');
-  return {report:lines.join('\n'),status:issues.length?'HOLD':'MATCHED',issues};
+  return {report:lines.join('\n'),status:issues.length?'HOLD':'MATCHED',stopLatched:latched,issues};
 }
 function main(argv) {
-  const option=k=>{const i=argv.indexOf(k);return i<0?null:argv[i+1];};
+  const option=k=>{const i=argv.indexOf(k),v=i<0?null:argv[i+1];return typeof v==='string'&&!v.startsWith('--')?v:null;};
   const input=option('--receipt'), output=option('--out');
   if(!input||!output) throw Error('usage: node scripts/report.cjs --receipt <raw-receipt.json> --out <local-report.md>');
   const inPath=path.resolve(input), outPath=path.resolve(output);
@@ -121,7 +124,9 @@ function main(argv) {
   const raw=fs.readFileSync(inPath), result=formatReceipt(JSON.parse(raw),inPath,sha(raw));
   fs.mkdirSync(path.dirname(outPath),{recursive:true});
   fs.writeFileSync(outPath,result.report,{encoding:'utf8',flag:'wx'});
-  process.stdout.write(`${result.status} ${outPath} SHA256 ${sha(Buffer.from(result.report))}\n`);
+  // STOP-LATCHED is appended so a caller that reads only stdout cannot miss a latched stop;
+  // it goes last so the status, path and hash keep their earlier positions.
+  process.stdout.write(`${result.status} ${outPath} SHA256 ${sha(Buffer.from(result.report))}${result.stopLatched.length?' STOP-LATCHED':''}\n`);
 }
 if(require.main===module) try {main(process.argv.slice(2));} catch(e) {console.error(e.message);process.exitCode=1;}
 module.exports={formatReceipt,meterText};

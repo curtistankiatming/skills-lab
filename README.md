@@ -1,6 +1,6 @@
 # Skills Lab
 
-Seven portable instruction skills for governed work, exact candidate checks, approved PR integration, scope reconciliation, offline receipt reporting and local Node workflow batching. Prepared distribution snapshot, 18 October 2026: collection 1.5.0 proposes Lean History Reporting 1.0.0 and the Offline Usage Reporter 1.0.2 output-preservation correction. Offline Usage Reporter 1.0.1 and Node Workflow Batcher 1.0.0 are already published in integrated source 1.4.0. The four existing skill resource sets are unchanged from integrated source 1.3.0. The latest observed issued release is 1.1.0. This new candidate is not yet published or installed. Earlier preparation labels in distribution history describe their original snapshots; the two existing additions were published under the recorded 1.4.0 delivery. New installation is outside this task. See [RIGHTS.md](RIGHTS.md).
+Six portable instruction skills for governed work, exact candidate checks, approved PR integration, scope reconciliation, task-history reporting and local Node workflow batching, plus one [example](examples/README.md) skill for offline receipt reporting. Prepared distribution snapshot, 18 October 2026: collection 1.5.0 proposes Lean History Reporting 1.0.0 and the Offline Usage Reporter 1.0.2 output-preservation correction. Offline Usage Reporter 1.0.1 and Node Workflow Batcher 1.0.0 are already published in integrated source 1.4.0. The four existing skill resource sets are unchanged from integrated source 1.3.0. The latest observed issued release is 1.1.0. This new candidate is not yet published or installed. Earlier preparation labels in distribution history describe their original snapshots; the two existing additions were published under the recorded 1.4.0 delivery. New installation is outside this task. See [RIGHTS.md](RIGHTS.md).
 
 The existing collection retains the [MIT License](LICENSE), copyright and notices. Source acceptance, selected distribution, host discovery, invocation and actual execution are separate states.
 
@@ -12,7 +12,6 @@ The existing collection retains the [MIT License](LICENSE), copyright and notice
 | Verify Exact Candidate | Exact files, hashes, revisions or evidence need comparison with a pinned basis. | [verify-exact-candidate](skills/verify-exact-candidate/SKILL.md) |
 | Integrate Approved PR | Integration prerequisites need inspection, or explicitly approved readiness/merge needs completion. | [integrate-approved-pr](skills/integrate-approved-pr/SKILL.md) |
 | Scope Pull | Agreed scope, evidenced progress, changes or proposed expansion needs reconciliation. | [scope-pull](skills/scope-pull/SKILL.md) |
-| Offline Usage Reporter | Supplied fictional O2 replay receipts need one offline report. | [offline-usage-reporter](skills/offline-usage-reporter/SKILL.md) |
 | Lean History Reporting | Task-history status reporting or diagnosis needs selective detailed-output retrieval. | [lean-history-reporting](skills/lean-history-reporting/SKILL.md) |
 | Node Workflow Batcher | Authorized local read, derive and validate phases can be grouped in a persistent Node REPL. | [node-workflow-batcher](skills/node-workflow-batcher/SKILL.md) |
 
@@ -27,17 +26,16 @@ Use $governed-task-lifecycle. Initialize TASK-001: build the authorized delivera
 Use $verify-exact-candidate to compare the supplied files with the pinned manifest. Read and hash only.
 Use $integrate-approved-pr to inspect OWNER/REPO PR #123. Make no changes.
 Use $scope-pull to reconcile agreed scope and evidenced progress from the sources I provide.
-Use $offline-usage-reporter for the supplied fictional O2 receipt and named new output file. Preserve HOLD, unknowns and STOP latches.
 Use $node-workflow-batcher for the authorized local job in a supported persistent Node REPL. Stop at unresolved decisions or approvals.
 ```
 
-Replace example identifiers with actual authorized inputs. For manual use, say “Use Offline Usage Reporter at <skill-folder>/SKILL.md” or “Use Node Workflow Batcher at <skill-folder>/SKILL.md” and supply every resource. An example or selector grants no extra authority. New-name discovery, automatic selection, phone/plugin availability and runtime are unverified for this distribution.
+Replace example identifiers with actual authorized inputs. For manual use, say “Use Node Workflow Batcher at <skill-folder>/SKILL.md” and supply every resource. An example or selector grants no extra authority. New-name discovery, automatic selection, phone/plugin availability and runtime are unverified for this distribution.
 
 Lifecycle consumers retain the [owner-facing summary](skills/governed-task-lifecycle/references/chat-summary.md) and the destination's command meanings. Keep owner status separate from an audience-facing deliverable unless requested.
 
 ## Dependencies and limits
 
-- Offline Usage Reporter includes SKILL.md, the [receipt contract](skills/offline-usage-reporter/references/receipt-contract.md), and both Node.js helpers. It requires an available Node.js runtime and authorized fictional O2 receipts. Preserve the exact stdout and process status: HOLD may accompany exit zero, and reset grants no restart authority. It has no live schema adapter, polling, worker messaging or enforcement. It is not a hostile-input validator.
+- The Offline Usage Reporter example (in `examples/`, not installed with the collection) includes SKILL.md, the [receipt contract](examples/offline-usage-reporter/references/receipt-contract.md), both Node.js helpers, fictional fixtures and `node:test` checks. It requires an available Node.js runtime and authorized fictional O2 receipts. Preserve the exact stdout and process status: HOLD may accompany exit zero, STOP-LATCHED marks a latched stop, and reset grants no restart authority. It has no live schema adapter, polling, worker messaging or enforcement. It is not a hostile-input validator.
 - Node Workflow Batcher is a one-file instruction skill. It needs a host-provided persistent Node REPL with the documented job/state and output facilities. A standalone Node executable is insufficient evidence of that host capability. Group only understood authorized phases, inspect every result and stop on provider denial. This package adds no REPL implementation, connector or permission.
 - Verify Exact Candidate retains its optional Python standard-library checker. Its fixture suite lives in `tests/verify-exact-candidate/`, outside the installable skill folder. Execution needs a trusted interpreter and task authority. No additional software is needed to read Markdown. PyYAML is not a runtime dependency of either new skill.
 
