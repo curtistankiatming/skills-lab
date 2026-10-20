@@ -13,7 +13,7 @@ The existing collection retains the [MIT License](LICENSE), copyright and notice
 | Integrate Approved PR | Integration prerequisites need inspection, or explicitly approved readiness/merge needs completion. | [integrate-approved-pr](skills/integrate-approved-pr/SKILL.md) |
 | Scope Pull | Agreed scope, evidenced progress, changes or proposed expansion needs reconciliation. | [scope-pull](skills/scope-pull/SKILL.md) |
 | Lean History Reporting | Task-history status reporting or diagnosis needs selective detailed-output retrieval. | [lean-history-reporting](skills/lean-history-reporting/SKILL.md) |
-| Node Workflow Batcher | Authorized local read, derive and validate phases can be grouped in a persistent Node REPL. | [node-workflow-batcher](skills/node-workflow-batcher/SKILL.md) |
+| Node Workflow Batcher | Authorized local read, derive and validate phases can be grouped into one code-tool call (Node, Python or similar). | [node-workflow-batcher](skills/node-workflow-batcher/SKILL.md) |
 
 The [catalog](CATALOG.md) explains examples, resources and boundaries. The [inventory](inventory.json) binds the complete selection. This collection is a selected distribution; it does not replace the maintained controller of any skill or expand an existing plugin bundle.
 
@@ -26,7 +26,7 @@ Use $governed-task-lifecycle. Initialize TASK-001: build the authorized delivera
 Use $verify-exact-candidate to compare the supplied files with the pinned manifest. Read and hash only.
 Use $integrate-approved-pr to inspect OWNER/REPO PR #123. Make no changes.
 Use $scope-pull to reconcile agreed scope and evidenced progress from the sources I provide.
-Use $node-workflow-batcher for the authorized local job in a supported persistent Node REPL. Stop at unresolved decisions or approvals.
+Use $node-workflow-batcher for the authorized local job in the available code tool. Stop at unresolved decisions or approvals.
 ```
 
 Replace example identifiers with actual authorized inputs. For manual use, say “Use Node Workflow Batcher at <skill-folder>/SKILL.md” and supply every resource. An example or selector grants no extra authority. New-name discovery, automatic selection, phone/plugin availability and runtime are unverified for this distribution.
@@ -36,7 +36,7 @@ Lifecycle consumers retain the [owner-facing summary](skills/governed-task-lifec
 ## Dependencies and limits
 
 - The Offline Usage Reporter example (in `examples/`, not installed with the collection) includes SKILL.md, the [receipt contract](examples/offline-usage-reporter/references/receipt-contract.md), both Node.js helpers, fictional fixtures and `node:test` checks. It requires an available Node.js runtime and authorized fictional O2 receipts. Preserve the exact stdout and process status: HOLD may accompany exit zero, STOP-LATCHED marks a latched stop, and reset grants no restart authority. It has no live schema adapter, polling, worker messaging or enforcement. It is not a hostile-input validator.
-- Node Workflow Batcher is a one-file instruction skill. It needs a host-provided persistent Node REPL with the documented job/state and output facilities. A standalone Node executable is insufficient evidence of that host capability. Group only understood authorized phases, inspect every result and stop on provider denial. This package adds no REPL implementation, connector or permission.
+- Node Workflow Batcher is a one-file instruction skill. It works with any code-execution tool the host provides: a persistent Node or Python REPL, a notebook kernel, or a one-shot script runner, where state is rebuilt from inputs on each call. The skill keeps its `node-workflow-batcher` name so existing installs keep working. Group only understood authorized phases, inspect every result and stop on provider denial. This package adds no REPL implementation, connector or permission.
 - Verify Exact Candidate retains its optional Python standard-library checker. Its fixture suite lives in `tests/verify-exact-candidate/`, outside the installable skill folder. Execution needs a trusted interpreter and task authority. No additional software is needed to read Markdown. PyYAML is not a runtime dependency of either new skill.
 
 The four existing agent metadata files retain their declarations. The two new packages add no agent metadata, installer, hooks, server, credentials or hosted workflow. Instructions and exact files do not establish backend identity, runtime enforcement, independent assurance or destination adoption.

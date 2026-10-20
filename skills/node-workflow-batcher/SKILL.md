@@ -1,18 +1,33 @@
 ---
 name: node-workflow-batcher
-description: Group local read, derive and validate work in a persistent Node REPL while keeping job and revision state explicit.
+description: Use this skill when authorized local work splits into read, derive and validate phases that can run together in one code-tool call (Node, Python or similar). Fewer calls, every result checked. Do not use it for steps that need approval or would make external changes.
 ---
 
-Before calling Node, identify any approval or decision that requires external inspection. If none must intervene, perform the authorized read, derive and validate phases in one Node call, awaiting dependencies in order. Check routine phase outcomes inside that call; returning a phase result is not itself a reason for another call. Use `Promise.allSettled` for independent reads and inspect every result.
+# Workflow batcher
 
-Before each dependent phase, check the preceding result against its documented schema and inspect every item for unexpected errors. Implement these checks in the call; serializing results alone is not inspection. Handle documented partial outcomes explicitly. Do not guess field locations. If the schema is unknown, inspect it first and group only the remaining understood phases.
+## When to use
 
-Split at an approval, unresolved decision or provider limit, preserving state for continuation. Honor stop requests before loading or processing, and between phases when a stop signal is available. Grouping grants no permission to execute downstream effects.
+- A local job needs several reads, then derived results, then validation, and you have a code-execution tool: a persistent Node or Python REPL, a notebook kernel, or a one-shot script runner.
+- Skip it when a step needs an approval or decision you don't have yet, or when the work sends, writes or changes anything outside the job's own state.
 
-Store state by job. Before reuse, check schema version, job, task and caller-supplied input revision. Rebuild missing or mismatched read/derive state from authorized inputs; do not replay side effects. A revision label does not detect unannounced file changes. Clear only the affected job when needed; avoid resetting the shared kernel.
+## Steps
 
-Preserve each input failure with its file, error code and message. Partial results, withheld approval and stopped work must remain explicit. Validate the declared final output schema; intermediate phase fields need not exist in a final result.
+1. **Find the split points first.** Before writing code, list any approval, open decision or provider limit that has to be resolved outside the code. Batch only the phases before the first split point.
+2. **Run the phases in one call**, awaiting dependencies in order. A returned phase result is not, by itself, a reason for another call.
+3. **Collect every independent read's outcome**, success or failure: `Promise.allSettled` in JavaScript, `asyncio.gather(..., return_exceptions=True)` or a per-item `try/except` in Python. Inspect every result.
+4. **Check each phase before the next one uses it.** Compare the result with its documented schema and look at every item for unexpected errors, in code, inside the same call. Printing results is not checking them. Handle documented partial outcomes explicitly. If you don't know the schema, inspect it first and batch only the phases you understand. Never guess where a field lives.
+5. **Keep state per job.** In a persistent runtime, store state under the job's id. Before reusing it, check its schema version, job, task and the caller's input revision. Rebuild missing or mismatched read/derive state from the authorized inputs, and never replay side effects. A revision label cannot detect unannounced file changes. Clear only the affected job, and don't reset a shared runtime. If the runtime is not persistent, rebuild state from inputs on each call.
+6. **Print the result as JSON** from the call that produced it (`JSON.stringify` in JavaScript, `json.dumps` in Python). Default object printing can hide nested errors and counters, as in Node's `[Object]` or a truncated repr. If serialization fails, report that failure instead of rerunning the work.
+7. **Return a compact result:** identity, revision, outcome, errors and next action. Save full evidence when a reviewer needs it. Validate the declared final output schema; intermediate phase fields don't have to appear in it.
 
-For JSON-compatible results, emit `nodeRepl.write(JSON.stringify(result))` in the producing call. Object inspection can hide nested errors and counters as `[Object]` or `[Array]`. Preserve every required field. If serialization fails, report the failure without replaying the work.
+## Stop and report
 
-Return a compact result with identity, revision, outcome, errors and next action. Save full evidence when required for review. On provider access denial, stop and report it; do not reroute around the denial.
+- At an approval, an unresolved decision or a provider limit: stop there and keep the state needed to continue.
+- On a stop request: honor it before loading or processing, and between phases when a stop signal is available.
+- On provider access denial: stop and report it. Do not route around it.
+- Record each input failure with its file, error code and message. Partial results, withheld approval and stopped work stay explicit in the result.
+- Batching grants no permission for downstream effects.
+
+## Example
+
+Job: summarize three local JSON reports. One call reads all three, recording successes and failures. It checks each against the report schema, merges the valid ones and validates the summary schema, then prints `{"job":"J1","revision":"r4","outcome":"partial","errors":[{"file":"c.json","code":"ENOENT","message":"not found"}],"next":"supply c.json or accept a 2-of-3 summary"}`. A follow-up step that would post the summary is not run; it waits for approval.
