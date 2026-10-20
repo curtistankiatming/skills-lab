@@ -92,11 +92,6 @@
       "sha256": "cfccc1d85aa5b21d6860b338036add6689f966208ab0214f36a20fd2b5f73723"
     },
     {
-      "path": "evaluations/harder-cases/__pycache__/run.cpython-313.pyc",
-      "bytes": 21324,
-      "sha256": "b60e57cd018dcb28683aebd110c22cc6b56473ebe12a79ae2148ecbd6733f283"
-    },
-    {
       "path": "evaluations/harder-cases/cases.json",
       "bytes": 13273,
       "sha256": "792b776aa99df67a1eee9238efbf221fcdccc74ad83cd8c9828efd0f6ee750ba"
