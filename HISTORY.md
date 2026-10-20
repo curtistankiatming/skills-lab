@@ -10,7 +10,8 @@ This file keeps the distribution notes that earlier README, CATALOG, RELEASING a
 - Integrate Approved PR 1.1.0: a seven-step checklist.
 - Scope Pull 1.2.0, Lean History Reporting 1.1.0 and Node Workflow Batcher 1.1.0: plainer triggers, and Lean History Reporting and Node Workflow Batcher no longer depend on one host's tools.
 - Offline Usage Reporter 1.1.0 moved to `examples/` and is no longer part of the installed set. That removal is why the collection version moved to 2.0.0.
-- The last GitHub release before 2.0.0 is v1.1.0.
+- Harder evaluation cases (`evaluations/harder-cases/`): 12 cases covering all six skills, 25 skill-selection tests and a standard-library runner for OpenAI-compatible endpoints, so local models can be tested. They had not been run on a model at release.
+- Published as the GitHub release v2.0.0. The previous release was v1.1.0.
 
 ## Earlier README introduction (1.5.0 snapshot, 18 October 2026)
 

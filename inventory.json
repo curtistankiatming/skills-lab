@@ -2,13 +2,13 @@
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
   "distribution_version": "2.0.0",
-  "distribution_state": "INTEGRATED_ON_MAIN_NOT_RELEASED",
+  "distribution_state": "RELEASE_SOURCE_V2_0_0",
   "last_issued_distribution_version": "1.1.0",
   "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
   "outgoing_licence": "MIT",
   "repository_identity": "curtistankiatming/skills-lab",
   "schema_version": 1,
-  "source_policy": "Six installable skills under skills/ and one example under examples/. Every skill and the example were revised for host portability in PRs #6-#12 and integrated on main; these repository copies are the current revisions. Existing notices and MIT terms apply. Source integration does not establish a release, installation, host discovery or runtime behavior.",
+  "source_policy": "Six installable skills under skills/ and one example under examples/. Every skill and the example were revised for host portability in PRs #6-#12 and integrated on main; these repository copies are the current revisions. Existing notices and MIT terms apply. This revision is the source for the v2.0.0 GitHub release. Release does not establish installation, host discovery or runtime behavior.",
   "history": "Earlier snapshot records removed from this file in 2.0.0 are reproduced in HISTORY.md.",
   "files": [
     {
@@ -28,13 +28,13 @@
     },
     {
       "path": "EVALUATING.md",
-      "bytes": 4137,
-      "sha256": "645bc6ee9cee30ad3a04e66a999b37d37e5a246210f66cb2d4863367a5c72c43"
+      "bytes": 4127,
+      "sha256": "3ef95ee522ad2de49222751bb1c49427e6fa00fe17f5c69bd1b6cedc5d7f8206"
     },
     {
       "path": "HISTORY.md",
-      "bytes": 12912,
-      "sha256": "203f0cf0bf182805c0d62bc0a73cd6c04d2e1ffe3752a5bc73ffd9ec84749f32"
+      "bytes": 13192,
+      "sha256": "890433cc2ffa697731a50a7205235acd8373a42a194850cfb37ab93f1a8e15ba"
     },
     {
       "path": "LICENSE",
@@ -48,8 +48,8 @@
     },
     {
       "path": "RELEASING.md",
-      "bytes": 3156,
-      "sha256": "ee34cb79a014cb2ec00c6315deffcf3284831579c76fdbd92796d33bdcd53bf5"
+      "bytes": 3328,
+      "sha256": "f49493ebfef0ff1fbb6559ef7710b9872bfd1b3b5d19bdb87aba230d5373fb62"
     },
     {
       "path": "RIGHTS.md",
