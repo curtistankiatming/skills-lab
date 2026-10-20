@@ -1,6 +1,6 @@
 ---
 name: governed-task-lifecycle
-description: Use this skill when the owner says Initialize (or Initiate), Validate or Approve for a named task, or the project requires that lifecycle. Build the work, check the actual result, then carry out only what was approved. Do not use it for ordinary requests.
+description: Use this skill when the owner says Initialize (or Initiate), Validate or Approve for a named task (for example "Initialize TASK-7"), or the project requires that lifecycle. Build the work, check the actual result, then carry out only what was approved. Do not use it for ordinary requests.
 ---
 
 # Governed task lifecycle

@@ -75,8 +75,8 @@
     },
     {
       "path": "skills/governed-task-lifecycle/SKILL.md",
-      "bytes": 8023,
-      "sha256": "406ed34afe1ea728d0df0e7b98cbdffc04f8a3e832b93eb9ee30da2f19924934"
+      "bytes": 8057,
+      "sha256": "d87ed1931949504da36f8805385aef93e6a5dcb536d73da99f620e89927408f2"
     },
     {
       "path": "skills/governed-task-lifecycle/agents/openai.yaml",
@@ -210,8 +210,8 @@
       "source_files": [
         {
           "path": "skills/governed-task-lifecycle/SKILL.md",
-          "bytes": 8023,
-          "sha256": "406ed34afe1ea728d0df0e7b98cbdffc04f8a3e832b93eb9ee30da2f19924934"
+          "bytes": 8057,
+          "sha256": "d87ed1931949504da36f8805385aef93e6a5dcb536d73da99f620e89927408f2"
         },
         {
           "path": "skills/governed-task-lifecycle/agents/openai.yaml",
