@@ -165,8 +165,8 @@
     },
     {
       "path": "skills/scope-pull/SKILL.md",
-      "bytes": 8958,
-      "sha256": "2e66002976878eee6cd24f6911ac8ff048bb820430daf00098201d712ca9b5fa"
+      "bytes": 9006,
+      "sha256": "7424edf7ede47009d1528833b1f3fa6135ee25fd61afbaeee229e3ad328e5b54"
     },
     {
       "path": "skills/scope-pull/agents/openai.yaml",
@@ -291,8 +291,8 @@
       "source_files": [
         {
           "path": "skills/scope-pull/SKILL.md",
-          "bytes": 8958,
-          "sha256": "2e66002976878eee6cd24f6911ac8ff048bb820430daf00098201d712ca9b5fa"
+          "bytes": 9006,
+          "sha256": "7424edf7ede47009d1528833b1f3fa6135ee25fd61afbaeee229e3ad328e5b54"
         },
         {
           "path": "skills/scope-pull/agents/openai.yaml",
