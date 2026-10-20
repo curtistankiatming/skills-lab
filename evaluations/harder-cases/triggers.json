@@ -1,0 +1,131 @@
+{
+  "fictional": true,
+  "meaning": "Each request should select the named skill, or none. The model sees only each skill's name and description, as a host's skill picker would. T19-T25 are near-misses: they share words with a skill's description but should not select it (except T25).",
+  "cases": [
+    {
+      "id": "T1",
+      "request": "Initialize TASK-9: add a CSV export to the reports page.",
+      "expected": "governed-task-lifecycle"
+    },
+    {
+      "id": "T2",
+      "request": "Validate TASK-9.",
+      "expected": "governed-task-lifecycle"
+    },
+    {
+      "id": "T3",
+      "request": "Can you review PR #88 for bugs and style problems?",
+      "expected": "none"
+    },
+    {
+      "id": "T4",
+      "request": "Can PR #88 go in yet? Just look, don't touch it.",
+      "expected": "integrate-approved-pr"
+    },
+    {
+      "id": "T5",
+      "request": "I approve PR #88 at 3f2a1bc, please merge it.",
+      "expected": "integrate-approved-pr"
+    },
+    {
+      "id": "T6",
+      "request": "Is the zip I downloaded byte-for-byte the build we signed off on? Here's the checksum list from the sign-off.",
+      "expected": "verify-exact-candidate"
+    },
+    {
+      "id": "T7",
+      "request": "Write unit tests for parser.py.",
+      "expected": "none"
+    },
+    {
+      "id": "T8",
+      "request": "Are we on track with the website redesign plan?",
+      "expected": "scope-pull"
+    },
+    {
+      "id": "T9",
+      "request": "Should dark mode be added to this quarter's scope?",
+      "expected": "scope-pull"
+    },
+    {
+      "id": "T10",
+      "request": "Where are we on the kitchen renovation compared with what we agreed?",
+      "expected": "scope-pull"
+    },
+    {
+      "id": "T11",
+      "request": "What happened in yesterday's migration session? Why did it fail?",
+      "expected": "lean-history-reporting"
+    },
+    {
+      "id": "T12",
+      "request": "Did this morning's backup task finish?",
+      "expected": "lean-history-reporting"
+    },
+    {
+      "id": "T13",
+      "request": "There's a folder of 40 CSV exports in ./data. Go through all of them, pull out each account's total and make sure the totals agree with ledger.csv. Python is available.",
+      "expected": "node-workflow-batcher"
+    },
+    {
+      "id": "T14",
+      "request": "Summarize this article for me.",
+      "expected": "none"
+    },
+    {
+      "id": "T15",
+      "request": "Rename the variable foo to bar in utils.js.",
+      "expected": "none"
+    },
+    {
+      "id": "T16",
+      "request": "What's the difference between a merge commit and a squash merge?",
+      "expected": "none"
+    },
+    {
+      "id": "T17",
+      "request": "Give me a status report on what the deploy thread did today.",
+      "expected": "lean-history-reporting"
+    },
+    {
+      "id": "T18",
+      "request": "Since the March brief, have we taken on more than we agreed for the mobile app?",
+      "expected": "scope-pull"
+    },
+    {
+      "id": "T19",
+      "request": "Initialize a git repo here.",
+      "expected": "none"
+    },
+    {
+      "id": "T20",
+      "request": "Should we add a cache to this endpoint?",
+      "expected": "none"
+    },
+    {
+      "id": "T21",
+      "request": "Run the test suite and tell me if it passes.",
+      "expected": "none"
+    },
+    {
+      "id": "T22",
+      "request": "Merge main into my feature branch.",
+      "expected": "none"
+    },
+    {
+      "id": "T23",
+      "request": "Approve this design mock.",
+      "expected": "none"
+    },
+    {
+      "id": "T24",
+      "request": "Read config.json and tell me the port.",
+      "expected": "none"
+    },
+    {
+      "id": "T25",
+      "request": "Approve TASK-9.",
+      "expected": "governed-task-lifecycle"
+    }
+  ]
+}
