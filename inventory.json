@@ -165,8 +165,8 @@
     },
     {
       "path": "skills/scope-pull/SKILL.md",
-      "bytes": 7023,
-      "sha256": "5fb0b0614670f78a84b13e1d08b6acd38f2f046221214f00eab0cbea243d7fc5"
+      "bytes": 8958,
+      "sha256": "2e66002976878eee6cd24f6911ac8ff048bb820430daf00098201d712ca9b5fa"
     },
     {
       "path": "skills/scope-pull/agents/openai.yaml",
@@ -286,13 +286,13 @@
     {
       "id": "scope-pull",
       "entrypoint": "skills/scope-pull/SKILL.md",
-      "source_version": "1.1.0",
-      "source_relationship": "exact_selected_export_of_prepared_source",
+      "source_version": "1.2.0",
+      "source_relationship": "portability_revision_of_selected_export",
       "source_files": [
         {
           "path": "skills/scope-pull/SKILL.md",
-          "bytes": 7023,
-          "sha256": "5fb0b0614670f78a84b13e1d08b6acd38f2f046221214f00eab0cbea243d7fc5"
+          "bytes": 8958,
+          "sha256": "2e66002976878eee6cd24f6911ac8ff048bb820430daf00098201d712ca9b5fa"
         },
         {
           "path": "skills/scope-pull/agents/openai.yaml",
@@ -305,7 +305,7 @@
           "sha256": "88f884da9ff3644327ed0a5e03abf9bbee6b1d8500f77bf82366b7130705370c"
         }
       ],
-      "source_state": "UNCHANGED_FROM_INTEGRATED_1_3_0",
+      "source_state": "PORTABILITY_REVISION_PENDING_REVIEW",
       "historical_preparation_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
     },
     {
