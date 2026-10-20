@@ -160,8 +160,8 @@
     },
     {
       "path": "skills/node-workflow-batcher/SKILL.md",
-      "bytes": 3640,
-      "sha256": "0417f006ad30d911a50950f4fb8fce195a2ad754a335d6a947cea2544d412a4e"
+      "bytes": 3682,
+      "sha256": "7ca1c57dc8f6f513c38cc899b16c1693f8a796c3023ebfb183a392e20f801781"
     },
     {
       "path": "skills/scope-pull/SKILL.md",
@@ -442,8 +442,8 @@
       "source_files": [
         {
           "path": "skills/node-workflow-batcher/SKILL.md",
-          "bytes": 3640,
-          "sha256": "0417f006ad30d911a50950f4fb8fce195a2ad754a335d6a947cea2544d412a4e"
+          "bytes": 3682,
+          "sha256": "7ca1c57dc8f6f513c38cc899b16c1693f8a796c3023ebfb183a392e20f801781"
         }
       ],
       "historical_outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION"
