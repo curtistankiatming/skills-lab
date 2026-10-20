@@ -24,6 +24,14 @@ Your decision: <one genuinely needed exact command, acceptance or approval reque
 | Validate | Report checks of actual work, corrections, open findings and assurance. When ready and needed, request the exact required acceptance and/or `Approve <actual task ID>` against the exact basis. |
 | Approve | Done / Now form the adaptable In Scope Checklist. Continue remaining included work under unchanged authority. When complete, Next is None; suggest `Initialize <known proposed ID>` only for a genuine upcoming target. |
 
+Use these status values in the first line's plain result, or the destination's own vocabulary where it differs:
+
+| Command | Ready for the next command | Not ready |
+| --- | --- | --- |
+| Initialize / Initiate | `INITIALIZED_VALIDATION_PENDING` | `INITIALIZATION_INCOMPLETE` |
+| Validate | `VALIDATED_APPROVAL_PENDING` | `VALIDATION_INCOMPLETE` |
+| Approve, per included action | verified complete | not attempted, in progress, failed, outcome unknown or held |
+
 Explain the work type and its main implications in Scope where required, using plain terms such as design, implementation or integration. Use `[x]` only for verified complete work; ongoing, held, unknown or future rows stay `[ ]`. If a field has no work, replace its entire checkbox list with plain None.
 
 For Approve, label Done / Now as its In Scope Checklist and list each included owner-decision, readiness, merge, release or other meaningful effect once in the appropriate group. Unfinished effects carry IN PROGRESS / FAILED / UNKNOWN / HELD / NOT ATTEMPTED and a reason. Do not print a second duplicate checklist. Excluded/NA work is outside unfinished scope; approval or a successful call alone is not verified completion.

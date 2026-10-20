@@ -10,8 +10,8 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 6630,
-      "sha256": "8c0d32d82dce4a5ff8c1b6f7ea6178c2599694f06c84a964a07cdc6912c62726"
+      "bytes": 6709,
+      "sha256": "53e1fae6517b580d7bceadb96251c68a014a1a59e7d277ca226eda61c197f644"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -75,8 +75,8 @@
     },
     {
       "path": "skills/governed-task-lifecycle/SKILL.md",
-      "bytes": 11860,
-      "sha256": "dcee8b3feb2153be540c5d145161d7fa3194c59488648aa5982d707114de04d5"
+      "bytes": 8057,
+      "sha256": "d87ed1931949504da36f8805385aef93e6a5dcb536d73da99f620e89927408f2"
     },
     {
       "path": "skills/governed-task-lifecycle/agents/openai.yaml",
@@ -90,8 +90,13 @@
     },
     {
       "path": "skills/governed-task-lifecycle/references/chat-summary.md",
-      "bytes": 4785,
-      "sha256": "bb334706cb9fe77bdda4ccc4068d52350e36cc6d58bb0b4fdd1f1fe7537f57d9"
+      "bytes": 5256,
+      "sha256": "48a49be5de9ca2be286c58dd5b80d348cb75ce0325636e0b9525dc558469908c"
+    },
+    {
+      "path": "skills/governed-task-lifecycle/references/detailed-rules.md",
+      "bytes": 10873,
+      "sha256": "8b33a26e578424e99d1e32d60a207435d9553eaf3b2d6e52fd6eb0f52e3250ff"
     },
     {
       "path": "skills/integrate-approved-pr/SKILL.md",
@@ -205,8 +210,8 @@
       "source_files": [
         {
           "path": "skills/governed-task-lifecycle/SKILL.md",
-          "bytes": 11860,
-          "sha256": "dcee8b3feb2153be540c5d145161d7fa3194c59488648aa5982d707114de04d5"
+          "bytes": 8057,
+          "sha256": "d87ed1931949504da36f8805385aef93e6a5dcb536d73da99f620e89927408f2"
         },
         {
           "path": "skills/governed-task-lifecycle/agents/openai.yaml",
@@ -220,13 +225,18 @@
         },
         {
           "path": "skills/governed-task-lifecycle/references/chat-summary.md",
-          "bytes": 4785,
-          "sha256": "bb334706cb9fe77bdda4ccc4068d52350e36cc6d58bb0b4fdd1f1fe7537f57d9"
+          "bytes": 5256,
+          "sha256": "48a49be5de9ca2be286c58dd5b80d348cb75ce0325636e0b9525dc558469908c"
+        },
+        {
+          "path": "skills/governed-task-lifecycle/references/detailed-rules.md",
+          "bytes": 10873,
+          "sha256": "8b33a26e578424e99d1e32d60a207435d9553eaf3b2d6e52fd6eb0f52e3250ff"
         }
       ],
-      "source_relationship": "exact_selected_export_of_prepared_source",
-      "source_version": "1.0.2",
-      "source_state": "UNCHANGED_FROM_INTEGRATED_1_3_0",
+      "source_relationship": "portability_revision_of_selected_export",
+      "source_version": "1.1.0",
+      "source_state": "PORTABILITY_REVISION_PENDING_REVIEW",
       "historical_preparation_state": "RECONCILED_PREPARED_REVISION_NOT_INTEGRATED"
     },
     {
