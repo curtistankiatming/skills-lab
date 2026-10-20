@@ -54,7 +54,7 @@ In Codex, `$skill-name` also works as a selector. Replace the example identifier
 
 ## Evaluation
 
-The [evaluation guide](EVALUATING.md) describes how to compare a revision against its baseline. The [2026-10-07 comparison](evaluations/2026-10-07/README.md) tested earlier versions of Verify Exact Candidate and Scope Pull only, and found no measurable difference between them. No claim is made yet about how much the current skills help any particular model.
+The [evaluation guide](EVALUATING.md) describes how to compare a revision against its baseline. The [2026-10-07 comparison](evaluations/2026-10-07/README.md) tested earlier versions of Verify Exact Candidate and Scope Pull only, and found no measurable difference between them. The [harder cases](evaluations/harder-cases/README.md) cover all six current skills and can run against a local model through any OpenAI-compatible endpoint; they have not been run yet, so no claim is made about how much the skills help any particular model.
 
 ## Maintenance
 

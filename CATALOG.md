@@ -27,6 +27,6 @@ The `agents/openai.yaml` files are optional Codex metadata that allow implicit i
 
 ## Evaluation
 
-The [evaluation guide](EVALUATING.md) separates case specifications, structural checks and observed behavior. The [2026-10-07 comparison](evaluations/2026-10-07/README.md) covers earlier versions of Verify Exact Candidate and Scope Pull; the published and revised instructions tied, so no behavioral gain is claimed for the current versions.
+The [evaluation guide](EVALUATING.md) separates case specifications, structural checks and observed behavior. The [2026-10-07 comparison](evaluations/2026-10-07/README.md) covers earlier versions of Verify Exact Candidate and Scope Pull; the published and revised instructions tied, so no behavioral gain is claimed for the current versions. The [harder cases](evaluations/harder-cases/README.md), with trigger tests and a runner for local models, cover all six current skills and have not been run yet.
 
 Earlier distribution snapshots are described in [HISTORY.md](HISTORY.md).

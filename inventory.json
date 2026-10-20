@@ -18,8 +18,8 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 5002,
-      "sha256": "04bdda103e483594a98ec714ba7718b84036705b603bc2aed92d7e20055173f6"
+      "bytes": 5164,
+      "sha256": "3884834f1ef8e3334596273e7a0ac02ce4fe79c4f97541b5fc9d5cacfa30da6b"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -28,8 +28,8 @@
     },
     {
       "path": "EVALUATING.md",
-      "bytes": 3700,
-      "sha256": "0eb6be281e18d27958ed13ebdbd8a24c73f34a3f5e31de672fb2eecdf1a18069"
+      "bytes": 4137,
+      "sha256": "645bc6ee9cee30ad3a04e66a999b37d37e5a246210f66cb2d4863367a5c72c43"
     },
     {
       "path": "HISTORY.md",
@@ -43,8 +43,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6681,
-      "sha256": "5764c97f30f06d94875592c371643e023cd90d6246d072e45e6ee89781798367"
+      "bytes": 6858,
+      "sha256": "c9f2ea416cab2e51a1bce498f0f29981b76907927533b0ad6d1bb7911d356d06"
     },
     {
       "path": "RELEASING.md",
@@ -85,6 +85,31 @@
       "path": "evaluations/2026-10-07/rubric.json",
       "bytes": 3372,
       "sha256": "f860f1ac83b05e47bf9cac9c51ba91ad9ed9198ea2fd049edfc10f3bf3bfdd5b"
+    },
+    {
+      "path": "evaluations/harder-cases/README.md",
+      "bytes": 4776,
+      "sha256": "96ecdce860a1f765fce0f31ecebce372ad5b09c5e429ec728fcc86a6f4edbe97"
+    },
+    {
+      "path": "evaluations/harder-cases/cases.json",
+      "bytes": 9444,
+      "sha256": "faff5e996841d19d0d93d08e415ba74b6dfe189fd2e893541195661d4e12320b"
+    },
+    {
+      "path": "evaluations/harder-cases/rubric.json",
+      "bytes": 4766,
+      "sha256": "a32dd68075d5960611e5709b5f4b0029ae1953bbd51308dd18a5bc3296c832f5"
+    },
+    {
+      "path": "evaluations/harder-cases/run.py",
+      "bytes": 11547,
+      "sha256": "9bfed7d5ad4d72a76431c01e43b9e6c2c58b59c23ba7de2e569b69ace2482c85"
+    },
+    {
+      "path": "evaluations/harder-cases/triggers.json",
+      "bytes": 2323,
+      "sha256": "701e692dc23e6f5997a14f9512b0db96068cb9898d9bb29c3918af3be9d5a397"
     },
     {
       "path": "examples/README.md",
@@ -225,6 +250,11 @@
       "path": "skills/verify-exact-candidate/scripts/verify_files.py",
       "bytes": 24880,
       "sha256": "b61f35021f0b67cb3886359cdcabfc60faabe90748ad5d5732d9545df5a607f7"
+    },
+    {
+      "path": "tests/evaluations/test_run_cases.py",
+      "bytes": 8096,
+      "sha256": "e58148e6a4b611301099413f35040ced9a8d8582c86b1d4ae916feb354612acf"
     },
     {
       "path": "tests/verify-exact-candidate/test_verify_files.py",
