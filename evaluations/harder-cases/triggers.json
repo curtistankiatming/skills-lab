@@ -126,6 +126,11 @@
       "id": "T25",
       "request": "Approve TASK-9.",
       "expected": "governed-task-lifecycle"
+    },
+    {
+      "id": "T26",
+      "request": "Initiate TASK-12: draft the onboarding checklist for new hires.",
+      "expected": "governed-task-lifecycle"
     }
   ]
 }

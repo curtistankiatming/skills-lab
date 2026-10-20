@@ -1,14 +1,14 @@
 {
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
-  "distribution_version": "2.1.0",
-  "distribution_state": "RELEASE_SOURCE_V2_1_0",
+  "distribution_version": "2.1.1",
+  "distribution_state": "PREPARED_ON_MAIN_NOT_RELEASED",
   "last_issued_distribution_version": "2.1.0",
   "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
   "outgoing_licence": "MIT",
   "repository_identity": "curtistankiatming/skills-lab",
   "schema_version": 1,
-  "source_policy": "Six installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. This revision is the source of the v2.1.0 release; a release does not establish installation, host discovery or runtime behavior.",
+  "source_policy": "Six installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. 2.1.1 restores \"Initiate\" in Governed Task Lifecycle's description. The latest published release is v2.1.0; integration on main does not establish a release, installation, host discovery or runtime behavior.",
   "history": "Earlier snapshot records removed from this file in 2.0.0 are reproduced in HISTORY.md.",
   "files": [
     {
@@ -19,7 +19,7 @@
     {
       "path": "CATALOG.md",
       "bytes": 5352,
-      "sha256": "55ccddb42dbd0836f7415fdbc9cef19187470c3d6bb6380cc015bc55c49a27f3"
+      "sha256": "6df74d13c4c1ace309841cf4896e69785aba1ab2288eb3f35839cea1dfa1ae49"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -33,8 +33,8 @@
     },
     {
       "path": "HISTORY.md",
-      "bytes": 14148,
-      "sha256": "c582e4a9d20cf0160002d401951f36374d75205dd4a3294d74ad69bf43922355"
+      "bytes": 14569,
+      "sha256": "defac3faa71c36d9e709e93096925922c019673f5c3cc4c6bd4de7e0c8e664fd"
     },
     {
       "path": "LICENSE",
@@ -44,22 +44,22 @@
     {
       "path": "README.md",
       "bytes": 6983,
-      "sha256": "1b31b0fd1a6ac085fb0f4b0156771c63465929e8b840d66fb4c2043be70348f6"
+      "sha256": "36718de973ee39d104237c19bfd8af0ddafa0018235414ed333622f0ed1c53dd"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 3328,
-      "sha256": "c274d0e3be0097171639cf171aad9ef2695746a96af17e20a7be984a6f0a65dc"
+      "bytes": 3369,
+      "sha256": "499eba9fbdf9e507090aa60cfbc552f2bcd6944306e05ac49d5254b5461cd9ee"
     },
     {
       "path": "RIGHTS.md",
       "bytes": 6171,
-      "sha256": "73c06888c91539a4a1bdca1486c6682e2f5030c96f257696d5166c54268a4199"
+      "sha256": "39018ea56d8a09b1d33e8a7e53347995861e465ed7b572d6d2bc953ddd42d313"
     },
     {
       "path": "VERSION",
       "bytes": 6,
-      "sha256": "c89b87c262e9d5ffd20e73aac74a1772adcc9f5a21682cc33adcf5086e5fef5c"
+      "sha256": "7b3ff271f1373cfb97e9e53349794e1450f3794e4c0788c54a2060c7596da821"
     },
     {
       "path": "evaluations/2026-10-07/README.md",
@@ -89,7 +89,7 @@
     {
       "path": "evaluations/harder-cases/README.md",
       "bytes": 6931,
-      "sha256": "59172fe68c9093f22e961f977c4e7dc7f9197ccdca1eddea6e4f55d5a6674a96"
+      "sha256": "507d7959ebb5875a8755e2bb04c1b8e387bef2ff84a0476a964b9ee486bcae0c"
     },
     {
       "path": "evaluations/harder-cases/cases.json",
@@ -108,8 +108,8 @@
     },
     {
       "path": "evaluations/harder-cases/triggers.json",
-      "bytes": 3738,
-      "sha256": "b414c1972540b33d29047165afc3d0cf01cb65371f24366eab3735ef17f73e06"
+      "bytes": 3898,
+      "sha256": "2b12638a65f78b266d3a7b182ef3d7f9ec7ba23c725f739202f21303e98e358c"
     },
     {
       "path": "examples/README.md",
@@ -153,8 +153,8 @@
     },
     {
       "path": "skills/governed-task-lifecycle/SKILL.md",
-      "bytes": 8022,
-      "sha256": "b34e31122d7812b756123e43044746d94c0714981fa1c3aee3e05755635ed0b0"
+      "bytes": 8036,
+      "sha256": "ea758747102eb121046acdbb51a092a3e515919c27e908afbb1a3291a2d405e8"
     },
     {
       "path": "skills/governed-task-lifecycle/agents/openai.yaml",
@@ -284,8 +284,8 @@
       "source_files": [
         {
           "path": "skills/governed-task-lifecycle/SKILL.md",
-          "bytes": 8022,
-          "sha256": "b34e31122d7812b756123e43044746d94c0714981fa1c3aee3e05755635ed0b0"
+          "bytes": 8036,
+          "sha256": "ea758747102eb121046acdbb51a092a3e515919c27e908afbb1a3291a2d405e8"
         },
         {
           "path": "skills/governed-task-lifecycle/agents/openai.yaml",
@@ -309,8 +309,8 @@
         }
       ],
       "source_relationship": "portability_revision_of_selected_export",
-      "source_version": "1.1.1",
-      "source_state": "REVISION_2_1_0"
+      "source_version": "1.1.2",
+      "source_state": "REVISION_2_1_1"
     },
     {
       "entrypoint": "skills/integrate-approved-pr/SKILL.md",
