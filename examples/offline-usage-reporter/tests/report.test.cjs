@@ -25,7 +25,7 @@ test('a latched STOP is visible on stdout and survives a reset',()=>{
   const out=path.join(scratch(),'report.md');
   const r=run('--receipt',fixture('stop-after-reset.json'),'--out',out);
   assert.strictEqual(r.status,0,r.stderr);
-  assert.match(r.stdout,/^MATCHED STOP-LATCHED \//);
+  assert.match(r.stdout,/^MATCHED \/.* SHA256 [0-9a-f]{64} STOP-LATCHED\n$/);
   const report=fs.readFileSync(out,'utf8');
   assert.match(report,/STOP latched: c1\/w1/);
   const nexts=report.match(/^Next action: .*$/gm);
@@ -65,5 +65,5 @@ test('the stdout hash matches the written report',()=>{
   const out=path.join(scratch(),'report.md');
   const line=execFileSync(process.execPath,[REPORT,'--receipt',fixture('work-only.json'),'--out',out],{encoding:'utf8'});
   const hash=require('node:crypto').createHash('sha256').update(fs.readFileSync(out)).digest('hex');
-  assert.strictEqual(line.trim().split(' ').pop(),hash);
+  assert.strictEqual(line.trim().split(' ')[3],hash);
 });

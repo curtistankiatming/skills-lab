@@ -124,8 +124,9 @@ function main(argv) {
   const raw=fs.readFileSync(inPath), result=formatReceipt(JSON.parse(raw),inPath,sha(raw));
   fs.mkdirSync(path.dirname(outPath),{recursive:true});
   fs.writeFileSync(outPath,result.report,{encoding:'utf8',flag:'wx'});
-  // STOP-LATCHED is printed so a caller that reads only stdout cannot miss a latched stop.
-  process.stdout.write(`${result.status}${result.stopLatched.length?' STOP-LATCHED':''} ${outPath} SHA256 ${sha(Buffer.from(result.report))}\n`);
+  // STOP-LATCHED is appended so a caller that reads only stdout cannot miss a latched stop;
+  // it goes last so the status, path and hash keep their earlier positions.
+  process.stdout.write(`${result.status} ${outPath} SHA256 ${sha(Buffer.from(result.report))}${result.stopLatched.length?' STOP-LATCHED':''}\n`);
 }
 if(require.main===module) try {main(process.argv.slice(2));} catch(e) {console.error(e.message);process.exitCode=1;}
 module.exports={formatReceipt,meterText};

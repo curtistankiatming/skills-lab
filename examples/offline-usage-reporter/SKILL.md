@@ -9,7 +9,7 @@ This is a worked example of a skill that wraps a deterministic helper. It is kep
 
 1. Check that Node.js is available and that you were given a receipt file and a new output path.
 2. From this folder, run once: `node scripts/report.cjs --receipt <input.json> --out <new-report.md>`
-3. Read the single stdout line. It starts with `MATCHED` or `HOLD`, followed by `STOP-LATCHED` when any worker's stop is latched, then the report path and its SHA-256.
+3. Read the single stdout line: `MATCHED` or `HOLD`, the report path, `SHA256` and the report's hash, then `STOP-LATCHED` at the end when any worker's stop is latched.
 4. Return that exact line and the exit status. Use the returned hash; do not re-hash or reload the report unless asked to review it.
 
 ## Stop and report

@@ -81,12 +81,12 @@
     {
       "path": "examples/offline-usage-reporter/SKILL.md",
       "bytes": 1770,
-      "sha256": "96b9e33115f35995c3e665d4a1f8987afab1ee96e3f1ce318dc82486a0906aa5"
+      "sha256": "cba66b59e9bf12db436d04db3dc84b62ee99b5fda5d3164bb9da23a06c2105c9"
     },
     {
       "path": "examples/offline-usage-reporter/references/receipt-contract.md",
-      "bytes": 2431,
-      "sha256": "b9cd62edf305ab4be1b8204ce1b4cc50ad73a155195c2de44e9c6654b6f469b4"
+      "bytes": 2475,
+      "sha256": "080f5d8de7cad7194b5bb9f5022af9d1c3eac6ff46e5a1b73a5fadf983a01c68"
     },
     {
       "path": "examples/offline-usage-reporter/scripts/gate.cjs",
@@ -95,8 +95,8 @@
     },
     {
       "path": "examples/offline-usage-reporter/scripts/report.cjs",
-      "bytes": 11145,
-      "sha256": "1c88d5c6a001d0e2d001f4ba0d2f57393d7e92bfa9fc753b35e57accc6362264"
+      "bytes": 11223,
+      "sha256": "630bb1a7d8028b10764e738562fce74668134eb61a33dbea25ddcb6ea6f76d85"
     },
     {
       "path": "examples/offline-usage-reporter/tests/fixtures/stop-after-reset.json",
@@ -110,8 +110,8 @@
     },
     {
       "path": "examples/offline-usage-reporter/tests/report.test.cjs",
-      "bytes": 2973,
-      "sha256": "67792c9fc96785deb2fc8b6c9542345bd811750e2986d0148cea2952c90fd3af"
+      "bytes": 2995,
+      "sha256": "df5b17c2df901d7acda858a92dd56cb97c5fdc4c5e4241458393f1d4983b6e13"
     },
     {
       "path": "skills/governed-task-lifecycle/SKILL.md",
@@ -367,12 +367,12 @@
         {
           "path": "examples/offline-usage-reporter/SKILL.md",
           "bytes": 1770,
-          "sha256": "96b9e33115f35995c3e665d4a1f8987afab1ee96e3f1ce318dc82486a0906aa5"
+          "sha256": "cba66b59e9bf12db436d04db3dc84b62ee99b5fda5d3164bb9da23a06c2105c9"
         },
         {
           "path": "examples/offline-usage-reporter/references/receipt-contract.md",
-          "bytes": 2431,
-          "sha256": "b9cd62edf305ab4be1b8204ce1b4cc50ad73a155195c2de44e9c6654b6f469b4"
+          "bytes": 2475,
+          "sha256": "080f5d8de7cad7194b5bb9f5022af9d1c3eac6ff46e5a1b73a5fadf983a01c68"
         },
         {
           "path": "examples/offline-usage-reporter/scripts/gate.cjs",
@@ -381,8 +381,8 @@
         },
         {
           "path": "examples/offline-usage-reporter/scripts/report.cjs",
-          "bytes": 11145,
-          "sha256": "1c88d5c6a001d0e2d001f4ba0d2f57393d7e92bfa9fc753b35e57accc6362264"
+          "bytes": 11223,
+          "sha256": "630bb1a7d8028b10764e738562fce74668134eb61a33dbea25ddcb6ea6f76d85"
         },
         {
           "path": "examples/offline-usage-reporter/tests/fixtures/stop-after-reset.json",
@@ -396,8 +396,8 @@
         },
         {
           "path": "examples/offline-usage-reporter/tests/report.test.cjs",
-          "bytes": 2973,
-          "sha256": "67792c9fc96785deb2fc8b6c9542345bd811750e2986d0148cea2952c90fd3af"
+          "bytes": 2995,
+          "sha256": "df5b17c2df901d7acda858a92dd56cb97c5fdc4c5e4241458393f1d4983b6e13"
         }
       ],
       "historical_outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION",

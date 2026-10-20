@@ -4,7 +4,7 @@ Use the O2 replay JSON schema: phase screening/confirmation; mode baseline/candi
 
 The pinned replay checks scheduled timestamps exactly. WORK requires matching account, bucket, reset, a fresh source reading and known ordinary permission/primary usage. Missing required evidence is HOLD. At 10% remaining or less, STOP latches across resets. Optional secondary UNKNOWN alone is allowed. This schema encodes the tested policy, not a universal monitoring schedule or permission to act on workers.
 
-The formatter checks source gates but is not a general hostile-input validator. Unsupported inputs require review or a separately validated adapter. Its process can exit zero while its report status is HOLD. Its single stdout line starts with MATCHED or HOLD and adds STOP-LATCHED whenever any worker's stop is latched, so a caller reading only stdout still sees the stop. Counters describe the replay; they are not token savings.
+The formatter checks source gates but is not a general hostile-input validator. Unsupported inputs require review or a separately validated adapter. Its process can exit zero while its report status is HOLD. Its single stdout line starts with MATCHED or HOLD, then the report path and SHA256 hash, and ends with STOP-LATCHED whenever any worker's stop is latched, so a caller reading only stdout still sees the stop. Counters describe the replay; they are not token savings.
 
 Required reading identity: callId is an integer (the form used by the supplied replay fixtures) or a nonblank string; actor is a nonblank string. Missing or invalid values require HOLD. No type coercion is used to validate these identifiers.
 
