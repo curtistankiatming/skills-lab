@@ -157,7 +157,7 @@ class RunCasesTest(unittest.TestCase):
         self.assertTrue(records["T4"]["correct"])
         self.assertEqual(records["T3"]["choice"], "none")
         self.assertTrue(records["T3"]["correct"])
-        self.assertIn("- scope-pull: Use this skill when", Stub.seen[0]["messages"][0]["content"])
+        self.assertIn("- scope-pull: Use when", Stub.seen[0]["messages"][0]["content"])
 
     def test_parse_choice(self):
         names = ["scope-pull", "lean-history-reporting"]

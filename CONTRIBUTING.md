@@ -1,6 +1,6 @@
 # Contributing to Skills Lab
 
-Start with the [repository instructions](AGENTS.md) and an exact assignment. A contribution proposal is not owner approval or permission to publish it. Collection 2.0.0 installs six skills and keeps one example in `examples/`. This is not a complete inventory of every skill its maintainer has created.
+Start with the [repository instructions](AGENTS.md) and an exact assignment. A contribution proposal is not owner approval or permission to publish it. The collection installs six skills and keeps one example in `examples/`. This is not a complete inventory of every skill its maintainer has created.
 
 ## Prepare a useful change
 

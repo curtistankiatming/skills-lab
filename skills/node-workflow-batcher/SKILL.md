@@ -1,6 +1,6 @@
 ---
 name: node-workflow-batcher
-description: Use this skill when a local task would otherwise take many separate tool calls to read files, compute results and check them, and you have a code-execution tool (Node, Python or similar). Do it in one call and check every result. Do not use it for steps that need approval or change anything outside the task.
+description: Use to do many local file reads, computations and checks in one code-tool call (Node, Python or similar) instead of many separate tool calls. Check every result. Not for steps that need approval or change anything outside the task.
 ---
 
 # Workflow batcher
