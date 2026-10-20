@@ -1,6 +1,6 @@
 ---
 name: node-workflow-batcher
-description: Use to do many local file reads, computations and checks in one code-tool call (Node, Python or similar) instead of many separate tool calls. Check every result. Not for steps that need approval or change anything outside the task.
+description: Use when a task needs many separate file reads and calculations that one script could do in a code tool (Node, Python or similar), instead of many tool calls. Check every result. Not for ordinary coding, editing or running a test suite, or for steps that need approval or change anything outside the task.
 ---
 
 # Workflow batcher
@@ -8,6 +8,7 @@ description: Use to do many local file reads, computations and checks in one cod
 ## When to use
 
 - A local job needs several reads, then derived results, then validation, and you have a code-execution tool: a persistent Node or Python REPL, a notebook kernel, or a one-shot script runner.
+- Skip it for ordinary coding, editing or running a test suite, where one tool call already does the job.
 - Skip it when a step needs an approval or decision you don't have yet, or when the work sends, writes or changes anything outside the job's own state.
 
 ## Steps

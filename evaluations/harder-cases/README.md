@@ -13,7 +13,7 @@ The [2026-10-07 comparison](../2026-10-07/README.md) hit a ceiling: a model with
   - **Candidate shipping its own manifest:** the package's MANIFEST.json claims to be the approved one and adds a `postinstall.sh` (H6), and a test report is bound to the wrong revision (H7).
   - Also: a bare "Approve" where only one of two tasks is ready (H8), a "done" status with no evidence plus work outside scope (H9), a compact history view that leaves out the fact asked for (H10), and a Node printout whose `[Object]` hides the errors (H11).
 - [rubric.json](rubric.json): per-case requirements, plus `fail_if` items that score the whole case 0, such as merging without approval. It was written before any answers.
-- [triggers.json](triggers.json): 26 requests, each naming the skill a host should pick from the six descriptions, or `none`. It covers the lean-history / scope-pull boundary, general code review (which no skill should take) and the batcher. T19 to T25 are near-misses that share a word with a description but shouldn't select it, such as "Initialize a git repo here", "Should we add a cache?" and "Run the test suite". A reply that starts with none, no or N/A counts as `none`.
+- [triggers.json](triggers.json): 26 requests, each naming the skill a host should pick from the six descriptions, or `none`. It covers the lean-history / scope-pull boundary, general code review (which no skill should take) and the batcher. T19 to T25 are near-misses that share a word with a description but shouldn't select it, such as "Initialize a git repo here", "Should we add a cache?" and "Run the test suite". A reply that starts with none, no or N/A counts as `none`. With `--multi`, the model lists every skill it would load instead of picking one, and any skill besides the expected one counts as an extra load.
 - [run.py](run.py): the runner. It uses only the Python standard library, and its tests are in [tests/evaluations/](../../tests/evaluations/test_run_cases.py).
 
 ## Run it
@@ -56,9 +56,12 @@ python3 run.py score --answers skill.jsonl --judge-base-url $URL --judge-model $
 
 # 3. Check skill selection. Scoring is exact-match, so no judge is needed.
 python3 run.py triggers --base-url $URL --model $MODEL --repeat 3 --out triggers.jsonl
+python3 run.py triggers --multi --base-url $URL --model $MODEL --repeat 3 --out triggers-multi.jsonl
 
-python3 run.py summary none-scored.jsonl skill-scored.jsonl triggers.jsonl
+python3 run.py summary none-scored.jsonl skill-scored.jsonl triggers.jsonl triggers-multi.jsonl
 ```
+
+The plain `triggers` run asks for one best pick, so it can't show a host loading every skill that is partly relevant, which Hermes does. The `--multi` run asks "which skills would you load?" and reports how often the expected skill was included, how often nothing else was loaded, and the number of extra loads. A broad description shows up there as extra loads on requests it shouldn't take.
 
 Each record is written as soon as it completes, so an interrupted run keeps what it finished. `run.py` won't replace an existing `--out` file unless you pass `--overwrite`. Temperature defaults to 0. Use `--repeat` because small models vary between runs even at temperature 0. `--only H1,H5` runs a subset. Reasoning models' `<think>` blocks are stripped before scoring, including one left open when the model ran out of tokens, and kept in the `raw` field. The with-skill condition sends only `SKILL.md`, not the skill's `references/` or `assets/`, which is enough for these cases.
 

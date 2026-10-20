@@ -11,9 +11,9 @@ Version 2.1.1; released versions are on the [Releases page](https://github.com/c
 | Governed Task Lifecycle | The owner says Initialize (or Initiate), Validate or Approve for a named task, or the project requires that lifecycle. Not for ordinary requests. | [governed-task-lifecycle](skills/governed-task-lifecycle/SKILL.md) |
 | Verify Exact Candidate | Exact files, hashes or revisions must match a pinned candidate or approved baseline, in a review, transfer or handoff. Not for general code review. | [verify-exact-candidate](skills/verify-exact-candidate/SKILL.md) |
 | Integrate Approved PR | You need to check whether a PR can merge, or mark ready or merge a PR the owner explicitly approved. Not for general code review. | [integrate-approved-pr](skills/integrate-approved-pr/SKILL.md) |
-| Scope Pull | You're asked whether a project is on track, what is left against the plan, whether scope has crept, or whether new work should be added to scope. Works for non-software projects too. | [scope-pull](skills/scope-pull/SKILL.md) |
+| Scope Pull | You're asked whether a project is on track, what is left against the plan, whether scope has crept, or whether new work should be added to the project's agreed scope. Works for non-software projects too. | [scope-pull](skills/scope-pull/SKILL.md) |
 | Lean History Reporting | You're asked for a status report on, or a diagnosis of, earlier work recorded in a chat, session, thread or task history. | [lean-history-reporting](skills/lean-history-reporting/SKILL.md) |
-| Node Workflow Batcher | Many local file reads, computations and checks can be done in one code-tool call (Node, Python or similar) instead of many separate tool calls. | [node-workflow-batcher](skills/node-workflow-batcher/SKILL.md) |
+| Node Workflow Batcher | A task needs many separate file reads and calculations that one script could do in a code tool (Node, Python or similar). Not for ordinary coding, editing or running a test suite. | [node-workflow-batcher](skills/node-workflow-batcher/SKILL.md) |
 
 Scope Pull and Lean History Reporting point to each other: progress against a plan is Scope Pull, and what a single recorded run did is Lean History Reporting. The [catalog](CATALOG.md) lists each skill's resources and boundaries. [examples/](examples/README.md) holds an example skill that is not part of the installed set.
 

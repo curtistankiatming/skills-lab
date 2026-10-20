@@ -2,6 +2,8 @@
 
 These are the full rules behind the checklist in [SKILL.md](../SKILL.md), moved here in version 1.2.0 with only their link paths changed. Read them when a step's edge case is not covered by the checklist, or when the destination's contract needs exact wording.
 
+If this file and SKILL.md disagree, SKILL.md wins. Report the conflict so the two can be brought back in line.
+
 Complete only the PR effects the authorized owner actually granted, following the destination's integration rules. This skill is self-contained: it needs no other skill, approval ritual or particular provider. Owner, repository, PR, base, head, method, writer and limits are current inputs.
 
 ## Bind the approved operation

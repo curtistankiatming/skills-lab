@@ -6,6 +6,8 @@ Start with the [repository instructions](AGENTS.md) and an exact assignment. A c
 
 Identify the affected skill, its controlling source and exact revision, the user request it should serve, and the intended change. Describe changes to triggers, resources, behaviour, compatibility, authority or rights. Work within the assigned writer scope and preserve unchanged resources.
 
+Four skills keep a checklist in `SKILL.md` and the full rules in `references/detailed-rules.md`. Change both files together in the same change and check that they still agree. If they ever conflict, `SKILL.md` wins.
+
 For a selected export, revise the controlling source through its own current authority before updating this copy. Do not patch a distributed copy and silently diverge from the source. An intended transfer of canonical ownership needs an explicit owner decision and a recorded revision boundary.
 
 Update the catalog, inventory and distribution version when their basis changes. Hash final raw bytes; state which files a manifest covers and exclude its own bytes explicitly. Keep historical issued versions and any private review evidence with their accountable owner.

@@ -41,6 +41,10 @@ class Stub(BaseHTTPRequestHandler):
             content = json.dumps({"requirements": [True] * n_req, "fail_if": [fail] + [False] * (n_fail - 1),
                                   "notes": "stub"})
             content = "Here is my verdict:\n" + content
+        elif "These skills are available" in system and "every skill" in system:
+            content = "integrate-approved-pr, scope-pull" if "PR #88 go in" in user else "None"
+            if "foo to bar" in user:
+                content = "I'd load the editing one"
         elif "These skills are available" in system:
             content = "<think>maybe scope-pull</think>integrate-approved-pr" if "PR #88 go in" in user else "None."
         else:
@@ -158,6 +162,29 @@ class RunCasesTest(unittest.TestCase):
         self.assertEqual(records["T3"]["choice"], "none")
         self.assertTrue(records["T3"]["correct"])
         self.assertIn("- scope-pull: Use when", Stub.seen[0]["messages"][0]["content"])
+
+    def test_multi_select_counts_extra_loads(self):
+        out = self.tmp / "m.jsonl"
+        run.main(["triggers", "--multi", "--base-url", self.url, "--model", "m", "--only", "T3,T4,T15",
+                  "--out", str(out)])
+        records = {r["case"]: r for r in run.read_jsonl(out)}
+        self.assertIn("list every skill", Stub.seen[0]["messages"][0]["content"])
+        self.assertEqual(records["T4"]["loaded"], ["integrate-approved-pr", "scope-pull"])
+        self.assertEqual(records["T4"]["extras"], ["scope-pull"])
+        self.assertTrue(records["T4"]["found"])
+        self.assertFalse(records["T4"]["correct"])
+        self.assertEqual((records["T3"]["loaded"], records["T3"]["extras"], records["T3"]["correct"]), ([], [], True))
+        self.assertIsNone(records["T15"]["loaded"])
+        self.assertFalse(records["T15"]["correct"])
+        run.main(["summary", str(out)])
+
+    def test_parse_choices(self):
+        names = ["scope-pull", "lean-history-reporting", "node-workflow-batcher"]
+        self.assertEqual(run.parse_choices("node-workflow-batcher, `scope-pull`", names),
+                         ["node-workflow-batcher", "scope-pull"])
+        self.assertEqual(run.parse_choices("None of these; scope-pull is closest", names), [])
+        self.assertEqual(run.parse_choices("**None**", names), [])
+        self.assertIsNone(run.parse_choices("the history one", names))
 
     def test_parse_choice(self):
         names = ["scope-pull", "lean-history-reporting"]

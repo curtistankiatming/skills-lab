@@ -2,6 +2,8 @@
 
 These are the full rules behind the checklist in [SKILL.md](../SKILL.md), moved here in version 1.3.0 with only their link paths changed and one opening paragraph dropped, because it repeated SKILL.md's "When to use". Read them when a step's edge case is not covered by the checklist, or when the destination's contract needs exact wording.
 
+If this file and SKILL.md disagree, SKILL.md wins. Report the conflict so the two can be brought back in line.
+
 ## Establish the basis
 
 Identify the project, requested time horizon and relevant authoritative sources from the supplied context and accessible project records. If different plausible projects or baselines would materially change the answer, ask one focused clarification; continue any useful reconciliation that does not depend on it.
