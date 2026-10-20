@@ -2,6 +2,14 @@
 
 This file keeps the distribution notes that earlier README, CATALOG, RELEASING and inventory.json versions carried, so the current files can describe the current collection. The text below is copied from those files as they stood at commit 4e12d40, before version 2.0.0. It describes each snapshot as it was then; statements such as "not yet published" are historical, not current. Links are relative to the repository root.
 
+## 2.1.0 (prepared 2026-10-20, not yet released)
+
+- Integrate Approved PR 1.2.0, Scope Pull 1.3.0 and Verify Exact Candidate 1.4.0 finish the restructure Governed Task Lifecycle had in 2.0.0. The checklist stays in `SKILL.md`, and the detailed rules move to `references/detailed-rules.md`, so each rule appears once. Each of those `SKILL.md` files is now less than half its previous size.
+- Verify Exact Candidate's step 2 now matches its detailed rules: whether links are allowed is the task's rule, and the no-follow behaviour belongs to the bundled checker.
+- Scope Pull drops a purpose paragraph that repeated "When to use".
+- Every description now opens with "Use when" or "Use to", so a skill list that shows only the first 50 to 60 characters still shows the trigger. Governed Task Lifecycle, Lean History Reporting and Node Workflow Batcher change only their description (1.1.1).
+- These changes follow the Hermes review of v2.0.0.
+
 ## 2.0.0 (2026-10-20)
 
 - Every skill was revised for use on any host: plain "Use this skill when … Do not use it for …" descriptions, numbered steps, stop rules and a short example in each `SKILL.md`, and host-specific text removed from skill bodies.

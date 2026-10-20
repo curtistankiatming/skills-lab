@@ -1,6 +1,6 @@
 ---
 name: lean-history-reporting
-description: Use this skill when asked for a status report on, or a diagnosis of, earlier work recorded in a chat, session, thread or task history. Read summaries first and fetch full outputs only when needed. For progress against an agreed plan or scope, use scope-pull. Do not use it to repair, rerun or approve anything.
+description: Use for a status report on, or diagnosis of, earlier work in a chat, session, thread or task history. Read summaries first and fetch full outputs only when needed. For progress against a plan or scope, use scope-pull. Not for repairing, rerunning or approving anything.
 ---
 
 # Lean history reporting

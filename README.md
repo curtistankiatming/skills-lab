@@ -2,18 +2,18 @@
 
 Six instruction skills that help an AI agent do careful, checkable work: run a task through Initialize, Validate and Approve; verify exact files against a pinned baseline; merge only a PR the owner approved; check a project against its agreed scope; report on earlier work from its history; and batch local tool work into one code call. Each skill is a folder with a `SKILL.md` in the common Agent Skills format (only `name` and `description` frontmatter), so the same files work in Claude, Codex, Hermes and plain-prompt local models.
 
-Version 2.0.0. The collection is MIT licensed; see [RIGHTS.md](RIGHTS.md).
+Version 2.1.0; released versions are on the [Releases page](https://github.com/curtistankiatming/skills-lab/releases). The collection is MIT licensed; see [RIGHTS.md](RIGHTS.md).
 
 ## Choose a skill
 
 | Skill | Use it when | Entry point |
 | --- | --- | --- |
 | Governed Task Lifecycle | The owner says Initialize (or Initiate), Validate or Approve for a named task, or the project requires that lifecycle. Not for ordinary requests. | [governed-task-lifecycle](skills/governed-task-lifecycle/SKILL.md) |
-| Verify Exact Candidate | A review, transfer or handoff must verify exact files, hashes, revisions or evidence against a pinned candidate or approved baseline. Not for general code review. | [verify-exact-candidate](skills/verify-exact-candidate/SKILL.md) |
+| Verify Exact Candidate | Exact files, hashes or revisions must match a pinned candidate or approved baseline, in a review, transfer or handoff. Not for general code review. | [verify-exact-candidate](skills/verify-exact-candidate/SKILL.md) |
 | Integrate Approved PR | You need to check whether a PR can merge, or mark ready or merge a PR the owner explicitly approved. Not for general code review. | [integrate-approved-pr](skills/integrate-approved-pr/SKILL.md) |
 | Scope Pull | You're asked whether a project is on track, what is left against the plan, whether scope has crept, or whether new work should be added to scope. Works for non-software projects too. | [scope-pull](skills/scope-pull/SKILL.md) |
 | Lean History Reporting | You're asked for a status report on, or a diagnosis of, earlier work recorded in a chat, session, thread or task history. | [lean-history-reporting](skills/lean-history-reporting/SKILL.md) |
-| Node Workflow Batcher | A local task would take many separate tool calls to read files, compute results and check them, and you have a code-execution tool (Node, Python or similar). | [node-workflow-batcher](skills/node-workflow-batcher/SKILL.md) |
+| Node Workflow Batcher | Many local file reads, computations and checks can be done in one code-tool call (Node, Python or similar) instead of many separate tool calls. | [node-workflow-batcher](skills/node-workflow-batcher/SKILL.md) |
 
 Scope Pull and Lean History Reporting point to each other: progress against a plan is Scope Pull, and what a single recorded run did is Lean History Reporting. The [catalog](CATALOG.md) lists each skill's resources and boundaries. [examples/](examples/README.md) holds an example skill that is not part of the installed set.
 
@@ -25,7 +25,7 @@ Copy the whole skill folder, not only `SKILL.md`: some skills link to files in t
 - **Claude apps:** zip the skill folder and upload it under Settings → Capabilities → Skills.
 - **Codex:** copy the folder to `~/.codex/skills/<skill-name>/`. The optional `agents/openai.yaml` files are Codex metadata; other hosts ignore them.
 - **Hermes:** install or copy the folder into Hermes's skills directory (by default `~/.hermes/skills/<skill-name>/`). Hermes scans skills on install. Verify Exact Candidate ships an optional Python checker in `scripts/`; if the scan blocks it, the skill still works from its Markdown alone.
-- **Local models without skill support** (for example Gemma 12B or Qwen 27B in Ollama, LM Studio or llama.cpp): paste the skill's `SKILL.md` into the system prompt or the first message, and add a referenced file only when a step calls for it. Load one skill at a time. Lean History Reporting and Node Workflow Batcher are the smallest, at about 3 KB each; the other four are 8 to 10 KB.
+- **Local models without skill support** (for example Gemma 12B or Qwen 27B in Ollama, LM Studio or llama.cpp): paste the skill's `SKILL.md` into the system prompt or the first message, and add a referenced file only when a step calls for it. Load one skill at a time. Each `SKILL.md` is about 3 to 4 KB, except Governed Task Lifecycle at about 8 KB. The longer rules each skill links to in `references/` are needed only for edge cases.
 
 Selecting or installing a skill grants no new permissions. The skills tell the agent to stop and ask when a step needs approval.
 
