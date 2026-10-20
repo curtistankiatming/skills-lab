@@ -10,8 +10,8 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 6709,
-      "sha256": "53e1fae6517b580d7bceadb96251c68a014a1a59e7d277ca226eda61c197f644"
+      "bytes": 6778,
+      "sha256": "5cc1cf02f8c1d5f47be5fbe77eda955b99f5754f2e6b1a9f36a686fbf86059b6"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -30,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8378,
-      "sha256": "872959e2d3b0200091917d4c9c0b38f987f511c0aae10478ba7d4de1d57f073d"
+      "bytes": 8419,
+      "sha256": "4bea1a7cfe2a0b61b239def2cca3c4ef33640744da4cf81b882723372714ac26"
     },
     {
       "path": "RELEASING.md",
@@ -115,8 +115,8 @@
     },
     {
       "path": "skills/lean-history-reporting/SKILL.md",
-      "bytes": 892,
-      "sha256": "e933e41a3c22eecda7a7381081aac7ba0bd2f8fbdec32764a2663355bc9a2b08"
+      "bytes": 2609,
+      "sha256": "febb541f526f14c75be6c1a738e1f6e17d80325a384e24b0ed90e8111b603215"
     },
     {
       "path": "skills/node-workflow-batcher/SKILL.md",
@@ -417,18 +417,18 @@
     {
       "id": "lean-history-reporting",
       "entrypoint": "skills/lean-history-reporting/SKILL.md",
-      "source_version": "1.0.0",
+      "source_version": "1.1.0",
       "source_relationship": "EXACT_SELECTED_COPY_OF_LOCAL_R5_PACKAGE",
-      "source_state": "RE_REVIEW_PUBLICATION_CANDIDATE",
+      "source_state": "PORTABILITY_REVISION_PENDING_REVIEW",
       "source_files": [
         {
           "path": "skills/lean-history-reporting/SKILL.md",
-          "bytes": 892,
-          "sha256": "e933e41a3c22eecda7a7381081aac7ba0bd2f8fbdec32764a2663355bc9a2b08"
+          "bytes": 2609,
+          "sha256": "febb541f526f14c75be6c1a738e1f6e17d80325a384e24b0ed90e8111b603215"
         }
       ],
       "resource_payload_sha256": "5ba6962048d11063708f1a26a6c8c57f7577deabe4a3fddf234bc51b303f60a2",
-      "dependency": "Authorized history reader exposing includeOutputs or an equivalent compact view; required detailed evidence remains necessary",
+      "dependency": "Authorized history access; uses an outputs-omitted or summary view when the host offers one, otherwise messages first; required detailed evidence remains necessary",
       "performance": "No general savings or effectiveness guarantee; prior packaging comparison is not recertified by publication",
       "outgoing_MIT_inclusion": "Selected retained MIT terms within current owner-directed eligible-publication task; actual review/delivery prerequisites remain",
       "discovery": "UNVERIFIED"
