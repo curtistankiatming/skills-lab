@@ -10,8 +10,8 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 6720,
-      "sha256": "0bce29b1bce84286c01be496a8c1c78af3c96d564c40bbf09234d38a10abc008"
+      "bytes": 6772,
+      "sha256": "f2c1f1566bbcb008b2ac33a079d8fea1787291eb660d386042273263eb71c5a2"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -30,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8273,
-      "sha256": "f7c2f4f09e8c4125e80a71d8f0af545fac0c600a73554caec2f575500ae87707"
+      "bytes": 8382,
+      "sha256": "45854e7052c4e4b1052d8938962389ce749d09a7f56a09410d558cc08f62f05b"
     },
     {
       "path": "RELEASING.md",
@@ -160,8 +160,8 @@
     },
     {
       "path": "skills/node-workflow-batcher/SKILL.md",
-      "bytes": 2289,
-      "sha256": "791ec622a5a4862c1a2942f52d123c1f51403b316acacecbe9e0ea219932d4dd"
+      "bytes": 3682,
+      "sha256": "7ca1c57dc8f6f513c38cc899b16c1693f8a796c3023ebfb183a392e20f801781"
     },
     {
       "path": "skills/scope-pull/SKILL.md",
@@ -433,18 +433,17 @@
     {
       "id": "node-workflow-batcher",
       "entrypoint": "skills/node-workflow-batcher/SKILL.md",
-      "source_version": "1.0.0",
+      "source_version": "1.1.0",
       "source_relationship": "EXACT_SELECTED_COPY_OF_ACCEPTED_LOCAL_SOURCE",
-      "source_state": "ACCEPTED_LOCAL_SOURCE_SELECTED_IN_VERIFIED_PUBLIC_BASE_1_4_0",
-      "resource_payload_sha256": "c0a9d22d5814985b97aff66718e41e0c130ab16ce014ff1a323acbdcf65d44a0",
+      "source_state": "PORTABILITY_REVISION_PENDING_REVIEW",
       "outgoing_MIT_inclusion": "ALREADY_PUBLISHED_IN_BASE_1_4_0",
-      "runtime_requirement": "Host-supported persistent Node REPL with documented state/output facilities",
+      "runtime_requirement": "Any host code-execution tool (persistent Node or Python REPL, notebook kernel, or one-shot script runner); no implementation, connector or permission is supplied",
       "discovery_and_new_name_runtime": "UNVERIFIED",
       "source_files": [
         {
           "path": "skills/node-workflow-batcher/SKILL.md",
-          "bytes": 2289,
-          "sha256": "791ec622a5a4862c1a2942f52d123c1f51403b316acacecbe9e0ea219932d4dd"
+          "bytes": 3682,
+          "sha256": "7ca1c57dc8f6f513c38cc899b16c1693f8a796c3023ebfb183a392e20f801781"
         }
       ],
       "historical_outgoing_MIT_inclusion": "PROPOSED_PENDING_EXACT_OWNER_DECISION"
