@@ -100,8 +100,8 @@
     },
     {
       "path": "skills/integrate-approved-pr/SKILL.md",
-      "bytes": 9340,
-      "sha256": "3fee8b7c8208907b60ac1244475d3091d89411aa2c82cc5efb697411224b6220"
+      "bytes": 9383,
+      "sha256": "922a369627c785e3883cf9ff4600483e36e1a85ec66356b94bf41bba9ea1321b"
     },
     {
       "path": "skills/integrate-approved-pr/agents/openai.yaml",
@@ -245,8 +245,8 @@
       "source_files": [
         {
           "path": "skills/integrate-approved-pr/SKILL.md",
-          "bytes": 9340,
-          "sha256": "3fee8b7c8208907b60ac1244475d3091d89411aa2c82cc5efb697411224b6220"
+          "bytes": 9383,
+          "sha256": "922a369627c785e3883cf9ff4600483e36e1a85ec66356b94bf41bba9ea1321b"
         },
         {
           "path": "skills/integrate-approved-pr/agents/openai.yaml",

@@ -1,6 +1,6 @@
 ---
 name: integrate-approved-pr
-description: Use this skill when asked to check whether a pull request can merge, or to mark ready or merge a PR the owner explicitly approved. Bind checks to the exact approved head and verify the result. Do not treat a review pass or design approval as permission to merge.
+description: Use this skill when asked to check whether a pull request can merge, or to mark ready or merge a PR the owner explicitly approved. Bind checks to the exact approved head and verify the result. Do not use it for general code review, and do not treat a review pass or design approval as permission to merge.
 ---
 
 # Integrate approved PR
