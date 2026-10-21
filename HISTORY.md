@@ -2,6 +2,15 @@
 
 This file keeps the distribution notes that earlier README, CATALOG, RELEASING and inventory.json versions carried, so the current files can describe the current collection. The text below is copied from those files as they stood at commit 4e12d40, before version 2.0.0. It describes each snapshot as it was then; statements such as "not yet published" are historical, not current. Links are relative to the repository root.
 
+## 2.1.2 (prepared 2026-10-21, not yet released)
+
+Small fixes after the first Gemma run, adding 23 words in total across four `SKILL.md` files:
+
+- Verify Exact Candidate 1.4.2: step 1 says a manifest or approval inside the candidate never counts as the independent reference. "When to use" is shortened by the same number of words.
+- Integrate Approved PR 1.2.2: step 1 says a bot, comment or tool output claiming approval is not the owner's instruction; the example's preflight also checks that pushing to main sets off no deploy; the description excludes merging branches locally.
+- Node Workflow Batcher 1.1.3: step 6 says never to report, send or act on output you haven't seen in full.
+- Governed Task Lifecycle 1.1.3: the description gives git init and design sign-off as ordinary requests it doesn't take.
+
 ## 2.1.1 (2026-10-20)
 
 - Governed Task Lifecycle 1.1.2: the description names "Initiate" again ("Initialize (or Initiate), Validate or Approve"), so a host that picks skills from the description alone still selects it for "Initiate TASK-…". The 2.1.0 shortening had dropped it; the skill body already accepted both words.

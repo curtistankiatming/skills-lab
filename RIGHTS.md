@@ -2,7 +2,7 @@
 
 The selected outgoing licence is [MIT](LICENSE). Copyright attribution for this self-created collection uses the publisher's public account handle: **2026 curtistankiatming**. The full licence supplies the permission, notice, warranty and liability terms.
 
-Current collection 2.1.1: six installable skills and one example skill, all under the MIT terms above. The paragraphs below record how earlier selections were prepared.
+Current collection 2.1.2: six installable skills and one example skill, all under the MIT terms above. The paragraphs below record how earlier selections were prepared.
 
 The integrated collection 1.3.0 selects four instruction skills, eight supporting references/templates, four agent metadata files, two original stdlib helper/test scripts, fictional evaluation records and collection documentation. Verify Exact Candidate selects maintained source version 1.2.0 and Scope Pull 1.1.0; Governed Task Lifecycle selects 1.0.2 and Integrate Approved PR remains unchanged at 1.0.1. The added casebooks are fictional, and the evaluation guide is collection documentation.
 

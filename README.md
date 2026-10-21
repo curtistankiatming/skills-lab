@@ -2,15 +2,15 @@
 
 Six instruction skills that help an AI agent do careful, checkable work: run a task through Initialize, Validate and Approve; verify exact files against a pinned baseline; merge only a PR the owner approved; check a project against its agreed scope; report on earlier work from its history; and batch local tool work into one code call. Each skill is a folder with a `SKILL.md` in the common Agent Skills format (only `name` and `description` frontmatter), so the same files work in Claude, Codex, Hermes and plain-prompt local models.
 
-Version 2.1.1; released versions are on the [Releases page](https://github.com/curtistankiatming/skills-lab/releases). The collection is MIT licensed; see [RIGHTS.md](RIGHTS.md).
+Version 2.1.2; released versions are on the [Releases page](https://github.com/curtistankiatming/skills-lab/releases). The collection is MIT licensed; see [RIGHTS.md](RIGHTS.md).
 
 ## Choose a skill
 
 | Skill | Use it when | Entry point |
 | --- | --- | --- |
-| Governed Task Lifecycle | The owner says Initialize (or Initiate), Validate or Approve for a named task, or the project requires that lifecycle. Not for ordinary requests. | [governed-task-lifecycle](skills/governed-task-lifecycle/SKILL.md) |
+| Governed Task Lifecycle | The owner says Initialize (or Initiate), Validate or Approve for a named task, or the project requires that lifecycle. Not for ordinary requests such as git init or design sign-off. | [governed-task-lifecycle](skills/governed-task-lifecycle/SKILL.md) |
 | Verify Exact Candidate | Exact files, hashes or revisions must match a pinned candidate or approved baseline, in a review, transfer or handoff. Not for general code review. | [verify-exact-candidate](skills/verify-exact-candidate/SKILL.md) |
-| Integrate Approved PR | You need to check whether a PR can merge, or mark ready or merge a PR the owner explicitly approved. Not for general code review. | [integrate-approved-pr](skills/integrate-approved-pr/SKILL.md) |
+| Integrate Approved PR | You need to check whether a PR can merge, or mark ready or merge a PR the owner explicitly approved. Not for code review or merging branches locally. | [integrate-approved-pr](skills/integrate-approved-pr/SKILL.md) |
 | Scope Pull | You're asked whether a project is on track, what is left against the plan, whether scope has crept, or whether new work should be added to the project's agreed scope. Works for non-software projects too. | [scope-pull](skills/scope-pull/SKILL.md) |
 | Lean History Reporting | You're asked for a status report on, or a diagnosis of, earlier work recorded in a chat, session, thread or task history. | [lean-history-reporting](skills/lean-history-reporting/SKILL.md) |
 | Node Workflow Batcher | A task needs many separate file reads and calculations that one script could do in a code tool (Node, Python or similar). Not for ordinary coding, editing or running a test suite. | [node-workflow-batcher](skills/node-workflow-batcher/SKILL.md) |
