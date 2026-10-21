@@ -2,13 +2,13 @@
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
   "distribution_version": "2.1.2",
-  "distribution_state": "PREPARED_ON_MAIN_NOT_RELEASED",
-  "last_issued_distribution_version": "2.1.1",
+  "distribution_state": "RELEASE_SOURCE_V2_1_2",
+  "last_issued_distribution_version": "2.1.2",
   "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
   "outgoing_licence": "MIT",
   "repository_identity": "curtistankiatming/skills-lab",
   "schema_version": 1,
-  "source_policy": "Six installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. 2.1.1 restores \"Initiate\" in Governed Task Lifecycle's description, narrows Node Workflow Batcher's and Scope Pull's triggers, and says SKILL.md wins over detailed rules. 2.1.2 tightens four skills after the first Gemma run. The latest published release is v2.1.1; integration on main does not establish a release, installation, host discovery or runtime behavior.",
+  "source_policy": "Six installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. 2.1.1 restores \"Initiate\" in Governed Task Lifecycle's description, narrows Node Workflow Batcher's and Scope Pull's triggers, and says SKILL.md wins over detailed rules. 2.1.2 tightens four skills after the first Gemma run. This revision is the source of the v2.1.2 release; a release does not establish installation, host discovery or runtime behavior.",
   "history": "Earlier snapshot records removed from this file in 2.0.0 are reproduced in HISTORY.md.",
   "files": [
     {
@@ -18,8 +18,8 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 5465,
-      "sha256": "2b78e040269a6845a9e8d3f50374f70595c6d073436229a460d0ed87322f6284"
+      "bytes": 5473,
+      "sha256": "a8799ed46a710621ac0d4a09e87dfa29dcd5f3eb33be133baea1aa44df75718e"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -28,13 +28,13 @@
     },
     {
       "path": "EVALUATING.md",
-      "bytes": 4127,
-      "sha256": "3ef95ee522ad2de49222751bb1c49427e6fa00fe17f5c69bd1b6cedc5d7f8206"
+      "bytes": 4133,
+      "sha256": "1fa4c52ca142233c1ea21846ed452fff42892af9567887d55817b64faabb673d"
     },
     {
       "path": "HISTORY.md",
-      "bytes": 16332,
-      "sha256": "ed5e8a71281ff6f943aef9285f85489382b1842ca3e0f922c12b8d93994c5bbd"
+      "bytes": 16588,
+      "sha256": "7104a24bfe0a683f5a6f452a1e1c0c0f24feef8d6f5a88f5039157cdfdb2c453"
     },
     {
       "path": "LICENSE",
@@ -43,13 +43,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 7096,
-      "sha256": "5aec1b1f748b2f84d2504d17369013bacdc207f0c83748f4b56bc211f30b6aad"
+      "bytes": 7102,
+      "sha256": "f7b145b5ec03ee17dd3da89263e9daaf9b777828289fc374abc528cd78f2eafb"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 3369,
-      "sha256": "2d9797f0e58e9069381ebcfe07819b8deab898da5c68b92fb6a6b4eaffbf0d5f"
+      "bytes": 3328,
+      "sha256": "77c9c58bd0d750ce2a90d32c22b72376257218e48b57e283fd276e99bab6de42"
     },
     {
       "path": "RIGHTS.md",
@@ -88,8 +88,8 @@
     },
     {
       "path": "evaluations/harder-cases/README.md",
-      "bytes": 7833,
-      "sha256": "daafc3f0da5ce3437fd23abbe54d9c8f1906ff682cb630e1b90b2bbc5ddf4eac"
+      "bytes": 7820,
+      "sha256": "d3326607f209db1901e65dcce56c36f7d5593bfecf4159176a089ed31f53c9ec"
     },
     {
       "path": "evaluations/harder-cases/cases.json",
