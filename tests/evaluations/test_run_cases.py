@@ -115,10 +115,12 @@ class RunCasesTest(unittest.TestCase):
                   "--only", "H1", "--out", str(out)])
         self.assertEqual(Stub.seen[0]["messages"][0]["content"], run.NONE_SYSTEM)
 
-    def test_endpoint_error_is_recorded_not_raised(self):
+    def test_endpoint_error_is_recorded_and_exits_1(self):
         out = self.tmp / "a.jsonl"
-        run.main(["answers", "--base-url", self.url, "--model", "broken", "--condition", "none",
-                  "--only", "H1", "--out", str(out)])
+        with self.assertRaises(SystemExit) as stop:
+            run.main(["answers", "--base-url", self.url, "--model", "broken", "--condition", "none",
+                      "--only", "H1", "--out", str(out)])
+        self.assertEqual(stop.exception.code, 1)
         record = run.read_jsonl(out)[0]
         self.assertIn("HTTPError", record["error"])
         self.assertEqual(record["answer"], "")
@@ -147,8 +149,9 @@ class RunCasesTest(unittest.TestCase):
 
     def test_unanswered_case_is_not_scored(self):
         answers, scored = self.tmp / "a.jsonl", self.tmp / "s.jsonl"
-        run.main(["answers", "--base-url", self.url, "--model", "broken", "--condition", "none",
-                  "--only", "H1", "--out", str(answers)])
+        with self.assertRaises(SystemExit):
+            run.main(["answers", "--base-url", self.url, "--model", "broken", "--condition", "none",
+                      "--only", "H1", "--out", str(answers)])
         run.main(["score", "--answers", str(answers), "--judge-base-url", self.url, "--judge-model", "j",
                   "--out", str(scored)])
         record = run.read_jsonl(scored)[0]
@@ -182,6 +185,25 @@ class RunCasesTest(unittest.TestCase):
         self.assertIn("0/6 points (3/6 before fail-zeroing), 2 failed cases (1 with no answer), 0 unscored", text)
         self.assertIn("H1 rep 0: 0/3 (raw 3) FAIL", text)
         self.assertIn("H3 rep 0: no answer, 0/3 FAIL", text)
+
+    def test_judge_endpoint_error_exits_1(self):
+        answers, scored = self.tmp / "a.jsonl", self.tmp / "s.jsonl"
+        run.main(["answers", "--base-url", self.url, "--model", "m", "--condition", "none",
+                  "--only", "H1", "--out", str(answers)])
+        with self.assertRaises(SystemExit) as stop:
+            run.main(["score", "--answers", str(answers), "--judge-base-url", self.url, "--judge-model", "broken",
+                      "--out", str(scored)])
+        self.assertEqual(stop.exception.code, 1)
+        self.assertTrue(run.read_jsonl(scored)[0]["judge_endpoint_error"])
+
+    def test_trigger_summary_counts_unparsed(self):
+        out = self.tmp / "m.jsonl"
+        run.main(["triggers", "--multi", "--base-url", self.url, "--model", "m", "--only", "T3,T15",
+                  "--out", str(out)])
+        text = io.StringIO()
+        with contextlib.redirect_stdout(text):
+            run.main(["summary", str(out)])
+        self.assertIn("1 unparsed, 0 errors", text.getvalue())
 
     def test_answer_instructions_ask_to_stop_for_missing_tool_results(self):
         text = run.load("cases.json")["answer_instructions"]
@@ -286,6 +308,8 @@ class RunCasesTest(unittest.TestCase):
         text = (self.tmp / "p" / "H6.txt").read_text(encoding="utf-8")
         self.assertIn("MANIFEST.json", text)
         self.assertNotIn("<skill", text)
+        self.assertIn("Take no actions except loading skills:", text)
+        self.assertNotIn("You have no tools", text)
         out = self.tmp / "t.jsonl"
         run.main(["triggers", "--base-url", self.url, "--model", "m", "--only", "T4", "--out", str(out)])
         run.main(["summary", str(out)])
