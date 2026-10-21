@@ -2,7 +2,9 @@
 
 Run: python3 -I -B tests/evaluations/test_run_cases.py
 """
+import contextlib
 import importlib.util
+import io
 import json
 import re
 import sys
@@ -152,6 +154,38 @@ class RunCasesTest(unittest.TestCase):
         record = run.read_jsonl(scored)[0]
         self.assertNotIn("score", record)
         self.assertTrue(record["judge_error"].startswith("answer missing"))
+
+    def test_cut_off_answer_is_not_judged(self):
+        answers, scored = self.tmp / "a.jsonl", self.tmp / "s.jsonl"
+        run.main(["answers", "--base-url", self.url, "--model", "cut-off", "--condition", "skill",
+                  "--only", "H6", "--out", str(answers)])
+        judged_before = len(Stub.seen)
+        run.main(["score", "--answers", str(answers), "--judge-base-url", self.url, "--judge-model", "j",
+                  "--out", str(scored)])
+        self.assertEqual(len(Stub.seen), judged_before)
+        self.assertEqual(run.read_jsonl(scored)[0]["judge_error"], "answer missing: no final answer")
+
+    def test_summary_counts_missing_answers_as_failures(self):
+        answers, scored = self.tmp / "a.jsonl", self.tmp / "s.jsonl"
+        with open(answers, "w", encoding="utf-8") as f:
+            for case, model in [("H1", "m"), ("H3", "broken")]:
+                f.write(json.dumps({"case": case, "skill": "integrate-approved-pr", "condition": "none",
+                                    "model": model, "repeat": 0, "answer": "" if model == "broken" else
+                                    "Done, it merges fine.", "error": "HTTPError: 500" if model == "broken" else None,
+                                    "context_check": None}) + "\n")
+        run.main(["score", "--answers", str(answers), "--judge-base-url", self.url, "--judge-model", "j",
+                  "--out", str(scored)])
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            run.main(["summary", str(scored)])
+        text = out.getvalue()
+        self.assertIn("0/6 points (3/6 before fail-zeroing), 2 failed cases (1 with no answer), 0 unscored", text)
+        self.assertIn("H1 rep 0: 0/3 (raw 3) FAIL", text)
+        self.assertIn("H3 rep 0: no answer, 0/3 FAIL", text)
+
+    def test_answer_instructions_ask_to_stop_for_missing_tool_results(self):
+        text = run.load("cases.json")["answer_instructions"]
+        self.assertIn("name that call and stop there; report only facts you have", text)
 
     def test_triggers_list_descriptions_and_parse_choice(self):
         out = self.tmp / "t.jsonl"

@@ -214,6 +214,8 @@ def cmd_score(args):
         for record in records:
             if record.get("error"):
                 record["judge_error"] = "answer missing: " + record["error"]
+            elif not record.get("answer", "").strip():
+                record["judge_error"] = "answer missing: no final answer"
             else:
                 record.update(judge_one(args, cases, rubric, record))
             emit(out, record)
@@ -327,15 +329,24 @@ def cmd_summary(args):
                 if not r["correct"]:
                     print(f"  {r['case']}: expected {r['expected']}, got {r['choice']}")
         else:
+            # A run with no final answer is the model's failure, not the judge's: it scores 0 and counts as failed.
+            needed = {case: len(rules["requirements"]) for case, rules in load("rubric.json")["cases"].items()}
             scored = [r for r in records if "score" in r]
-            points, top = sum(r["score"] for r in scored), sum(r["max"] for r in scored)
-            fails = sum(1 for r in scored if any(r["fail_if"]))
+            missing = [r for r in records if "score" not in r and str(r.get("judge_error")).startswith("answer missing")]
+            points, raw = sum(r["score"] for r in scored), sum(sum(r["requirements"]) for r in scored)
+            top = sum(r["max"] for r in scored) + sum(needed[r["case"]] for r in missing)
+            fails = sum(1 for r in scored if any(r["fail_if"])) + len(missing)
             conditions = sorted({r["condition"] for r in records})
-            print(f"{path}: {', '.join(conditions)}: {points}/{top} points, {fails} failed cases, "
-                  f"{len(records) - len(scored)} unscored")
-            for r in scored:
-                flag = " FAIL" if any(r["fail_if"]) else ""
-                print(f"  {r['case']} rep {r['repeat']}: {r['score']}/{r['max']}{flag}{warn(r)}")
+            print(f"{path}: {', '.join(conditions)}: {points}/{top} points ({raw}/{top} before fail-zeroing), "
+                  f"{fails} failed cases ({len(missing)} with no answer), "
+                  f"{len(records) - len(scored) - len(missing)} unscored")
+            for r in records:
+                if r in scored:
+                    flag = " FAIL" if any(r["fail_if"]) else ""
+                    print(f"  {r['case']} rep {r['repeat']}: {r['score']}/{r['max']} "
+                          f"(raw {sum(r['requirements'])}){flag}{warn(r)}")
+                elif r in missing:
+                    print(f"  {r['case']} rep {r['repeat']}: no answer, 0/{needed[r['case']]} FAIL{warn(r)}")
         if flagged:
             print(f"  WARNING: {len(flagged)} record(s) flagged by the context check "
                   f"({', '.join(sorted({r['context_check'] for r in flagged}))}); "
