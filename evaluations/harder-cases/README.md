@@ -71,6 +71,7 @@ Each record is written as soon as it completes, so an interrupted run keeps what
 
 - The skill helps where the `skill` condition scores higher or fails fewer cases than `none` on the same model. A tie on these cases means no effect was shown, not that the skill is useless. Read results case by case, because some cases are expected to separate the conditions more than others.
 - Read the `fail_if` hits first. They are the costly mistakes, like merging on a forged approval.
+- `summary` counts a run with no final answer (an endpoint error, or an answer cut off before it started) as a failed case worth 0 points. It also prints the points before fail-zeroing, so partial progress on a failed case still shows.
 - A judge model can be wrong. Spot-check a few scored answers by hand, especially any `fail_if` hit and any case where the conditions differ. Record the judge model with the results.
 - Record the exact model tag, quantization, server and commit of this repository for each run. Results apply to that setup only.
 - The cases are fictional and the model has no tools, so they test what the model says it would do, not real tool use.
