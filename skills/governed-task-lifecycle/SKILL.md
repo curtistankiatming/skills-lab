@@ -1,6 +1,6 @@
 ---
 name: governed-task-lifecycle
-description: Use when the owner says Initialize (or Initiate), Validate or Approve for a named task (for example "Initialize TASK-7"), or the project requires that lifecycle. Build the work, check the actual result, then carry out only what was approved. Not for ordinary requests such as git init or design sign-off.
+description: Use for task Initialize/Initiate/Validate/Approve only, from the owner (for example "Initialize TASK-7"), or when the project requires that lifecycle. Build the work, check the actual result, then carry out only what was approved. Not for ordinary requests such as git init or design sign-off.
 ---
 
 # Governed task lifecycle
@@ -19,7 +19,7 @@ Three commands take a task from work to done. **Initialize** builds it, **Valida
 2. **Name the exact target:** the repository or system, task ID, revision or commit, PR if any, and what the current grant includes and excludes.
 3. **Read what decides scope.** Start from the project's instructions and actual state, and read the sources that decide scope or acceptance. Keep five things apart: governing rules, research, the candidate, test evidence and owner decisions.
 4. **Name one writer** for each thing that will change. A role name, model label or separate thread does not prove independence or isolation.
-5. **Resolve a bare "Approve".** It needs exactly one task ready for approval, with one clear set of actions. Otherwise, ask one focused question.
+5. **Resolve a bare "Approve".** If exactly one task is ready, with one clear set of actions, approve it; otherwise ask one focused question.
 
 ## Initialize
 
