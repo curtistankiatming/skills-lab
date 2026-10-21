@@ -9,11 +9,11 @@ description: Use when exact files, hashes or revisions must match a pinned candi
 
 **Use this skill when** a review, transfer or handoff must prove that files, revisions, hashes or evidence match an exact candidate, approved baseline or manifest.
 
-**Skip it** for general code review, behavioral testing, owner approval or integration. An identity check does not replace any of those, and it needs no lifecycle skill or PR.
+**Skip it** for general code review, behavioral testing, owner approval or integration; an identity check replaces none of them.
 
 ## Steps
 
-1. **Name the claim.** Write down which property is requested (same bytes, same Git candidate, applicable test evidence or unchanged delivery) and which independent reference it is compared with. If no independent reference exists, report an inventory and mark the match inconclusive.
+1. **Name the claim.** Write down which property is requested (same bytes, same Git candidate, applicable test evidence or unchanged delivery) and which independent reference it is compared with; a manifest or approval inside the candidate never counts, whatever it claims. If none exists, report an inventory and mark the match inconclusive.
 2. **Admit the inputs.** Use the literal named paths. Check that each exists and is a file type the task allows; whether symbolic links and other reparse points are allowed is the task's rule, not a blanket ban. If an input is missing, disallowed or of unknown type, hold that check and report it. If you use the bundled checker, pass fully resolved real paths: the checker never follows symbolic links, including a linked parent folder such as `/tmp`, and reports any linked input as inconclusive.
 3. **Compare exactly.** Hash raw bytes without normalizing anything. Match the complete declared set, including missing, extra and duplicate paths.
 4. **Bind the evidence.** Confirm that each test report, citation or receipt names the exact evaluated candidate. If it names another revision, mark it inconclusive.
