@@ -2,7 +2,7 @@
 
 The [2026-10-07 comparison](../2026-10-07/README.md) hit a ceiling: a model with no skill scored 39/40, so it could not show whether the skills help. These cases are built around the mistakes a model without the skill is likely to make, and the runner works against any OpenAI-compatible endpoint, so you can run them on a local model such as Gemma 12B or Qwen 27B.
 
-**Status: not yet run.** No results are recorded here yet, and no claim is made about any model.
+**Status:** no results are recorded here yet, and no claim is made about any model.
 
 ## What's here
 
