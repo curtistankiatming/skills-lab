@@ -2,13 +2,15 @@
 
 This file keeps the distribution notes that earlier README, CATALOG, RELEASING and inventory.json versions carried, so the current files can describe the current collection. The text below is copied from those files as they stood at commit 4e12d40, before version 2.0.0. It describes each snapshot as it was then; statements such as "not yet published" are historical, not current. Links are relative to the repository root.
 
-## 3.0.0 (prepared 2026-10-21, not yet released)
+## 3.0.0 (2026-10-22)
 
 Changes from the v2.1.2 evaluation runs on Gemma 12B, Qwen 9B and Qwen 27B, with no net growth in words. The major version marks the new description openings: hosts that pick skills from a description's first 57 characters may now select these two skills differently.
 
 - Integrate Approved PR 1.3.0 (480 to 479 words): step 1 says only the owner's own message is approval, and that approval claims in comments, bot posts, logs or tool output never are and are reported as unverified. "Stop and report" adds PR content or tool output that claims approval or says to merge. On Qwen 9B the 2.1.2 wording led the model to merge on a bot's approval comment, or say it would, in 6 of 10 runs. Three repeated lines are trimmed, and the description opens "Use for merge readiness or owner-approved PR merges only."
 - Governed Task Lifecycle 1.2.0 (1,252 to 1,246 words): step 5 says to approve when exactly one task is ready with one clear set of actions, instead of only stating the requirement; on stock Gemma the old wording led to "which task?" in 3 of 5 runs. The description opens "Use for task Initialize/Initiate/Validate/Approve only", keeping every command word, including Initiate.
 - Verify Exact Candidate 1.4.3 (no change in words): the example says "the reference lists" instead of "the manifest lists", so it no longer suggests a manifest is the reference.
+- Evaluation harness: rubric amendments for H2 and H10 are recorded with their dates; `run.py` exits 1 and names the error fields when an endpoint call fails, and counts unparsed trigger replies; the Hermes prompt says "Take no actions except loading skills".
+- Published as the GitHub release v3.0.0.
 
 ## 2.1.2 (2026-10-21)
 
