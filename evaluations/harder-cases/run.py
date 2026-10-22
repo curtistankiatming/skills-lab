@@ -18,6 +18,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 NONE_SYSTEM = "You are a careful assistant."
+# Hermes doesn't load skills when told it has no tools, so the pasted prompts allow loading only.
+NO_TOOLS = "You have no tools in this exercise:"
+HERMES_NO_TOOLS = "Take no actions except loading skills:"
 # A prompt whose reported token count falls below this share of a rough
 # characters/4 estimate was probably cut to fit a small context window.
 SHORT_PROMPT_RATIO = 0.8
@@ -142,7 +145,7 @@ def warn(record):
 
 
 def cmd_answers(args):
-    cases = load("cases.json")
+    cases, errors = load("cases.json"), 0
     with open_out(args) as out:
         for case in selected(cases["cases"], args.only):
             system, user = system_prompt(args, case), case_prompt(cases, case)
@@ -151,8 +154,10 @@ def cmd_answers(args):
                 emit(out, {"case": case["id"], "skill": case["skill"], "condition": args.condition,
                            "model": args.model, "repeat": rep, "system_sha256": sha(system),
                            "user_sha256": sha(user), **result})
+                errors += bool(result["error"])
                 status = "ERROR " + result["error"] if result["error"] else "ok"
                 print(f"{case['id']} rep {rep}: {status}{warn(result)}", file=sys.stderr)
+    return errors
 
 
 JUDGE = """You are scoring one answer against a fixed rubric. You do not know which model or setup wrote it.
@@ -192,7 +197,7 @@ def judge_one(args, cases, rubric, record):
         fail_if="\n".join(f"{i + 1}. {r}" for i, r in enumerate(rules["fail_if"])))
     result = call(args, args.judge_base_url, args.judge_model, NONE_SYSTEM, prompt)
     scored = {"judge_model": args.judge_model, "judge_raw": result["raw"], "judge_error": result["error"],
-              "judge_context_check": result["context_check"]}
+              "judge_context_check": result["context_check"], "judge_endpoint_error": result["error"] is not None}
     if result["error"] is None:
         try:
             verdict = parse_json_object(result["answer"])
@@ -209,7 +214,7 @@ def judge_one(args, cases, rubric, record):
 
 def cmd_score(args):
     rubric, cases = load("rubric.json"), load("cases.json")
-    records = read_jsonl(args.answers)
+    records, errors = read_jsonl(args.answers), 0
     with open_out(args) as out:
         for record in records:
             if record.get("error"):
@@ -218,9 +223,11 @@ def cmd_score(args):
                 record["judge_error"] = "answer missing: no final answer"
             else:
                 record.update(judge_one(args, cases, rubric, record))
+                errors += record["judge_endpoint_error"]
             emit(out, record)
             print(f"{record['case']} rep {record['repeat']}: {record.get('score', record.get('judge_error'))}",
                   file=sys.stderr)
+    return errors
 
 
 def skill_names(skills_dir):
@@ -279,6 +286,7 @@ def cmd_triggers(args):
     listing = "\n".join(f"- {n}: {d}" for n, d in skills)
     system = (f"{NONE_SYSTEM} These skills are available:\n{listing}\n\n"
               + (MULTI_PICK if args.multi else SINGLE_PICK))
+    errors = 0
     with open_out(args) as out:
         for case in selected(load("triggers.json")["cases"], args.only):
             for rep in range(args.repeat):
@@ -286,6 +294,7 @@ def cmd_triggers(args):
                 scored = trigger_record(case, None if result["error"] else result["answer"], names, args.multi)
                 emit(out, {"case": case["id"], "model": args.model, "repeat": rep, "expected": case["expected"],
                            **scored, **result})
+                errors += bool(result["error"])
                 if result["error"]:
                     shown = "ERROR " + result["error"]
                 elif args.multi:
@@ -293,11 +302,13 @@ def cmd_triggers(args):
                 else:
                     shown = scored["choice"]
                 print(f"{case['id']}: {shown}{warn(result)}", file=sys.stderr)
+    return errors
 
 
 def cmd_prompts(args):
     """Write each case's prompt to a text file, for pasting into a host such as Hermes."""
     cases = load("cases.json")
+    cases["answer_instructions"] = cases["answer_instructions"].replace(NO_TOOLS, HERMES_NO_TOOLS)
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     for case in selected(cases["cases"], args.only):
@@ -314,9 +325,10 @@ def cmd_summary(args):
             found = sum(r["found"] for r in done)
             extras = sum(len(r["extras"] or []) for r in done)
             exact = sum(r["correct"] for r in done)
+            unparsed = sum(r["loaded"] is None for r in done)
             print(f"{path}: multi-select triggers {found}/{len(done)} included the expected answer, "
                   f"{exact}/{len(done)} loaded nothing else, {extras} extra loads, "
-                  f"{len(records) - len(done)} errors")
+                  f"{unparsed} unparsed, {len(records) - len(done)} errors")
             for r in done:
                 if not r["correct"]:
                     got = "unparsed" if r["loaded"] is None else ", ".join(r["loaded"]) or "none"
@@ -324,7 +336,9 @@ def cmd_summary(args):
         elif records and "expected" in records[0]:
             done = [r for r in records if not r["error"]]
             right = sum(r["correct"] for r in done)
-            print(f"{path}: triggers {right}/{len(done)} correct, {len(records) - len(done)} errors")
+            unparsed = sum(r["choice"] == "unparsed" for r in done)
+            print(f"{path}: triggers {right}/{len(done)} correct, {unparsed} unparsed, "
+                  f"{len(records) - len(done)} errors")
             for r in done:
                 if not r["correct"]:
                     print(f"  {r['case']}: expected {r['expected']}, got {r['choice']}")
@@ -387,8 +401,12 @@ def main(argv=None):
     m.add_argument("files", nargs="+")
 
     args = p.parse_args(argv)
-    {"answers": cmd_answers, "score": cmd_score, "triggers": cmd_triggers,
-     "prompts": cmd_prompts, "summary": cmd_summary}[args.command](args)
+    errors = {"answers": cmd_answers, "score": cmd_score, "triggers": cmd_triggers,
+              "prompts": cmd_prompts, "summary": cmd_summary}[args.command](args)
+    if errors:
+        # A crashed or unreachable server must not look like a finished run.
+        print(f"{errors} endpoint error(s); see the error fields in {args.out}", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

@@ -88,8 +88,8 @@
     },
     {
       "path": "evaluations/harder-cases/README.md",
-      "bytes": 7820,
-      "sha256": "d3326607f209db1901e65dcce56c36f7d5593bfecf4159176a089ed31f53c9ec"
+      "bytes": 8856,
+      "sha256": "66bf79ed459ef5116eaf4cbe355a40a61edcf7ee5a51658fbdddcce6f47f08ab"
     },
     {
       "path": "evaluations/harder-cases/cases.json",
@@ -98,13 +98,13 @@
     },
     {
       "path": "evaluations/harder-cases/rubric.json",
-      "bytes": 5712,
-      "sha256": "7f3b2b7e2743864e1fd906dfae78023da1846242e8738d11e687f81ef7104506"
+      "bytes": 6505,
+      "sha256": "3004d7f037f5f49bc7bc8d72dff1ce0db2de07cbc9fce2254597206b6fb84721"
     },
     {
       "path": "evaluations/harder-cases/run.py",
-      "bytes": 17844,
-      "sha256": "09ddefdfc76088a2bb4f83790be2870502e3e598dc572ef1da74ad27f246b309"
+      "bytes": 18868,
+      "sha256": "a10b2bb3d30f5c1d3bef55880a91b9edc4b985bfc4b2938f3ffe2f915006f4ea"
     },
     {
       "path": "evaluations/harder-cases/triggers.json",
@@ -268,8 +268,8 @@
     },
     {
       "path": "tests/evaluations/test_run_cases.py",
-      "bytes": 15236,
-      "sha256": "f4edc9ca40d63193399459ad8db080631f0c5a70d2006998bb4807618f976aa1"
+      "bytes": 16535,
+      "sha256": "1c33f2f94a64fa2ac35851810afc1277e56ce8a7e6846e93f52792f233135993"
     },
     {
       "path": "tests/verify-exact-candidate/test_verify_files.py",
