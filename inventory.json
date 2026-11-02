@@ -33,8 +33,8 @@
     },
     {
       "path": "HISTORY.md",
-      "bytes": 19724,
-      "sha256": "910142fb77456676cf2e0c61783dcc0db7892de20e0ef8a2ed41a2058e8c87ff"
+      "bytes": 19816,
+      "sha256": "a56ce0b67ab55ace39be14385c25dd39e332f0942c1698fd7871d2e1338b3174"
     },
     {
       "path": "LICENSE",
@@ -228,8 +228,8 @@
     },
     {
       "path": "skills/scratch-folder/SKILL.md",
-      "bytes": 2484,
-      "sha256": "8bb715c573a3bb2e2b6228e0b425cb3329323529700b2fa1b07e94bbefa19b38"
+      "bytes": 2651,
+      "sha256": "8abd12ad35c3a29b7a580719c309aaa1cf1db73be32add77dfd767ffefa85da1"
     },
     {
       "path": "skills/verify-exact-candidate/SKILL.md",
@@ -541,8 +541,8 @@
       "source_files": [
         {
           "path": "skills/scratch-folder/SKILL.md",
-          "bytes": 2484,
-          "sha256": "8bb715c573a3bb2e2b6228e0b425cb3329323529700b2fa1b07e94bbefa19b38"
+          "bytes": 2651,
+          "sha256": "8abd12ad35c3a29b7a580719c309aaa1cf1db73be32add77dfd767ffefa85da1"
         }
       ],
       "dependency": "File access in the working folder; cleanup commands given for Linux or macOS and Windows PowerShell",

@@ -1,6 +1,6 @@
 ---
 name: scratch-folder
-description: Use for drafts and temp files: work in scratch, clean up
+description: Use for drafts and temp files: work in scratch, clean up. Keep only files the project or user needs and delete the rest. Not for files the user asked for by name or path, or for deleting anything outside the scratch folder.
 ---
 
 # Scratch folder
