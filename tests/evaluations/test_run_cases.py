@@ -90,7 +90,7 @@ class RunCasesTest(unittest.TestCase):
         rubric = run.load("rubric.json")["cases"]
         self.assertEqual([c["id"] for c in cases], list(rubric))
         skills = {n for n, _ in run.skill_names(REPO / "skills")}
-        self.assertEqual(len(skills), 6)
+        self.assertEqual(len(skills), 7)
         for case in cases:
             self.assertIn(case["skill"], skills)
             self.assertTrue(rubric[case["id"]]["requirements"] and rubric[case["id"]]["fail_if"])

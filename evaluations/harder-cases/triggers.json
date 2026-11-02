@@ -1,6 +1,6 @@
 {
   "fictional": true,
-  "meaning": "Each request should select the named skill, or none. The model sees only each skill's name and description, as a host's skill picker would. T19-T25 are near-misses: they share words with a skill's description but should not select it (except T25).",
+  "meaning": "Each request should select the named skill, or none. The model sees only each skill's name and description, as a host's skill picker would. T19-T25 are near-misses: they share words with a skill's description but should not select it (except T25). T29 is a near-miss for scratch-folder.",
   "cases": [
     {
       "id": "T1",
@@ -131,6 +131,21 @@
       "id": "T26",
       "request": "Initiate TASK-12: draft the onboarding checklist for new hires.",
       "expected": "governed-task-lifecycle"
+    },
+    {
+      "id": "T27",
+      "request": "Draft the release notes, try a few versions, and don't leave temp files behind.",
+      "expected": "scratch-folder"
+    },
+    {
+      "id": "T28",
+      "request": "Clean up the temp files you made while debugging.",
+      "expected": "scratch-folder"
+    },
+    {
+      "id": "T29",
+      "request": "Draft an email to the team about Friday's outage.",
+      "expected": "none"
     }
   ]
 }

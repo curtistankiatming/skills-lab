@@ -2,6 +2,12 @@
 
 This file keeps the distribution notes that earlier README, CATALOG, RELEASING and inventory.json versions carried, so the current files can describe the current collection. The text below is copied from those files as they stood at commit 4e12d40, before version 2.0.0. It describes each snapshot as it was then; statements such as "not yet published" are historical, not current. Links are relative to the repository root.
 
+## 3.1.0 (2026-11-03)
+
+- New skill: Scratch Folder 1.0.0, a single `SKILL.md` of about 450 words. Agents keep drafts, logs, test output and temporary scripts in `.scratch` in the working folder (kept out of git through `.git/info/exclude`). Before finishing they keep only files the user asked for, that the project needs to build, run or test, or that record a decision or result; they move those to a permanent place and delete the rest. Cleanup commands are given for Linux or macOS and Windows PowerShell. Its description is 56 characters, under the 60-character limit Hermes v0.22.6 applies when it installs or edits a skill.
+- Trigger tests T27 to T29 cover it, including one near-miss (T29). No harder case covers it yet.
+- Includes the 3.0.1 fixes below. Not yet released.
+
 ## 3.0.1 (2026-11-03)
 
 Two small fixes from the v3.0.0 retest, with no net growth in words.

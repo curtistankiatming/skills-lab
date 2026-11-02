@@ -1,6 +1,6 @@
 # Skills Lab catalog
 
-Collection 3.0.1: six installable skills, plus one example skill in [examples/](examples/README.md). The [inventory](inventory.json) records every tracked file's size and SHA-256. See [rights](RIGHTS.md).
+Collection 3.1.0: seven installable skills, plus one example skill in [examples/](examples/README.md). The [inventory](inventory.json) records every tracked file's size and SHA-256. See [rights](RIGHTS.md).
 
 | Folder | Use when | Boundary | Entry point |
 | --- | --- | --- | --- |
@@ -10,6 +10,7 @@ Collection 3.0.1: six installable skills, plus one example skill in [examples/](
 | scope-pull | Whether a project is on track, what is left against the plan, whether scope has crept, or whether new work should be added to the project's agreed scope, including non-software projects. | Reports only; it doesn't approve or start work. Missing evidence is not evidence of non-completion. For what a single recorded run did, use lean-history-reporting. | [SKILL.md](skills/scope-pull/SKILL.md) |
 | lean-history-reporting | A status report on, or a diagnosis of, earlier work recorded in a chat, session, thread or task history. | Summaries first; fetch full outputs when a fact, contradiction or check needs them. Omitted output never proves success. For progress against a plan, use scope-pull. Doesn't repair, rerun or approve. | [SKILL.md](skills/lean-history-reporting/SKILL.md) |
 | node-workflow-batcher | A task needs many separate file reads and calculations that one script could do in a code tool (Node, Python or similar). | Not for ordinary coding, editing or running a test suite. Needs a host code-execution tool. Check every result; stop at decisions, approvals or a denied provider. Not for steps that need approval or change anything outside the task. | [SKILL.md](skills/node-workflow-batcher/SKILL.md) |
+| scratch-folder | A task makes drafts, notes, logs, test output, downloads or one-off scripts, or the user asks to avoid clutter. | Not for files the user asked for by name or path. Deletes only files it made inside `.scratch`; when unsure whether a file matters, it keeps it and asks. A task that stops early leaves `.scratch` as it is. | [SKILL.md](skills/scratch-folder/SKILL.md) |
 
 ## Included resources
 
@@ -17,7 +18,7 @@ Collection 3.0.1: six installable skills, plus one example skill in [examples/](
 - Verification: [detailed rules](skills/verify-exact-candidate/references/detailed-rules.md), [Git custody reference](skills/verify-exact-candidate/references/git-custody.md), [local checker reference](skills/verify-exact-candidate/references/local-checker.md), the optional [checker script](skills/verify-exact-candidate/scripts/verify_files.py), an [optional verification record](skills/verify-exact-candidate/assets/verification-record.md), [fictional examples and evaluation cases](skills/verify-exact-candidate/references/check-cases.md), and Codex agent metadata. The checker's tests are in `tests/verify-exact-candidate/`, outside the skill folder.
 - Integration: [detailed rules](skills/integrate-approved-pr/references/detailed-rules.md), [optional integration receipt](skills/integrate-approved-pr/assets/integration-receipt.md) and Codex agent metadata.
 - Scope Pull: [detailed rules](skills/scope-pull/references/detailed-rules.md), [fictional examples and evaluation cases](skills/scope-pull/references/check-cases.md) and [Codex agent metadata](skills/scope-pull/agents/openai.yaml).
-- Lean History Reporting and Node Workflow Batcher are a single `SKILL.md` each.
+- Lean History Reporting, Node Workflow Batcher and Scratch Folder are a single `SKILL.md` each.
 
 The `agents/openai.yaml` files are optional Codex metadata that allow implicit invocation there. Other hosts read only `SKILL.md`. Whether a host discovers a skill, and whether the agent follows it, depends on the host and model.
 
@@ -27,6 +28,6 @@ The `agents/openai.yaml` files are optional Codex metadata that allow implicit i
 
 ## Evaluation
 
-The [evaluation guide](EVALUATING.md) separates case specifications, structural checks and observed behavior. The [2026-10-07 comparison](evaluations/2026-10-07/README.md) covers earlier versions of Verify Exact Candidate and Scope Pull; the published and revised instructions tied, so no behavioral gain is claimed for the current versions. The [harder cases](evaluations/harder-cases/README.md), with trigger tests and a runner for local models, cover all six current skills; no results are recorded here yet.
+The [evaluation guide](EVALUATING.md) separates case specifications, structural checks and observed behavior. The [2026-10-07 comparison](evaluations/2026-10-07/README.md) covers earlier versions of Verify Exact Candidate and Scope Pull; the published and revised instructions tied, so no behavioral gain is claimed for the current versions. The [harder cases](evaluations/harder-cases/README.md), with trigger tests and a runner for local models, cover the six earlier skills, with trigger tests for Scratch Folder too; no results are recorded here yet.
 
 Earlier distribution snapshots are described in [HISTORY.md](HISTORY.md).
