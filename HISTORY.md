@@ -6,6 +6,7 @@ This file keeps the distribution notes that earlier README, CATALOG, RELEASING a
 
 - New skill: Scratch Folder 1.0.0, a single `SKILL.md` of about 450 words. Agents keep drafts, logs, test output and temporary scripts in `.scratch` in the working folder (kept out of git through `.git/info/exclude`). Before finishing they keep only files the user asked for, that the project needs to build, run or test, or that record a decision or result; they move those to a permanent place and delete the rest. Cleanup commands are given for Linux or macOS and Windows PowerShell. Its description's first 56 characters ("Use for drafts and temp files: work in scratch, clean up.") make sense on their own, since Hermes shows about 60; the rest keeps the exclusions the trigger tests depend on.
 - Trigger tests T27 to T29 cover it, including one near-miss (T29). No harder case covers it yet.
+- Tested on 2026-11-03: trigger picks were 87/87 on Qwen 27B and 83/87 on Gemma 12B, with T27 to T29 all correct. Hermes loaded the skill only when the prompt named it. Gemma once reported a cleanup it hadn't done, so step 6 now says to list `.scratch` before reporting; the rule repeating step 3's "the user asked for it" was removed to keep the word count down.
 - Includes the 3.0.1 fixes below. Not yet released.
 
 ## 3.0.1 (2026-11-03)

@@ -23,7 +23,7 @@ Keep drafts and temporary files in one scratch folder. When the task ends, move 
    - it records a decision or result someone will need later.
 4. **Move each kept file** to its permanent place, next to similar files in the project. Check before you replace an existing file. In a cloud container, a kept file is safe only once it is committed or saved where the user can reach it.
 5. **Delete the other files you made in `.scratch`.** Delete the folder when it is empty: `rmdir .scratch` on Linux or macOS, `Remove-Item .scratch` in Windows PowerShell, or your host's delete tool.
-6. **Report in one line:** which files you kept and where, and that scratch was cleaned up.
+6. **List `.scratch`, then report in one line:** which files you kept and where, and what is left in scratch.
 
 ## Rules
 
@@ -31,7 +31,6 @@ Keep drafts and temporary files in one scratch folder. When the task ends, move 
 - If you are unsure whether a file matters, leave it in `.scratch` and ask the user.
 - If `.scratch` already holds files you did not make, leave them and mention them in your report.
 - If the task stops early, for example on an error or while waiting for approval, leave `.scratch` as it is and say so.
-- If the user says to keep scratch files, keep them.
 
 ## Example
 
