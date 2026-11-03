@@ -2,6 +2,13 @@
 
 This file keeps the distribution notes that earlier README, CATALOG, RELEASING and inventory.json versions carried, so the current files can describe the current collection. The text below is copied from those files as they stood at commit 4e12d40, before version 2.0.0. It describes each snapshot as it was then; statements such as "not yet published" are historical, not current. Links are relative to the repository root.
 
+## 3.0.1 (2026-11-03)
+
+Two small fixes from the v3.0.0 retest, with no net growth in words.
+
+- Governed Task Lifecycle 1.2.1 (2 words fewer): the description opens "Use for owner task Initialize/Initiate/Validate/Approve only". Hosts that show only about the first 60 characters, such as the Hermes skill index, cut the old opening before "from the owner", so "Approve this design mock" and "Initialize a git repo here" could select it. Every command word, including Initiate, is kept.
+- Evaluation harness: `run.py summary` recognises trigger records by their `choice` field and no longer needs an `error` field, so hand-saved Hermes records no longer crash it.
+
 ## 3.0.0 (2026-10-22)
 
 Changes from the v2.1.2 evaluation runs on Gemma 12B, Qwen 9B and Qwen 27B, with no net growth in words. The major version marks the new description openings: hosts that pick skills from a description's first 57 characters may now select these two skills differently.
