@@ -13,7 +13,7 @@ This file keeps the distribution notes that earlier README, CATALOG, RELEASING a
 
 Two small fixes from the v3.0.0 retest, with no net growth in words.
 
-- Governed Task Lifecycle 1.2.1 (2 words fewer): the description opens "Use for owner task Initialize/Initiate/Validate/Approve only". Hosts that show only about the first 60 characters, such as the Hermes skill index, cut the old opening before "from the owner", so "Approve this design mock" and "Initialize a git repo here" could select it. Every command word, including Initiate, is kept.
+- Governed Task Lifecycle 1.2.1 (2 words fewer): the description opens "Use for owner task Initialize/Initiate/Validate/Approve only". Hosts that show only about the first 60 characters, such as the Hermes skill index, cut the old opening before "from the owner". Every command word, including Initiate, is kept. A retest on 2026-11-03 (Qwen 27B, Qwen 9B, Gemma 12B and Hermes 0.22.6) found that this stops most "Initialize a git repo here" false picks, but not "Approve this design mock": with cut descriptions that still selected the skill as often as before.
 - Evaluation harness: `run.py summary` recognises trigger records by their `choice` field and no longer needs an `error` field, so hand-saved Hermes records no longer crash it.
 
 ## 3.0.0 (2026-10-22)
