@@ -1,8 +1,8 @@
 # Skills Lab
 
-Six instruction skills that help an AI agent do careful, checkable work: run a task through Initialize, Validate and Approve; verify exact files against a pinned baseline; merge only a PR the owner approved; check a project against its agreed scope; report on earlier work from its history; and batch local tool work into one code call. Each skill is a folder with a `SKILL.md` in the common Agent Skills format (only `name` and `description` frontmatter), so the same files work in Claude, Codex, Hermes and plain-prompt local models.
+Seven instruction skills that help an AI agent do careful, checkable work: run a task through Initialize, Validate and Approve; verify exact files against a pinned baseline; merge only a PR the owner approved; check a project against its agreed scope; report on earlier work from its history; batch local tool work into one code call; and keep drafts and temp files in a scratch folder that is cleaned up after the task. Each skill is a folder with a `SKILL.md` in the common Agent Skills format (only `name` and `description` frontmatter), so the same files work in Claude, Codex, Hermes and plain-prompt local models.
 
-Version 3.0.1; released versions are on the [Releases page](https://github.com/curtistankiatming/skills-lab/releases). The collection is MIT licensed; see [RIGHTS.md](RIGHTS.md).
+Version 3.1.0 (not yet released; the latest release is 3.0.0); released versions are on the [Releases page](https://github.com/curtistankiatming/skills-lab/releases). The collection is MIT licensed; see [RIGHTS.md](RIGHTS.md).
 
 ## Choose a skill
 
@@ -14,6 +14,7 @@ Version 3.0.1; released versions are on the [Releases page](https://github.com/c
 | Scope Pull | You're asked whether a project is on track, what is left against the plan, whether scope has crept, or whether new work should be added to the project's agreed scope. Works for non-software projects too. | [scope-pull](skills/scope-pull/SKILL.md) |
 | Lean History Reporting | You're asked for a status report on, or a diagnosis of, earlier work recorded in a chat, session, thread or task history. | [lean-history-reporting](skills/lean-history-reporting/SKILL.md) |
 | Node Workflow Batcher | A task needs many separate file reads and calculations that one script could do in a code tool (Node, Python or similar). Not for ordinary coding, editing or running a test suite. | [node-workflow-batcher](skills/node-workflow-batcher/SKILL.md) |
+| Scratch Folder | A task makes drafts, logs, test output or other temporary files. They go in `.scratch`; at the end only what matters is moved to a permanent place and the rest is deleted. | [scratch-folder](skills/scratch-folder/SKILL.md) |
 
 Scope Pull and Lean History Reporting point to each other: progress against a plan is Scope Pull, and what a single recorded run did is Lean History Reporting. The [catalog](CATALOG.md) lists each skill's resources and boundaries. [examples/](examples/README.md) holds an example skill that is not part of the installed set.
 
@@ -25,7 +26,7 @@ Copy the whole skill folder, not only `SKILL.md`: some skills link to files in t
 - **Claude apps:** zip the skill folder and upload it under Settings → Capabilities → Skills.
 - **Codex:** copy the folder to `~/.codex/skills/<skill-name>/`. The optional `agents/openai.yaml` files are Codex metadata; other hosts ignore them.
 - **Hermes:** install or copy the folder into Hermes's skills directory (by default `~/.hermes/skills/<skill-name>/`). Hermes scans skills on install. Verify Exact Candidate ships an optional Python checker in `scripts/`; if the scan blocks it, the skill still works from its Markdown alone.
-- **Local models without skill support** (for example Gemma 12B or Qwen 27B in Ollama, LM Studio or llama.cpp): paste the skill's `SKILL.md` into the system prompt or the first message, and add a referenced file only when a step calls for it. Load one skill at a time. Each `SKILL.md` is about 3 to 4 KB, except Governed Task Lifecycle at about 8 KB. The longer rules each skill links to in `references/` are needed only for edge cases.
+- **Local models without skill support** (for example Gemma 12B or Qwen 27B in Ollama, LM Studio or llama.cpp): paste the skill's `SKILL.md` into the system prompt or the first message, and add a referenced file only when a step calls for it. Load one skill at a time. Each `SKILL.md` is about 2.5 to 4 KB, except Governed Task Lifecycle at about 8 KB. The longer rules each skill links to in `references/` are needed only for edge cases.
 
 Selecting or installing a skill grants no new permissions. The skills tell the agent to stop and ask when a step needs approval.
 
@@ -40,6 +41,7 @@ Use the integrate-approved-pr skill to inspect OWNER/REPO PR #123. Make no chang
 Use the scope-pull skill to check the project's progress against its agreed scope, using the sources I provide.
 Use the lean-history-reporting skill to report the status of yesterday's migration task.
 Use the node-workflow-batcher skill for this local job in the available code tool. Stop at decisions or approvals.
+Use the scratch-folder skill: keep drafts in .scratch and clean it up when you finish.
 ```
 
 In Codex, `$skill-name` also works as a selector. Replace the example identifiers with real ones; an example is not an authorization.
@@ -49,12 +51,13 @@ In Codex, `$skill-name` also works as a selector. Replace the example identifier
 - Governed Task Lifecycle, Integrate Approved PR, Scope Pull and Lean History Reporting are instructions only. They need whatever access the task itself needs (for example a GitHub tool to merge a PR, or a history reader).
 - Verify Exact Candidate includes an optional Python standard-library checker, `scripts/verify_files.py`. Its tests live outside the skill folder in `tests/verify-exact-candidate/`. Run the checker only with a trusted interpreter and when the task allows it.
 - Node Workflow Batcher needs a code-execution tool: a persistent Node or Python REPL, a notebook kernel, or a one-shot script runner. It supplies no runtime of its own.
+- Scratch Folder needs only file access in the working folder. Its cleanup commands are given for both Linux or macOS and Windows PowerShell.
 - Lean History Reporting needs authorized access to the history it reports on. It uses a summary or outputs-omitted view when the host offers one.
 - No skill includes an installer, hooks, server, credentials or hosted workflow. A skill's instructions don't enforce themselves; how faithfully an agent follows them depends on the host and model.
 
 ## Evaluation
 
-The [evaluation guide](EVALUATING.md) describes how to compare a revision against its baseline. The [2026-10-07 comparison](evaluations/2026-10-07/README.md) tested earlier versions of Verify Exact Candidate and Scope Pull only, and found no measurable difference between them. The [harder cases](evaluations/harder-cases/README.md) cover all six current skills and can run against a local model through any OpenAI-compatible endpoint; no results are recorded here yet, so no claim is made about how much the skills help any particular model.
+The [evaluation guide](EVALUATING.md) describes how to compare a revision against its baseline. The [2026-10-07 comparison](evaluations/2026-10-07/README.md) tested earlier versions of Verify Exact Candidate and Scope Pull only, and found no measurable difference between them. The [harder cases](evaluations/harder-cases/README.md) cover the six earlier skills (Scratch Folder has trigger tests only) and can run against a local model through any OpenAI-compatible endpoint; no results are recorded here yet, so no claim is made about how much the skills help any particular model.
 
 ## Maintenance
 

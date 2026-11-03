@@ -1,14 +1,14 @@
 {
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
-  "distribution_version": "3.0.1",
+  "distribution_version": "3.1.0",
   "distribution_state": "PREPARED_ON_MAIN_NOT_RELEASED",
   "last_issued_distribution_version": "3.0.0",
   "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
   "outgoing_licence": "MIT",
   "repository_identity": "curtistankiatming/skills-lab",
   "schema_version": 1,
-  "source_policy": "Six installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. 2.1.1 restores \"Initiate\" in Governed Task Lifecycle's description, narrows Node Workflow Batcher's and Scope Pull's triggers, and says SKILL.md wins over detailed rules. 2.1.2 tightens four skills after the first Gemma run. 3.0.0 changes Integrate Approved PR's approval rule and two description openings after the v2.1.2 evaluation runs. 3.0.1 sharpens Governed Task Lifecycle's description opening and fixes run.py summary for hand-saved records. This revision is prepared on main and not yet released; the latest release is v3.0.0. A release does not establish installation, host discovery or runtime behavior.",
+  "source_policy": "Seven installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. 2.1.1 restores \"Initiate\" in Governed Task Lifecycle's description, narrows Node Workflow Batcher's and Scope Pull's triggers, and says SKILL.md wins over detailed rules. 2.1.2 tightens four skills after the first Gemma run. 3.0.0 changes Integrate Approved PR's approval rule and two description openings after the v2.1.2 evaluation runs. 3.0.1 sharpens Governed Task Lifecycle's description opening and fixes run.py summary for hand-saved records. 3.1.0 adds Scratch Folder, a single-file skill written for this collection. This revision is prepared on main and not yet released; the latest release is v3.0.0. A release does not establish installation, host discovery or runtime behavior.",
   "history": "Earlier snapshot records removed from this file in 2.0.0 are reproduced in HISTORY.md.",
   "files": [
     {
@@ -18,23 +18,23 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 5473,
-      "sha256": "5a3db1723e1928c46f5b0260e77e5a6e55d64ff4950933faee3dd9c7be141892"
+      "bytes": 5920,
+      "sha256": "1a805884144c58ee8204d72c47d9d4ff9b982b3689611d6c494b8a965d172479"
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 3825,
-      "sha256": "69af29435abc40f9279299d3536701d1dcf9e825fc9109ac9d7fef6199db7bc4"
+      "bytes": 3827,
+      "sha256": "2a16645f6dddbd938b6062b90c5a64eb8c9bab272b800211c2ed6acee7e71efb"
     },
     {
       "path": "EVALUATING.md",
-      "bytes": 4133,
-      "sha256": "1fa4c52ca142233c1ea21846ed452fff42892af9567887d55817b64faabb673d"
+      "bytes": 4167,
+      "sha256": "a1ec1fa074e362583302687b12c04766856250034ac2a0e51c92a73137378796"
     },
     {
       "path": "HISTORY.md",
-      "bytes": 18942,
-      "sha256": "7a7f34b0aca0442e1014e086a44ea91336138f7291bd8b0aa29c15b0a603722d"
+      "bytes": 19816,
+      "sha256": "a56ce0b67ab55ace39be14385c25dd39e332f0942c1698fd7871d2e1338b3174"
     },
     {
       "path": "LICENSE",
@@ -43,23 +43,23 @@
     },
     {
       "path": "README.md",
-      "bytes": 7102,
-      "sha256": "c161dced724dc9b2bf7adfef7d5fd0118008e5dbd22c35e90e21056ccbbb3925"
+      "bytes": 7749,
+      "sha256": "b7657b5243da8911e04279aecc62461a56e9a20c268b758679036d3b7ae8f341"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 3369,
-      "sha256": "29d3366e9432c35d8c596c1f05798b2f1ec1df045fde119d287f90c668b5b6c9"
+      "bytes": 3400,
+      "sha256": "759c89d23d69238a3ee86382568e5019f9f258c473ef93f3c6ffb73b2cd4258e"
     },
     {
       "path": "RIGHTS.md",
-      "bytes": 6171,
-      "sha256": "0dbedc714e20bce7cefad475f6ecc840e63922dedae56dbd3cf8e1c0e637a66b"
+      "bytes": 6291,
+      "sha256": "fbbfa3aaea4bdbc8c1f39c7a437747755fbbc1c9e32c6d3c1c687da749dde325"
     },
     {
       "path": "VERSION",
       "bytes": 6,
-      "sha256": "06e3fe4a7a1884d20d81cc7065ca8cfd4c394ec602c4d180ddc39bbd4f7da521"
+      "sha256": "b2f44d3b6e29f8b1b73ea4735f006affc4d198e1fd9c7d50e736159b1ef636c6"
     },
     {
       "path": "evaluations/2026-10-07/README.md",
@@ -88,8 +88,8 @@
     },
     {
       "path": "evaluations/harder-cases/README.md",
-      "bytes": 8856,
-      "sha256": "66bf79ed459ef5116eaf4cbe355a40a61edcf7ee5a51658fbdddcce6f47f08ab"
+      "bytes": 8964,
+      "sha256": "b9ad4d583bf7ac2d581abb2f8400db06bbab8e22c5a466eaf218d5fbecc381d2"
     },
     {
       "path": "evaluations/harder-cases/cases.json",
@@ -108,8 +108,8 @@
     },
     {
       "path": "evaluations/harder-cases/triggers.json",
-      "bytes": 3898,
-      "sha256": "2b12638a65f78b266d3a7b182ef3d7f9ec7ba23c725f739202f21303e98e358c"
+      "bytes": 4368,
+      "sha256": "8144c7de8ff38f892321c64d4393ab98a73c07e2fe4c15e3af0b0078f28ce0ae"
     },
     {
       "path": "examples/README.md",
@@ -227,6 +227,11 @@
       "sha256": "db12f1a7f1f1ebfc36ba02a4f16a5817de63fd21ec808fc012c2cef8657b1173"
     },
     {
+      "path": "skills/scratch-folder/SKILL.md",
+      "bytes": 2651,
+      "sha256": "8abd12ad35c3a29b7a580719c309aaa1cf1db73be32add77dfd767ffefa85da1"
+    },
+    {
       "path": "skills/verify-exact-candidate/SKILL.md",
       "bytes": 2871,
       "sha256": "10e144649793664b195e70d06c198a6d07f3e5f03d317b94e8390dc854e5a249"
@@ -269,7 +274,7 @@
     {
       "path": "tests/evaluations/test_run_cases.py",
       "bytes": 17443,
-      "sha256": "4c4d996b8a3993a4b2d63842e93016abf920f093cad706933b55d6f8ded675f0"
+      "sha256": "978101acce03626d95e77f24cc0f20b4953029e85c157f5cfaef8ebbd86cee0a"
     },
     {
       "path": "tests/verify-exact-candidate/test_verify_files.py",
@@ -526,6 +531,23 @@
       "dependency": "Authorized history access; uses an outputs-omitted or summary view when the host offers one, otherwise messages first; required detailed evidence remains necessary",
       "performance": "No general savings or effectiveness guarantee; prior packaging comparison is not recertified by publication",
       "outgoing_MIT_inclusion": "Published under MIT from v2.0.0"
+    },
+    {
+      "id": "scratch-folder",
+      "entrypoint": "skills/scratch-folder/SKILL.md",
+      "source_version": "1.0.0",
+      "source_relationship": "authored_in_this_collection",
+      "source_state": "NEW_IN_3_1_0",
+      "source_files": [
+        {
+          "path": "skills/scratch-folder/SKILL.md",
+          "bytes": 2651,
+          "sha256": "8abd12ad35c3a29b7a580719c309aaa1cf1db73be32add77dfd767ffefa85da1"
+        }
+      ],
+      "dependency": "File access in the working folder; cleanup commands given for Linux or macOS and Windows PowerShell",
+      "performance": "Not evaluated beyond trigger test specifications T27-T29; no effectiveness guarantee",
+      "outgoing_MIT_inclusion": "New under MIT in 3.1.0"
     }
   ]
 }
