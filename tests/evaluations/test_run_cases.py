@@ -205,6 +205,20 @@ class RunCasesTest(unittest.TestCase):
             run.main(["summary", str(out)])
         self.assertIn("1 unparsed, 0 errors", text.getvalue())
 
+    def test_summary_reads_hand_saved_records(self):
+        scored = self.tmp / "hermes-scored.jsonl"
+        scored.write_text(json.dumps({"case": "H1", "repeat": 0, "condition": "skill", "answer": "x",
+                                      "expected": None, "score": 1, "max": 1, "requirements": [True],
+                                      "fail_if": [False]}) + "\n", encoding="utf-8")
+        picks = self.tmp / "hermes-triggers.jsonl"
+        picks.write_text(json.dumps({"case": "T23", "repeat": 0, "expected": "none", "choice": "none",
+                                     "correct": True}) + "\n", encoding="utf-8")
+        text = io.StringIO()
+        with contextlib.redirect_stdout(text):
+            run.main(["summary", str(scored), str(picks)])
+        self.assertIn("skill: 1/1 points", text.getvalue())
+        self.assertIn("triggers 1/1 correct, 0 unparsed, 0 errors", text.getvalue())
+
     def test_answer_instructions_ask_to_stop_for_missing_tool_results(self):
         text = run.load("cases.json")["answer_instructions"]
         self.assertIn("name that call and stop there; report only facts you have", text)

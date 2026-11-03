@@ -321,7 +321,7 @@ def cmd_summary(args):
         records = read_jsonl(path)
         flagged = [r for r in records if r.get("context_check") not in (None, "ok")]
         if records and records[0].get("mode") == "multi":
-            done = [r for r in records if not r["error"]]
+            done = [r for r in records if not r.get("error")]
             found = sum(r["found"] for r in done)
             extras = sum(len(r["extras"] or []) for r in done)
             exact = sum(r["correct"] for r in done)
@@ -333,8 +333,8 @@ def cmd_summary(args):
                 if not r["correct"]:
                     got = "unparsed" if r["loaded"] is None else ", ".join(r["loaded"]) or "none"
                     print(f"  {r['case']}: expected {r['expected']}, loaded {got}")
-        elif records and "expected" in records[0]:
-            done = [r for r in records if not r["error"]]
+        elif records and "choice" in records[0]:
+            done = [r for r in records if not r.get("error")]
             right = sum(r["correct"] for r in done)
             unparsed = sum(r["choice"] == "unparsed" for r in done)
             print(f"{path}: triggers {right}/{len(done)} correct, {unparsed} unparsed, "
