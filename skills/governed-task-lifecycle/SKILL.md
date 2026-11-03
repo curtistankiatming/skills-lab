@@ -1,6 +1,6 @@
 ---
 name: governed-task-lifecycle
-description: Use for owner task Initialize/Initiate/Validate/Approve only (for example "Initialize TASK-7"), or when the project requires that lifecycle. Build the work, check the actual result, then carry out only what was approved. Not for ordinary requests such as git init or design sign-off.
+description: Use for "Initialize TASK-7"-style owner commands (Initiate, Validate, Approve too), or when the project requires that lifecycle. Build the work, check the actual result, then carry out only what was approved. Not for ordinary requests such as git init or design sign-off.
 ---
 
 # Governed task lifecycle
