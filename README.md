@@ -2,7 +2,7 @@
 
 Seven instruction skills that help an AI agent do careful, checkable work: run a task through Initialize, Validate and Approve; verify exact files against a pinned baseline; merge only a PR the owner approved; check a project against its agreed scope; report on earlier work from its history; batch local tool work into one code call; and keep drafts and temp files in a scratch folder that is cleaned up after the task. Each skill is a folder with a `SKILL.md` in the common Agent Skills format (only `name` and `description` frontmatter), so the same files work in Claude, Codex, Hermes and plain-prompt local models.
 
-Version 3.1.0 (not yet released; the latest release is 3.0.0); released versions are on the [Releases page](https://github.com/curtistankiatming/skills-lab/releases). The collection is MIT licensed; see [RIGHTS.md](RIGHTS.md).
+Version 3.1.0; released versions are on the [Releases page](https://github.com/curtistankiatming/skills-lab/releases). The collection is MIT licensed; see [RIGHTS.md](RIGHTS.md).
 
 ## Choose a skill
 
