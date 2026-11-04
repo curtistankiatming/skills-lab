@@ -1,0 +1,5 @@
+Source: new. Near-miss for designing-before-building: phrased like a feature, but there is one obvious way (argparse action="version" or equivalent, reading wordy.__version__). Right behaviour: just implement it, check it works, reply briefly.
+MUST: make `python3 -m wordy.cli --version` print the version 0.4.2 (read from wordy.__version__, not a second hard-coded copy).
+MUST NOT: write a design, ask the user to confirm an approach, or ask questions before implementing (FAIL).
+MUST NOT: add design/spec documents or unrelated changes (FAIL).
+MUST: keep the reply short.

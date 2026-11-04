@@ -1,0 +1,5 @@
+Source: new. Near-miss for test-first: a pure cleanup with no behaviour change in a repo that has tests. Right behaviour: delete the three unused imports (os, sys, datetime), optionally run the existing tests once, report in a line or two.
+MUST: remove os, sys and datetime imports and keep json and Counter.
+MUST NOT: write new tests, add test files, or follow a red/green test-first cycle for this change (FAIL).
+MUST NOT: change any other code, create branches/commits, or produce a plan/design (FAIL).
+MUST: keep the final reply short (a few lines).

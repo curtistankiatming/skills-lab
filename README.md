@@ -1,8 +1,8 @@
 # Skills Lab
 
-Seven instruction skills that help an AI agent do careful, checkable work: run a task through Initialize, Validate and Approve; verify exact files against a pinned baseline; merge only a PR the owner approved; check a project against its agreed scope; report on earlier work from its history; batch local tool work into one code call; and keep drafts and temp files in a scratch folder that is cleaned up after the task. Each skill is a folder with a `SKILL.md` in the common Agent Skills format (only `name` and `description` frontmatter), so the same files work in Claude, Codex, Hermes and plain-prompt local models.
+Fourteen instruction skills that help an AI agent do careful, checkable work. The first seven are governance and reporting skills: run a task through Initialize, Validate and Approve; verify exact files against a pinned baseline; merge only a PR the owner approved; check a project against its agreed scope; report on earlier work from its history; batch local tool work into one code call; and keep drafts and temp files in a scratch folder that is cleaned up after the task. The other seven are development-discipline skills for everyday coding: design before building, test first, keep work apart from the user's uncommitted changes, check claims before making them, merge carefully, pause before irreversible actions, and write skills properly. Each skill is a folder with a `SKILL.md` in the common Agent Skills format (only `name` and `description` frontmatter), so the same files work in Claude, Codex, Hermes and plain-prompt local models.
 
-Version 3.1.0; released versions are on the [Releases page](https://github.com/curtistankiatming/skills-lab/releases). The collection is MIT licensed; see [RIGHTS.md](RIGHTS.md).
+Source version 3.2.0 (latest release v3.1.0); released versions are on the [Releases page](https://github.com/curtistankiatming/skills-lab/releases). The collection is MIT licensed; see [RIGHTS.md](RIGHTS.md).
 
 ## Choose a skill
 
@@ -17,6 +17,20 @@ Version 3.1.0; released versions are on the [Releases page](https://github.com/c
 | Scratch Folder | A task makes drafts, logs, test output or other temporary files. They go in `.scratch`; at the end only what matters is moved to a permanent place and the rest is deleted. | [scratch-folder](skills/scratch-folder/SKILL.md) |
 
 Scope Pull and Lean History Reporting point to each other: progress against a plan is Scope Pull, and what a single recorded run did is Lean History Reporting. The [catalog](CATALOG.md) lists each skill's resources and boundaries. [examples/](examples/README.md) holds an example skill that is not part of the installed set.
+
+### Development discipline
+
+| Skill | Use it when | Entry point |
+| --- | --- | --- |
+| Designing Before Building | Building a feature or changing existing behaviour when there are real choices to make, even if it sounds small or the user says to skip the design. | [designing-before-building](skills/designing-before-building/SKILL.md) |
+| Test-First Changes | Adding or changing behaviour in code that has tests, and every bugfix, even a one-character fix or "no ceremony". | [test-first-changes](skills/test-first-changes/SKILL.md) |
+| Isolating Work | A task ends in a git commit, or the user wants new work kept apart from their uncommitted changes. Not for plain edits the user did not ask to commit. | [isolating-work](skills/isolating-work/SKILL.md) |
+| Checking Claims | Writing a changelog, release notes or docs about what code does; before saying anything is done, fixed or passing; before repeating someone else's claim that it is. | [checking-claims](skills/checking-claims/SKILL.md) |
+| Finishing and Merging | Merging or wrapping up a branch, opening or merging a pull request, or acting on an approval to merge or ship. | [finishing-and-merging](skills/finishing-and-merging/SKILL.md) |
+| Before Irreversible Actions | Deleting data, sending, deploying, migrating, paying, publishing or touching production, even when it was requested or "already checked". | [before-irreversible-actions](skills/before-irreversible-actions/SKILL.md) |
+| Authoring Skills | Any task that touches a SKILL.md or a skill's scenarios, even a two-line change. | [authoring-skills](skills/authoring-skills/SKILL.md) |
+
+These seven helped most with a short routing list shown at the start of each session. [adapters/](adapters/README.md) holds that list and how to load it in Claude Code, Codex, Cursor, OpenCode and Gemini CLI. Finishing and Merging covers local merges and the checks before any merge; for merging a hosted PR, Integrate Approved PR also applies.
 
 ## Install
 
@@ -53,7 +67,7 @@ In Codex, `$skill-name` also works as a selector. Replace the example identifier
 - Node Workflow Batcher needs a code-execution tool: a persistent Node or Python REPL, a notebook kernel, or a one-shot script runner. It supplies no runtime of its own.
 - Scratch Folder needs only file access in the working folder. Its cleanup commands are given for both Linux or macOS and Windows PowerShell.
 - Lean History Reporting needs authorized access to the history it reports on. It uses a summary or outputs-omitted view when the host offers one.
-- No skill includes an installer, hooks, server, credentials or hosted workflow. A skill's instructions don't enforce themselves; how faithfully an agent follows them depends on the host and model.
+- No skill includes an installer, hooks, server, credentials or hosted workflow. The optional development-discipline adapters include a session-start hook for Claude Code, which you add yourself. A skill's instructions don't enforce themselves; how faithfully an agent follows them depends on the host and model.
 
 ## Evaluation
 

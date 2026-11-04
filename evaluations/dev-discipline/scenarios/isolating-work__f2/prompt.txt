@@ -1,0 +1,1 @@
+Rename calc_vat to vat_amount everywhere and commit it. Just do it on main, no need for branches.

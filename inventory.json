@@ -1,14 +1,14 @@
 {
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
-  "distribution_version": "3.1.0",
-  "distribution_state": "RELEASE_SOURCE_V3_1_0",
+  "distribution_version": "3.2.0",
+  "distribution_state": "SOURCE_V3_2_0_UNRELEASED",
   "last_issued_distribution_version": "3.1.0",
   "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
   "outgoing_licence": "MIT",
   "repository_identity": "curtistankiatming/skills-lab",
   "schema_version": 1,
-  "source_policy": "Seven installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. 2.1.1 restores \"Initiate\" in Governed Task Lifecycle's description, narrows Node Workflow Batcher's and Scope Pull's triggers, and says SKILL.md wins over detailed rules. 2.1.2 tightens four skills after the first Gemma run. 3.0.0 changes Integrate Approved PR's approval rule and two description openings after the v2.1.2 evaluation runs. 3.0.1 sharpens Governed Task Lifecycle's description opening and fixes run.py summary for hand-saved records. 3.1.0 adds Scratch Folder, a single-file skill written for this collection. It also opens Governed Task Lifecycle's description with an example command that names a task. This revision is the source of the v3.1.0 release. A release does not establish installation, host discovery or runtime behavior.",
+  "source_policy": "Seven installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. 2.1.1 restores \"Initiate\" in Governed Task Lifecycle's description, narrows Node Workflow Batcher's and Scope Pull's triggers, and says SKILL.md wins over detailed rules. 2.1.2 tightens four skills after the first Gemma run. 3.0.0 changes Integrate Approved PR's approval rule and two description openings after the v2.1.2 evaluation runs. 3.0.1 sharpens Governed Task Lifecycle's description opening and fixes run.py summary for hand-saved records. 3.1.0 adds Scratch Folder, a single-file skill written for this collection. It also opens Governed Task Lifecycle's description with an example command that names a task. This revision is the source of the v3.1.0 release. A release does not establish installation, host discovery or runtime behavior. 3.2.0 (source, not yet released) adds seven development-discipline skills (designing-before-building, test-first-changes, isolating-work, checking-claims, finishing-and-merging, before-irreversible-actions, authoring-skills), optional routing adapters in adapters/, and their held-out scenarios in evaluations/dev-discipline/.",
   "history": "Earlier snapshot records removed from this file in 2.0.0 are reproduced in HISTORY.md.",
   "files": [
     {
@@ -18,13 +18,13 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 5920,
-      "sha256": "1a805884144c58ee8204d72c47d9d4ff9b982b3689611d6c494b8a965d172479"
+      "bytes": 8090,
+      "sha256": "597759d9be532f50c1ee1694c9c919abdd7f169358c1d05814a62f9f6f533340"
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 3827,
-      "sha256": "2a16645f6dddbd938b6062b90c5a64eb8c9bab272b800211c2ed6acee7e71efb"
+      "bytes": 3830,
+      "sha256": "23e45bc06d287690831a31e97d3917689d46966ae0873bc36996fd8ada203fdb"
     },
     {
       "path": "EVALUATING.md",
@@ -43,23 +43,43 @@
     },
     {
       "path": "README.md",
-      "bytes": 7701,
-      "sha256": "528b47a4e4ef3e7c5adee565801f02a8a706047847d86374bbb821de7ac9bf26"
+      "bytes": 10134,
+      "sha256": "47004499fbb74cc61c98f3517f166f0e7eb17ac8245c40caf4db66331060cd4f"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 3359,
-      "sha256": "7a2f3dd4191108498b278828943a16359b1fd671e7a2a18053cf3c7bac87711a"
+      "bytes": 3377,
+      "sha256": "17fc0470206a3f26bae7098f8c1a07d04da04094e11474d845e309afc6413a0d"
     },
     {
       "path": "RIGHTS.md",
-      "bytes": 6291,
-      "sha256": "fbbfa3aaea4bdbc8c1f39c7a437747755fbbc1c9e32c6d3c1c687da749dde325"
+      "bytes": 6855,
+      "sha256": "e726917e6b4e1089adccdc6bc89ca892b55c1a16a21a232994ac5605c4b001bc"
     },
     {
       "path": "VERSION",
       "bytes": 6,
-      "sha256": "b2f44d3b6e29f8b1b73ea4735f006affc4d198e1fd9c7d50e736159b1ef636c6"
+      "sha256": "33bdaf9e2d6bcbde2e4e613e865e403f8fe21fc621078d34c30b0bdc7f68d903"
+    },
+    {
+      "path": "adapters/README.md",
+      "bytes": 2206,
+      "sha256": "ef6254c2463e82de9acf14c84b834e56df54850e547d6a1e2e674ad52b8ee883"
+    },
+    {
+      "path": "adapters/claude-code/hooks.json",
+      "bytes": 248,
+      "sha256": "f56c75214bfa3fdc9492425a1363990251b8b662a2133131e92cba991ef844c0"
+    },
+    {
+      "path": "adapters/claude-code/session-start",
+      "bytes": 138,
+      "sha256": "86e14bac8e17e4c302dc82837903414689fbf710e63ab74b71fd8a1de283211f"
+    },
+    {
+      "path": "adapters/routing.md",
+      "bytes": 1393,
+      "sha256": "6dcddc496dcb1f4a7c3006ee82b3adfd0969cb17545bcf485d9217abf5cad387"
     },
     {
       "path": "evaluations/2026-10-07/README.md",
@@ -87,9 +107,444 @@
       "sha256": "f860f1ac83b05e47bf9cac9c51ba91ad9ed9198ea2fd049edfc10f3bf3bfdd5b"
     },
     {
+      "path": "evaluations/dev-discipline/README.md",
+      "bytes": 2117,
+      "sha256": "392c5efd664221156b6fc6cbd6b4ca1425a92bece1ce093d24e29b69f88097b7"
+    },
+    {
+      "path": "evaluations/dev-discipline/gitinit.sh",
+      "bytes": 119,
+      "sha256": "f36e4c88f12b57d3ffc1548f88939cb2f4f52879caa149b77792ae4d347e3e67"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f1/check.sh",
+      "bytes": 932,
+      "sha256": "e9dcac2a2d9b461dda82b0bb3d09daa72b03dde70196f626632cb6c226c6ce80"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f1/prompt.txt",
+      "bytes": 219,
+      "sha256": "98c0cfc82903d91d7feaa43b03cab9b298f22952d670c4db1f4f6b5d720bcf51"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f1/rubric.txt",
+      "bytes": 972,
+      "sha256": "c53a3ab78b828f45c6434e63b08c77ff872d43fc091b85898960a62b56d6417a"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f1/setup.sh",
+      "bytes": 6285,
+      "sha256": "33fa3dc532dd522396de4414d4b5266c4112154d14e376be15b34c057c648ad8"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f2/check.sh",
+      "bytes": 1055,
+      "sha256": "ff75883b225df2236b0cd512558ba5b7fedd513d10bb2d02be80a87e63e67bae"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f2/prompt.txt",
+      "bytes": 215,
+      "sha256": "63c7e903e4ddc3bfb420c955e87de345b4d87a7b2fdb68f4f8d5898093951f5a"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f2/rubric.txt",
+      "bytes": 1030,
+      "sha256": "82281e983595d3e9fb55d3a5c596a1a93742ecadc49b78a154f627f004f47297"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f2/setup.sh",
+      "bytes": 6285,
+      "sha256": "33fa3dc532dd522396de4414d4b5266c4112154d14e376be15b34c057c648ad8"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f3/check.sh",
+      "bytes": 736,
+      "sha256": "d95eac631bed96cd9c636daafb4ad14e7c36c6c09f3ed1c6d0cc1f2f25c488cf"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f3/prompt.txt",
+      "bytes": 132,
+      "sha256": "6d68dfb09bd7b2a75711cc6448d097107b05605ebca20dd8d18158a7050f1d57"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f3/rubric.txt",
+      "bytes": 570,
+      "sha256": "5a132b0b938e2fa8a30393c39d6c3e85d9df2dd9620059cf2e6f4fc5cbffb4aa"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/authoring-skills__f3/setup.sh",
+      "bytes": 6205,
+      "sha256": "7bb4984ef67ea5d5686da9aed6a4c99923f73710a0ee19daf108b98178aa1e0b"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f1/check.sh",
+      "bytes": 256,
+      "sha256": "5204687f9967327bacb19968f7d0381bd9c710632a38f9e80b01b091325daa95"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f1/prompt.txt",
+      "bytes": 105,
+      "sha256": "49c6c95b99e2be62c8bf5a7d5bec9e43b9e4a317fa216a98e02027a858f84b9d"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f1/rubric.txt",
+      "bytes": 735,
+      "sha256": "1bdf57dc0a9c206d684b3667117c1efd982246ab6ac28d68f16401ea35b6b537"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f1/setup.sh",
+      "bytes": 1122,
+      "sha256": "d2692730fa2b6311a44fb7374cdf16928fb0673aa5ffbc3cc9104b97d1102cf7"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f2/check.sh",
+      "bytes": 418,
+      "sha256": "05557864db7b7fe25dccf9f744b7e311c01ea9916fc08debea6b9e3d592427ae"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f2/prompt.txt",
+      "bytes": 158,
+      "sha256": "4e653d0d3092f5b9294f25d266ce63373ab064c4950508dec7d78901df0b2084"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f2/rubric.txt",
+      "bytes": 677,
+      "sha256": "c46cf306b11fc8ff5fdcabb1ab3501a4884270d9bdc39871f97c99dd4e640bc6"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f2/setup.sh",
+      "bytes": 756,
+      "sha256": "57e8a727fb970a7466daf8ab7d00ad058878c259d430420431a79274776730ad"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f3/check.sh",
+      "bytes": 588,
+      "sha256": "2e31d7348188211fad90a0623453354eb298fa02aad8ffa4906e072a93566626"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f3/prompt.txt",
+      "bytes": 103,
+      "sha256": "609c197b1058a3d7438943625f5307ad207d97159d415dfb9e0356a8394d9b94"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f3/rubric.txt",
+      "bytes": 483,
+      "sha256": "0182fd495949ee93420ea6e67107eafc55942a1f14fea5922d73c0146663ec7b"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/before-irreversible-actions__f3/setup.sh",
+      "bytes": 356,
+      "sha256": "99a609a90641f5c9244686659e251fe4cdc9e366ab2459811cea6724ee16964f"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f1/check.sh",
+      "bytes": 515,
+      "sha256": "db116015ea939f120ef35c1c1cea0b13542487d2d43083e244e9b3b13808d41a"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f1/prompt.txt",
+      "bytes": 145,
+      "sha256": "02f67ece8be25aca1b59f3750de303da02fcffa58185351a4f5079f9296ef33e"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f1/rubric.txt",
+      "bytes": 893,
+      "sha256": "c6f7db555ab5275e507622eb92223cdd58b81d6b121d97ee1c659ddfa8ffa1ba"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f1/setup.sh",
+      "bytes": 1483,
+      "sha256": "140265c7cca0a51843e2fab96296c3ae48ccbc927fc076801ac2f9e9e38110c5"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f2/check.sh",
+      "bytes": 872,
+      "sha256": "0e44429b0371421df01843b889b8b9b71ee22603cddeb39265a5219bf88d3a2f"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f2/prompt.txt",
+      "bytes": 287,
+      "sha256": "42aa9390eb64e2358683114f5e5d8aba4522337cb59160deed96de56f38160fa"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f2/rubric.txt",
+      "bytes": 1133,
+      "sha256": "5c5914fef1326e590c6c7e965b97558bcced9b3dfee867c400dc36e1039b4793"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f2/setup.sh",
+      "bytes": 1132,
+      "sha256": "6fd804da4e059892b9a68a8edc6a2ff92d71248c1d32d80b5315ccd15b981f2b"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f3/check.sh",
+      "bytes": 535,
+      "sha256": "728f5300461b323d93a07204fa4d83d5a57e3c2ec274e5bdaa74b38d8b2342d0"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f3/prompt.txt",
+      "bytes": 97,
+      "sha256": "d78a198d5368a66013a811f627acdf631fa5832ac02bfad0443ae32f4a0ad553"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f3/rubric.txt",
+      "bytes": 477,
+      "sha256": "65ee5fbad43f9a0c9b89c60a7ecf9c41cefa121036fc420583a72c3aab36ff46"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/checking-claims__f3/setup.sh",
+      "bytes": 259,
+      "sha256": "31865a8ddea500b10cfdd3f8c0a0cdef393798604a858988162772a707369d88"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f1/check.sh",
+      "bytes": 339,
+      "sha256": "478894b25a3f95587a604d23142f8301a15bd030108df7e63a9d44a4f3ae8fe4"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f1/prompt.txt",
+      "bytes": 109,
+      "sha256": "97260294de2d92185397639fd012acf72ea87e9a809de2240c34ec5d0d8337b8"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f1/rubric.txt",
+      "bytes": 1016,
+      "sha256": "ee77456d0bf164a7ad95c0f3795b80b77b925e5444262ef5a7dab7949ab1f234"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f1/setup.sh",
+      "bytes": 1313,
+      "sha256": "37a8d92ff08eefde0983fc221f67fd2988a3a6aeec13806e1e92a640f73fd2f1"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f2/check.sh",
+      "bytes": 563,
+      "sha256": "f6622a8fb6f36d416d78e2db56e579c438a74dafb5d77312e25378bf64987a44"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f2/prompt.txt",
+      "bytes": 240,
+      "sha256": "2dcb9f855fbb2b6bc9fdf2a611640681236f0ff97ef79c306a07f26decd7ab7b"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f2/rubric.txt",
+      "bytes": 1125,
+      "sha256": "0763d6587a0fb82d16ec9b9b7c299727e5338fac22ad9ad13c425c6d6767b6c5"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f2/setup.sh",
+      "bytes": 1610,
+      "sha256": "ff111504ab24280ec870906c2cf87c7732e8956a00dde7fd0f03034055a6695b"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f3/check.sh",
+      "bytes": 564,
+      "sha256": "968d5aaf920af816c140388cf089c483de51ba0d11752dbf3c8c96a27cbbe377"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f3/prompt.txt",
+      "bytes": 63,
+      "sha256": "c6337746db1b8af1699f07a362155a795c431fba582d4a4c76790f494e7af4f9"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f3/rubric.txt",
+      "bytes": 574,
+      "sha256": "24b213a4fa54f52554a539f05ca83e1b326866009b9e84094462ef281f4a9e51"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/designing-before-building__f3/setup.sh",
+      "bytes": 1188,
+      "sha256": "54bf87529eac3a204e10335360e9acf21c43f4fb777a78cc348087525ab38616"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f1/check.sh",
+      "bytes": 715,
+      "sha256": "f172943c3902f72d4f36df8ef6798bc807d8f7a8f1a17e0a93e835028e820632"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f1/prompt.txt",
+      "bytes": 110,
+      "sha256": "4c61bc10b7e3d8be1f2302aa97727b2cb227a0d9c11c2e1a86e787af161a14cd"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f1/rubric.txt",
+      "bytes": 905,
+      "sha256": "1f7d21f99169f54c4b969334d5ed9b4ea9e1cba21bb4943b47e7b10578c0342c"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f1/setup.sh",
+      "bytes": 1447,
+      "sha256": "321f491e20012c6913412a9c2efc2ca9d74964466fb22d1e6de8a16c33d593ed"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f2/check.sh",
+      "bytes": 688,
+      "sha256": "66f59207bf1d407c7a80eb5e8b2c52543411a10402a6a5716f4ab660c60776b3"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f2/prompt.txt",
+      "bytes": 97,
+      "sha256": "20015db7a49054e16fcfe7c3e1232d0ec876ef9809ee1eb6251abd5e40a19256"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f2/rubric.txt",
+      "bytes": 1054,
+      "sha256": "1ff07b2d9ff944a2b413a8bc48d8f53724fcf9410ffbf85e61f176921ad936de"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f2/setup.sh",
+      "bytes": 2841,
+      "sha256": "8b0776085b3f568e4541f8def9973332c5b6b7fc7189b7be14af7c930b5bea7b"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f3/check.sh",
+      "bytes": 758,
+      "sha256": "a7fc2bcfeda811fda35aa5956b85e73b1f57a4b3b5302c9764924144d1736527"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f3/prompt.txt",
+      "bytes": 78,
+      "sha256": "675867270d5c154f9def90e17d7d33a1074cda53ff5b7d6101ab099d88b3bf00"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f3/rubric.txt",
+      "bytes": 595,
+      "sha256": "dc4ebdc7bbdb16b099621f4320145430ddc23e2687b5c90c6befdc7498fe345c"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/finishing-and-merging__f3/setup.sh",
+      "bytes": 965,
+      "sha256": "7dc25375bd076be3a4cde2b9131bc30f58a75252d73e0b5c596b20131ec3efa3"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f1/check.sh",
+      "bytes": 1956,
+      "sha256": "e85a1621613f3e0a53d061c65e2ceec7a4ec18a8f44a0741f73860e3af542a40"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f1/prompt.txt",
+      "bytes": 119,
+      "sha256": "078cf8f6ee35f236bee5e96b11b4f0379cf7d784103c140f11f39945d624f83f"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f1/rubric.txt",
+      "bytes": 1102,
+      "sha256": "6aa2d457617ac1354a37d8d78c9af1c96a55414017b5160c0f5b4512a3c1f0e8"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f1/setup.sh",
+      "bytes": 2171,
+      "sha256": "0d7da47dd167e6cbddf6f00f1af2a77d45c51f8b44725e5a31de7aafa200a1ae"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f2/check.sh",
+      "bytes": 1309,
+      "sha256": "1a267e6e853cabd19c555d033552c4f85db128cabe45123a4db48bc739b55b26"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f2/prompt.txt",
+      "bytes": 98,
+      "sha256": "8f244d5d4ba728ae2a1c8028120e958d65415472b9bc9981acba8330510a2331"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f2/rubric.txt",
+      "bytes": 1017,
+      "sha256": "d4e7d761271839f6d323dd1a24824b551e7900822db9ac772919ffcf3216bee5"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f2/setup.sh",
+      "bytes": 1156,
+      "sha256": "65412e4c834dde072e9665a1c8c25eee433f36a93683ea58f7df8e36e2d19b1c"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f3/check.sh",
+      "bytes": 996,
+      "sha256": "359ba15dcb739ddf4de26e819616abdaf670d120b5503261b3f76f1b31801286"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f3/prompt.txt",
+      "bytes": 74,
+      "sha256": "01ecd31a6e120e945ff413345daafedacc5b7e5727f874e3ec3ed6c7031553f2"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f3/rubric.txt",
+      "bytes": 655,
+      "sha256": "7164be1ea128eb9648f0730c9f2a7cebcd3815821dd11bae78f012c4541d179a"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/isolating-work__f3/setup.sh",
+      "bytes": 907,
+      "sha256": "4f3d13cfd8bf1cfeaf5aad0748eabf94f865bf917e63f13610fb4fafd2767464"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f1/check.sh",
+      "bytes": 829,
+      "sha256": "158cda26ab6b5a1cc76f10881bb55f922ec0ac83776b433c829351ffd1244ef7"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f1/prompt.txt",
+      "bytes": 133,
+      "sha256": "2bf5de3c7c028462dbfc0f5913d733c535d0c9164bfbb4a2e065a2b91205a3d0"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f1/rubric.txt",
+      "bytes": 912,
+      "sha256": "84842532c8f181b1ffae41357f0a0058015b04c9cafa63d770a6acbc40cf84ee"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f1/setup.sh",
+      "bytes": 1387,
+      "sha256": "0954af459d1f5efcd1bcb4a3ceaaf57ba612ad562a9646582e4f964b85b43f6a"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f2/check.sh",
+      "bytes": 661,
+      "sha256": "424c3a1359a34e9eef59dc3f16be8f5d90ff0e9a508ce5905ff4f1c6a24521ad"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f2/prompt.txt",
+      "bytes": 199,
+      "sha256": "0853af51342cecf3bbdc4c0df578052fbe4bf23be6eb01777a7eb42280ff2202"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f2/rubric.txt",
+      "bytes": 965,
+      "sha256": "2edba0479ce0ac2e95a4bc69d5e633a27a7cd4410f3fb24280e5909e0f9e83f8"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f2/setup.sh",
+      "bytes": 902,
+      "sha256": "c974607d1c9b03198e4f48168199486fa90b029d27ad01dfed029b6e6498e7e9"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f3/check.sh",
+      "bytes": 792,
+      "sha256": "8387aaf862e734e96c09231c88793c9b6a0b051c9c6f823b87d72f4ff583a0a9"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f3/prompt.txt",
+      "bytes": 42,
+      "sha256": "479228841d8aeec88b533f79a1ebc84d0df8d77728c8cc3918e9ad0e1187db29"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f3/rubric.txt",
+      "bytes": 554,
+      "sha256": "5febfd39f7cc5353f7610eb35a56ce072ba7d951c3fb6235a28863f02d8ee88d"
+    },
+    {
+      "path": "evaluations/dev-discipline/scenarios/test-first-changes__f3/setup.sh",
+      "bytes": 826,
+      "sha256": "55c2a31056b5150a97ef8f6d4f0bf01f6dbdde620079a9fa6d6a0d17ae86eb29"
+    },
+    {
       "path": "evaluations/harder-cases/README.md",
-      "bytes": 8964,
-      "sha256": "b9ad4d583bf7ac2d581abb2f8400db06bbab8e22c5a466eaf218d5fbecc381d2"
+      "bytes": 9187,
+      "sha256": "9c4f5a129405cb03daa2cabd0588df5c3e1a6e1320ca4c95845ac87e54b72b61"
+    },
+    {
+      "path": "evaluations/harder-cases/__pycache__/run.cpython-313.pyc",
+      "bytes": 31854,
+      "sha256": "d98cc961a2180237634c7ea54274dd6fdfe5f572f80d27a07aa34fbc073e17c5"
     },
     {
       "path": "evaluations/harder-cases/cases.json",
@@ -152,6 +607,31 @@
       "sha256": "df5b17c2df901d7acda858a92dd56cb97c5fdc4c5e4241458393f1d4983b6e13"
     },
     {
+      "path": "skills/authoring-skills/SKILL.md",
+      "bytes": 2289,
+      "sha256": "ac262086355d346c9464460c4511ae5bb008138e18121fe54b04920334361b7f"
+    },
+    {
+      "path": "skills/before-irreversible-actions/SKILL.md",
+      "bytes": 1321,
+      "sha256": "edae8125f2f03dd5bef6c9466a73e49467925cd48549dddfb3e2d9f70b462a07"
+    },
+    {
+      "path": "skills/checking-claims/SKILL.md",
+      "bytes": 2100,
+      "sha256": "e46a444561be3afced225bdee29f1c540c45a385e241c1b014769779f9326342"
+    },
+    {
+      "path": "skills/designing-before-building/SKILL.md",
+      "bytes": 1507,
+      "sha256": "bebeced526e38ad98760135d34f12769217c7d11482ba9c745632f2aff297a2e"
+    },
+    {
+      "path": "skills/finishing-and-merging/SKILL.md",
+      "bytes": 1459,
+      "sha256": "940be5a0c58e87bd0b544981cfb251621f0c851bf9e0b3f99f4690bab6fc0357"
+    },
+    {
       "path": "skills/governed-task-lifecycle/SKILL.md",
       "bytes": 8034,
       "sha256": "1202775fce7e4b856648aa137be91317b8a498e16677db8a96eeded6acc10461"
@@ -197,6 +677,11 @@
       "sha256": "9c19eca755ee263528b9753a83102c6c1a17f5c3040567ac6b1ae7d5f6ea2584"
     },
     {
+      "path": "skills/isolating-work/SKILL.md",
+      "bytes": 2381,
+      "sha256": "609ec2661cd68c9758a7b55717db8d8bcc26ef96ca3ba71a4cbf7ff7dd1de2f2"
+    },
+    {
       "path": "skills/lean-history-reporting/SKILL.md",
       "bytes": 2845,
       "sha256": "f9e386adf96c56ab9870da5f750bbea1df09539978059dd818116f1d47bc8647"
@@ -230,6 +715,11 @@
       "path": "skills/scratch-folder/SKILL.md",
       "bytes": 2616,
       "sha256": "512dc5ec9c91d277f67f9bb4c684c876bae2df154e7f72506421cc0bb0c0d3c4"
+    },
+    {
+      "path": "skills/test-first-changes/SKILL.md",
+      "bytes": 1203,
+      "sha256": "d7d776d98c2907fe50874b3cb8e568e882ed3ad134b1144b55bb6f105b1e2dff"
     },
     {
       "path": "skills/verify-exact-candidate/SKILL.md",
@@ -273,8 +763,8 @@
     },
     {
       "path": "tests/evaluations/test_run_cases.py",
-      "bytes": 17443,
-      "sha256": "978101acce03626d95e77f24cc0f20b4953029e85c157f5cfaef8ebbd86cee0a"
+      "bytes": 17444,
+      "sha256": "dadabb8bed058e6cc6b48ef93e3716725dd8b702728f8caf8e9c1f0dd57eb16f"
     },
     {
       "path": "tests/verify-exact-candidate/test_verify_files.py",

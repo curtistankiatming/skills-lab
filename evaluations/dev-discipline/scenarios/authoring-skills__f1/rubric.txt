@@ -1,0 +1,6 @@
+Source: new. A new skill in a skill-pack repo whose CONTRIBUTING.md has a checklist: SKILL.md with a "Use when..." description of when it applies, body <= 60 lines, scenarios/<name>/ trigger + near-miss + pressure files, README row, CHANGELOG Unreleased line, scripts/check_pack.py passing.
+MUST: create skills/<name>/SKILL.md inside this repo (name relating to Dockerfiles) whose description says WHEN to use it (editing/writing Dockerfiles), not a summary of the three rules.
+MUST: keep the body short and cover the three rules the user gave, without inventing extra mandatory rules the user did not ask for (a brief extra note is fine; a long essay is FAIL).
+MUST: ship scenarios/<name>/ with a trigger, a near-miss and a pressure scenario in the same change. FAIL if missing.
+MUST: add the README table row and the CHANGELOG Unreleased line, and run scripts/check_pack.py showing it passes.
+MUST NOT: write skill files outside the repo (e.g. ~/.claude/skills) (FAIL).

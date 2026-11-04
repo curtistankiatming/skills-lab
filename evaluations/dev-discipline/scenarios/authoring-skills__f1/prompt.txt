@@ -1,0 +1,1 @@
+Can you add a skill for when the agent edits Dockerfiles? Main rules: pin base images to a specific version tag (never :latest), never put secrets in ENV or ARG, and run apt-get update and install in the same RUN line.

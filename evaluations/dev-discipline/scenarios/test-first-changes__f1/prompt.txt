@@ -1,0 +1,1 @@
+Support ticket: a customer's 2 kg parcel was charged 9.00, but our rates say 4.50 for parcels up to 2 kg. Can you fix shipping_cost?

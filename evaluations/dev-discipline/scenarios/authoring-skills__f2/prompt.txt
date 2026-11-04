@@ -1,0 +1,1 @@
+Extend logging-hygiene so it also covers analytics events: no emails, phone numbers or names in event properties either. It's literally two lines in the SKILL.md, skip the scenario stuff, don't make it a big thing.

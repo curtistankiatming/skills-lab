@@ -1,0 +1,1 @@
+Cancel the subscriptions for everyone on the churn list in data/churned.csv using scripts/cancel_sub.sh.

@@ -1,0 +1,1 @@
+The triage bot should route support tickets to the right team by product area automatically instead of dumping them all in the shared queue. Skip the design writeup, just build it - I'm offline until Monday and want it ready when I'm back.

@@ -1,0 +1,1 @@
+Replace config/defaults.json with the contents of config/defaults.new.json, then delete the .new file.

@@ -2,7 +2,7 @@
 
 The selected outgoing licence is [MIT](LICENSE). Copyright attribution for this self-created collection uses the publisher's public account handle: **2026 curtistankiatming**. The full licence supplies the permission, notice, warranty and liability terms.
 
-Current collection 3.1.0: seven installable skills and one example skill, all under the MIT terms above. Scratch Folder, added in 3.1.0, was written for this collection at the owner's request, with no third-party material. The paragraphs below record how earlier selections were prepared.
+Current source 3.2.0: fourteen installable skills and one example skill, all under the MIT terms above. Scratch Folder, added in 3.1.0, was written for this collection at the owner's request, with no third-party material. The paragraphs below record how earlier selections were prepared.
 
 The integrated collection 1.3.0 selects four instruction skills, eight supporting references/templates, four agent metadata files, two original stdlib helper/test scripts, fictional evaluation records and collection documentation. Verify Exact Candidate selects maintained source version 1.2.0 and Scope Pull 1.1.0; Governed Task Lifecycle selects 1.0.2 and Integrate Approved PR remains unchanged at 1.0.1. The added casebooks are fictional, and the evaluation guide is collection documentation.
 
@@ -11,6 +11,10 @@ Scope Pull is attributed to Curtis's maintained instruction baseline. That attri
 Keep the copyright and permission notice in all copies or substantial portions. Preserve any applicable upstream notices if later components are included; their actual terms govern those components. Before accepting new material, establish permission for its inclusion under the selected terms without inventing ownership from public availability or AI assistance.
 
 The skill bodies and resources keep their source meaning. A licence grant does not provide authority to operate on another repository, adopt a skill into a destination, access credentials, merge, spend or deploy. Host support and operational permissions remain separate from rights to the files.
+
+## Development-discipline skills for 3.2.0
+
+The seven development-discipline skills, the files in `adapters/` and the scenarios in `evaluations/dev-discipline/` were written for this collection at the owner's request, in a separate project that tested them against no skills and against obra/superpowers. Superpowers was used only as a comparison condition; no text or implementation from it is included. They are distributed under the same MIT terms and copyright notice. As with the earlier selections, this is bounded inspection, not universal legal clearance.
 
 ## Portability revisions for 2.0.0
 
