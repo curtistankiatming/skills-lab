@@ -2,13 +2,13 @@
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
   "distribution_version": "3.1.0",
-  "distribution_state": "PREPARED_ON_MAIN_NOT_RELEASED",
-  "last_issued_distribution_version": "3.0.0",
+  "distribution_state": "RELEASE_SOURCE_V3_1_0",
+  "last_issued_distribution_version": "3.1.0",
   "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
   "outgoing_licence": "MIT",
   "repository_identity": "curtistankiatming/skills-lab",
   "schema_version": 1,
-  "source_policy": "Seven installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. 2.1.1 restores \"Initiate\" in Governed Task Lifecycle's description, narrows Node Workflow Batcher's and Scope Pull's triggers, and says SKILL.md wins over detailed rules. 2.1.2 tightens four skills after the first Gemma run. 3.0.0 changes Integrate Approved PR's approval rule and two description openings after the v2.1.2 evaluation runs. 3.0.1 sharpens Governed Task Lifecycle's description opening and fixes run.py summary for hand-saved records. 3.1.0 adds Scratch Folder, a single-file skill written for this collection. It also opens Governed Task Lifecycle's description with an example command that names a task. This revision is prepared on main and not yet released; the latest release is v3.0.0. A release does not establish installation, host discovery or runtime behavior.",
+  "source_policy": "Seven installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. 2.1.1 restores \"Initiate\" in Governed Task Lifecycle's description, narrows Node Workflow Batcher's and Scope Pull's triggers, and says SKILL.md wins over detailed rules. 2.1.2 tightens four skills after the first Gemma run. 3.0.0 changes Integrate Approved PR's approval rule and two description openings after the v2.1.2 evaluation runs. 3.0.1 sharpens Governed Task Lifecycle's description opening and fixes run.py summary for hand-saved records. 3.1.0 adds Scratch Folder, a single-file skill written for this collection. It also opens Governed Task Lifecycle's description with an example command that names a task. This revision is the source of the v3.1.0 release. A release does not establish installation, host discovery or runtime behavior.",
   "history": "Earlier snapshot records removed from this file in 2.0.0 are reproduced in HISTORY.md.",
   "files": [
     {
@@ -33,8 +33,8 @@
     },
     {
       "path": "HISTORY.md",
-      "bytes": 21106,
-      "sha256": "5ee1f06cd67601bef4f8a0f5e3b90480c080b0a90db2ad8056ea579cc8c6f781"
+      "bytes": 21165,
+      "sha256": "9ccd356084a1bb77a5715ecb75a7daaae8975c8c77ce7e77c06693b96572fb38"
     },
     {
       "path": "LICENSE",
@@ -43,13 +43,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 7749,
-      "sha256": "b7657b5243da8911e04279aecc62461a56e9a20c268b758679036d3b7ae8f341"
+      "bytes": 7701,
+      "sha256": "528b47a4e4ef3e7c5adee565801f02a8a706047847d86374bbb821de7ac9bf26"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 3400,
-      "sha256": "759c89d23d69238a3ee86382568e5019f9f258c473ef93f3c6ffb73b2cd4258e"
+      "bytes": 3359,
+      "sha256": "7a2f3dd4191108498b278828943a16359b1fd671e7a2a18053cf3c7bac87711a"
     },
     {
       "path": "RIGHTS.md",
