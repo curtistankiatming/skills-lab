@@ -2,13 +2,13 @@
   "collection": "skills-lab",
   "copyright_notice": "Copyright 2026 curtistankiatming",
   "distribution_version": "3.2.0",
-  "distribution_state": "SOURCE_V3_2_0_UNRELEASED",
-  "last_issued_distribution_version": "3.1.0",
+  "distribution_state": "RELEASE_SOURCE_V3_2_0",
+  "last_issued_distribution_version": "3.2.0",
   "inventory_hash_policy": "Raw SHA-256 and byte sizes cover every repository file except inventory.json itself; hash this file externally.",
   "outgoing_licence": "MIT",
   "repository_identity": "curtistankiatming/skills-lab",
   "schema_version": 1,
-  "source_policy": "Seven installable skills under skills/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. 2.1.1 restores \"Initiate\" in Governed Task Lifecycle's description, narrows Node Workflow Batcher's and Scope Pull's triggers, and says SKILL.md wins over detailed rules. 2.1.2 tightens four skills after the first Gemma run. 3.0.0 changes Integrate Approved PR's approval rule and two description openings after the v2.1.2 evaluation runs. 3.0.1 sharpens Governed Task Lifecycle's description opening and fixes run.py summary for hand-saved records. 3.1.0 adds Scratch Folder, a single-file skill written for this collection. It also opens Governed Task Lifecycle's description with an example command that names a task. This revision is the source of the v3.1.0 release. A release does not establish installation, host discovery or runtime behavior. 3.2.0 (source, not yet released) adds seven development-discipline skills (designing-before-building, test-first-changes, isolating-work, checking-claims, finishing-and-merging, before-irreversible-actions, authoring-skills), optional routing adapters in adapters/, and their held-out scenarios in evaluations/dev-discipline/.",
+  "source_policy": "Fourteen installable skills under skills/, optional adapters under adapters/ and one example under examples/. These repository copies are the current revisions; 2.1.0 moves the detailed rules of three skills into references/ and shortens every description. Existing notices and MIT terms apply. 2.1.1 restores \"Initiate\" in Governed Task Lifecycle's description, narrows Node Workflow Batcher's and Scope Pull's triggers, and says SKILL.md wins over detailed rules. 2.1.2 tightens four skills after the first Gemma run. 3.0.0 changes Integrate Approved PR's approval rule and two description openings after the v2.1.2 evaluation runs. 3.0.1 sharpens Governed Task Lifecycle's description opening and fixes run.py summary for hand-saved records. 3.1.0 adds Scratch Folder, a single-file skill written for this collection. It also opens Governed Task Lifecycle's description with an example command that names a task. 3.2.0 adds seven development-discipline skills (designing-before-building, test-first-changes, isolating-work, checking-claims, finishing-and-merging, before-irreversible-actions, authoring-skills), optional routing adapters in adapters/, and their held-out scenarios in evaluations/dev-discipline/. This revision is the source of the v3.2.0 release. A release does not establish installation, host discovery or runtime behavior.",
   "history": "Earlier snapshot records removed from this file in 2.0.0 are reproduced in HISTORY.md.",
   "files": [
     {
@@ -18,8 +18,8 @@
     },
     {
       "path": "CATALOG.md",
-      "bytes": 8090,
-      "sha256": "597759d9be532f50c1ee1694c9c919abdd7f169358c1d05814a62f9f6f533340"
+      "bytes": 8081,
+      "sha256": "36b6294136251af5af850414848c5db2d9a97e48fe315f06de1499f6289aaf98"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -33,8 +33,8 @@
     },
     {
       "path": "HISTORY.md",
-      "bytes": 21165,
-      "sha256": "9ccd356084a1bb77a5715ecb75a7daaae8975c8c77ce7e77c06693b96572fb38"
+      "bytes": 22532,
+      "sha256": "0394aeacaa78c83b1e3011cb5b9a9138198a533b9b1c136c9554d7425990e0d9"
     },
     {
       "path": "LICENSE",
@@ -43,13 +43,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 10134,
-      "sha256": "47004499fbb74cc61c98f3517f166f0e7eb17ac8245c40caf4db66331060cd4f"
+      "bytes": 10103,
+      "sha256": "dadfaf3643c9d1e6cc1a0265802d5413c4d0a5f5a428bff5b16a2d4f6ade7cf7"
     },
     {
       "path": "RELEASING.md",
-      "bytes": 3377,
-      "sha256": "17fc0470206a3f26bae7098f8c1a07d04da04094e11474d845e309afc6413a0d"
+      "bytes": 3348,
+      "sha256": "869e35bdb90377e5894b966e056fcd440c8e8cc96323522d5efe51aef310828b"
     },
     {
       "path": "RIGHTS.md",
