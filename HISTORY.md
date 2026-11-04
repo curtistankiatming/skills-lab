@@ -2,6 +2,14 @@
 
 This file keeps the distribution notes that earlier README, CATALOG, RELEASING and inventory.json versions carried, so the current files can describe the current collection. The text below is copied from those files as they stood at commit 4e12d40, before version 2.0.0. It describes each snapshot as it was then; statements such as "not yet published" are historical, not current. Links are relative to the repository root.
 
+## 3.2.0 (2026-11-04)
+
+- Seven new development-discipline skills, each a single `SKILL.md` of 13 to 21 lines: Designing Before Building, Test-First Changes, Isolating Work, Checking Claims, Finishing and Merging, Before Irreversible Actions and Authoring Skills. Finishing and Merging covers local merges and sends hosted-PR merges to Integrate Approved PR.
+- Optional adapters in `adapters/`: one routing list (`routing.md`) shown at session start, with setup notes for Claude Code (a SessionStart hook script that prints the file), Codex, Cursor, OpenCode and Gemini CLI. Nothing is installed automatically.
+- Held-out scenarios in `evaluations/dev-discipline/`: 21 fictional scenarios, three per new skill. In Claude Code with Claude Haiku 4.5, 5 runs each and the routing list loaded, an earlier revision of the pack passed 79 of 105 runs, against 36 with no skills and 39 with obra/superpowers. The released revision passed 12 of 15 runs on three further scenarios (0 of 15 with no skills) and was not rerun on all 21. Checking Claims catches stale CI or QA sign-offs about 60% of the time, and Isolating Work still rarely misses a rename on `main` with an untracked user file. No other host or model has a recorded result.
+- The seven earlier skills are unchanged. The harder-cases trigger set still covers only them.
+- Published as the GitHub release v3.2.0.
+
 ## 3.1.0 (2026-11-04)
 
 - New skill: Scratch Folder 1.0.0, a single `SKILL.md` of about 450 words. Agents keep drafts, logs, test output and temporary scripts in `.scratch` in the working folder (kept out of git through `.git/info/exclude`). Before finishing they keep only files the user asked for, that the project needs to build, run or test, or that record a decision or result; they move those to a permanent place and delete the rest. Cleanup commands are given for Linux or macOS and Windows PowerShell. Its description's first 56 characters ("Use for drafts and temp files: work in scratch, clean up.") make sense on their own, since Hermes shows about 60; the rest keeps the exclusions the trigger tests depend on.

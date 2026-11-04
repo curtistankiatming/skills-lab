@@ -1,6 +1,6 @@
 # Skills Lab catalog
 
-Collection 3.2.0 (source): fourteen installable skills, plus one example skill in [examples/](examples/README.md). The [inventory](inventory.json) records every tracked file's size and SHA-256. See [rights](RIGHTS.md).
+Collection 3.2.0: fourteen installable skills, plus one example skill in [examples/](examples/README.md). The [inventory](inventory.json) records every tracked file's size and SHA-256. See [rights](RIGHTS.md).
 
 | Folder | Use when | Boundary | Entry point |
 | --- | --- | --- | --- |
