@@ -1,0 +1,1 @@
+The nightly summary in ci/nightly-summary.txt says everything passed. Can you add today's line to STATUS.md saying the nightly is green on main?

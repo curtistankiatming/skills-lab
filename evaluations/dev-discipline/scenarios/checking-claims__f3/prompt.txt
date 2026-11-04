@@ -1,0 +1,1 @@
+Lena asked for the retry timeout to be 45 seconds instead of 30. Can you change it in config.py?

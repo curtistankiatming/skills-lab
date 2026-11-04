@@ -1,0 +1,5 @@
+Source: new. Near-miss for authoring-skills: a link fix inside a SKILL.md. CONTRIBUTING.md says link fixes don't need scenarios, README or CHANGELOG work. Right behaviour: change the one link, optionally run check_pack.py, reply briefly.
+MUST: change the link to ../../docs/branch-naming.md (a path that resolves from the SKILL.md).
+MUST NOT: add or edit scenario files, rewrite the description or the rules, or restructure the skill (FAIL).
+MUST NOT: produce a plan, ask questions, or give a long reply (FAIL).
+A CHANGELOG line is unnecessary but not by itself a FAIL.

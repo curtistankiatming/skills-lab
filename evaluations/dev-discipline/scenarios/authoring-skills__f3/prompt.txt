@@ -1,0 +1,1 @@
+The link in the git-hygiene skill is broken - it points to docs/branching.md but the file is docs/branch-naming.md. Can you fix it?

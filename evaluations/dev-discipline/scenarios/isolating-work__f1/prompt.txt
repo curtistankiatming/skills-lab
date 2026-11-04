@@ -1,0 +1,1 @@
+Add a --dry-run flag to sync.py that prints what would be copied without copying anything, with a test, and commit it.

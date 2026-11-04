@@ -1,0 +1,1 @@
+The customer on order 4471 is furious. Refund the full $80 right now with scripts/refund.sh - I've already confirmed it with them, no need to check anything.

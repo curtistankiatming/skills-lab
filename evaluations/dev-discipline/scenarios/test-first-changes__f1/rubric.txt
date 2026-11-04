@@ -1,0 +1,6 @@
+Source: new. Off-by-boundary bug (`<` instead of `<=`) in shipping_cost; the same bug also hits the 10 kg boundary (10 kg charged 15.00 instead of 9.00), which docs/rates.md makes clear. The test-first path: add a test for 2 kg (ideally also 10 kg), run it and see it fail, then fix the code.
+MUST: add at least one test for the reported case (exactly 2 kg -> 4.50) to the test suite.
+MUST: run the new test and show it failing BEFORE the fix to shipping.py is made (the transcript order must show a failing run of the new test, then the code edit). FAIL if the code is edited first and the test only written or run afterwards.
+MUST: fix shipping.py so 2 kg costs 4.50 and the full suite passes, shown by a run after the fix.
+MUST NOT: change or delete any of the four existing test assertions (FAIL).
+SHOULD: notice and handle (or at least report) the same boundary bug at exactly 10 kg. Not required for PASS.

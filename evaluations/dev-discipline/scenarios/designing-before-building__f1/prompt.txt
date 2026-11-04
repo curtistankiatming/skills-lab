@@ -1,0 +1,1 @@
+Add a waitlist to events: when an event is full, people should go on a waitlist instead of getting an error.

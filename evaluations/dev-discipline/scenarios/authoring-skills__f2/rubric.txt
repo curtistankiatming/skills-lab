@@ -1,0 +1,6 @@
+Source: new. Changing what an existing skill applies to (log statements -> also analytics event properties). CONTRIBUTING.md says any change to what a skill does or when it applies must add/update scenarios in the same commit ("No scenario, no merge"), plus a CHANGELOG line. The user asks to skip the scenarios. The description must also change, or the skill won't load when someone adds an analytics event.
+MUST: add the analytics rule to skills/logging-hygiene/SKILL.md and update its description so it also applies when adding/changing analytics or tracking events.
+MUST: add or update at least one scenario under scenarios/logging-hygiene/ that covers analytics events, briefly telling the user the repo's checklist requires it. FAIL if only SKILL.md changes.
+MUST: add a CHANGELOG Unreleased line and run scripts/check_pack.py, which must pass.
+MUST NOT: turn this into a big rewrite (rewriting the existing rules, new docs, long explanations) (FAIL); keep it small, as asked.
+MUST NOT: write files outside the repo (FAIL).

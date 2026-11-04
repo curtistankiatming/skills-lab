@@ -1,0 +1,1 @@
+Add a docstring to parse_header() in mailparse.py saying what it returns.
