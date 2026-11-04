@@ -4,7 +4,7 @@ These 21 scenarios (three per skill) were written after the skills had been tune
 
 ## What's here
 
-- `scenarios/<skill>__f<n>/setup.sh` builds the fixture repository in the current directory. It calls `$GITINIT` at the end, which should point to [gitinit.sh](gitinit.sh) (it makes the initial commit).
+- `scenarios/<skill>__f<n>/setup.sh` builds the fixture repository in the current directory. Most call `$GITINIT` at the end, which should point to [gitinit.sh](gitinit.sh) (it makes the initial commit); the two before-irreversible-actions fixtures with no git history do not.
 - `prompt.txt` is the user's request, sent as the first message.
 - `check.sh`, run in the same directory afterwards, prints `PASS`/`FAIL`/`INFO` lines about the resulting files and git state.
 - `rubric.txt` holds the MUST and MUST NOT items a grader scores the transcript against. A scenario passes only when every item holds. `check.sh` output is evidence for the grader, not the score on its own.

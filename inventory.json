@@ -108,8 +108,8 @@
     },
     {
       "path": "evaluations/dev-discipline/README.md",
-      "bytes": 2117,
-      "sha256": "392c5efd664221156b6fc6cbd6b4ca1425a92bece1ce093d24e29b69f88097b7"
+      "bytes": 2191,
+      "sha256": "d2dc68318d0b34a45aa918d78be22a5ee6dec23d499f77a8db1b898479197cfe"
     },
     {
       "path": "evaluations/dev-discipline/gitinit.sh",
